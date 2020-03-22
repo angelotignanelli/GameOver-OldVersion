@@ -4,11 +4,11 @@ Temática: Venta de videojuegos rígidos para consolas XBOX 360, XBOX ONE, PS4, 
 
 Audiencia: +13 años
 
-Objetivo: Captar mediante el Fans Zone y la publicidad audiovisual un público interesado en comprar videojuegos rígidos para las consolas ya mencionadas.
+Objetivo: Captar mediante el Fan Zone y la publicidad audiovisual un público interesado en comprar videojuegos rígidos para las consolas ya mencionadas.
 
 Sitios de referencia: 
 
--Steam (https://store.steampowered.com/?l=spanish): Esta página es la que nos captó más la atención por su impacto visual, los juegos ingresan a los ojos del comprador desde una Home dinámica y llena de información. Además no sólo muestra imágenes, sino también videos, demos y transmiciones en vivo. 
+-Steam (https://store.steampowered.com/?l=spanish): Esta página es la que nos captó más la atención por su impacto visual, los juegos ingresan a los ojos del comprador desde una Home dinámica y llena de información. Además no sólo muestra imágenes, sino también videos, demos y transmisiones en vivo. 
 
 -Kinguin (https://www.kinguin.net/) : Esta es una página sencilla pero muy completa porque tiene juegos para la gran mayoría de las plataformas, nos gustó la disposición de los juegos en el catálogo.
 
