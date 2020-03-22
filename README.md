@@ -14,8 +14,8 @@ Sitios de referencia:
 
 -Blizzard (https://www.blizzard.com/es-es/): La tienda de Blizzard atrae desde el Home, pero nos gustó la completa descripción del producto, con detalles, requisitos de sistema, imágenes adiconales y videos.
 
--FullH4rd (https://www.fullh4rd.com.ar/):Esta página nos sirvió para inspirarnos en el Header y el Footer, simple pero con los requisitos básicos para llevar a cabo nuestro e-commerce.
+-FullH4rd (https://www.fullh4rd.com.ar/): Esta página nos sirvió para inspirarnos en el Header y el Footer, simple pero con los requisitos básicos para llevar a cabo nuestro e-commerce.
 
--Compra Gamer (https://compragamer.com/):Nos gustó el  carousel de imágenes con el que muestra sus productos.
+-Compra Gamer (https://compragamer.com/): Nos gustó el  carousel de imágenes con el que muestra sus productos.
 
 -Sitio oficial de Playstation (https://www.playstation.com/), XBox (https://www.xbox.com/es-AR), Nintendo (https://www.nintendo.es/#): Nos centramos en estas páginas para ver las últimas novedades de estas consolas, sus juegos y accesorios.
