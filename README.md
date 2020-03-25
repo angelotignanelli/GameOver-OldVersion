@@ -19,3 +19,6 @@ Sitios de referencia:
 -Compra Gamer (https://compragamer.com/): Nos gustó el  carousel de imágenes con el que muestra sus productos.
 
 -Sitio oficial de Playstation (https://www.playstation.com/), XBox (https://www.xbox.com/es-AR), Nintendo (https://www.nintendo.es/#): Nos centramos en estas páginas para ver las últimas novedades de estas consolas, sus juegos y accesorios.
+
+PRESENTACION:
+https://slides.com/jonigonzalez/p/fullscreen#/
