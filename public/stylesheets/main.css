@@ -1,0 +1,266 @@
+/* Estilos del box gris */
+.box{
+    width: 700px;
+    margin: 0 auto;
+    background: #848383;
+    border-radius: 4px;
+    padding: 10px;
+}
+/* Estilos del titulo box */
+.tittle{
+    display: flex;
+    justify-content: space-evenly
+    
+}
+/* Fuente para el contenedor */
+.wrapper-main{
+    font-family: 'Roboto', sans-serif;
+}
+/* Estilos de fuente h1 */
+.wrapper-main h1{
+    font-size: 60px;
+}
+/* Estilos TITULO CARRITO */
+.wrapper-main .tittle-carrito {
+    padding: 5%;
+    
+}
+/* Estilos de imagen carrito */
+.wrapper-main .tittle-carrito img{
+    width: 100px;
+}
+/* Contenedor box Config */
+.wrapper-web .wrapper-main .wrapper-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+.wrapper-main .wrapper-box .pik{
+    padding: 20px;
+    width: 20%;
+    text-align: center;
+}
+.wrapper-main .wrapper-box .pik img{
+    width: 120px;
+}
+.wrapper-main .wrapper-box .pik #delete{
+    color: red;
+    font-size: 70px;
+    cursor: pointer;
+    padding: 20px;
+}
+.wrapper-main .wrapper-box .box{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.wrapper-web .wrapper-main .box .tittle{
+    font-family: 'Righteous', cursive;
+    color: #fff;
+    text-shadow: 1px 2px 1px black;
+}
+.wrapper-main  img{
+    width: 20%;
+}
+/* Estilo del contenido dentro del box */
+.wrapper-main .box .detail-box {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+}
+/* Estilos de precis */
+.wrapper-main .box .detail-box .price{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+/* Estilos de cantidad */
+.wrapper-main .box .detail-box .quantity{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+/* Estilos de botones */
+.wrapper-main .box .detail-box .quantity button{
+    height: 60px;
+    width: 100%;
+    background: transparent;
+    border: none;
+}
+/* Estilo boton quitar */
+.wrapper-main .box .detail-box .quantity #less{
+    color: red;
+    font-size: 40px;
+    text-shadow: 1px 1px 3px  black;
+}
+.wrapper-main .box .detail-box .quantity #less:hover{
+    cursor: pointer;
+}
+/* Estilo boton agregar */
+.wrapper-main .box .detail-box .quantity #add{
+    color: greenyellow;
+    font-size: 40px;
+    text-shadow: 1px 1px 3px  black;
+}
+.wrapper-main .box .detail-box .quantity #add:hover{
+    cursor: pointer;
+}
+/* Estilos de detalles */
+.wrapper-main .box .detail-box .detail{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.wrapper-main .box .detail-box .detail-2{
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+/* Estilos de detalles parrafos */
+
+.wrapper-main .box .detail-box .detail p{
+    color: #fff;
+}
+/* Estilos de detalles strong */
+
+.wrapper-main .box .detail-box  .detail strong{
+    color: orange;
+    text-shadow: 1px 1px 2px black;
+}
+.wrapper-main .box .detail-box  .detail-2 strong{
+    color: orange;
+    text-shadow: 1px 1px 2px black;
+}
+.wrapper-main .box .detail-box p{
+    color: white;
+}
+/* Estilos paraffos del detalle */
+.wrapper-main .box .detail-box p{
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo descuento */
+.wrapper-main .wrapper-total{
+    display: flex;
+}
+.wrapper-main .discount{
+    width: 400px;
+    height: 100px;
+    border-radius: 15px;
+    background: #848383;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+wrapper-main .discount h3{
+    color: black;
+}
+#discount{
+    background: #fff;
+    border:none;
+    width: 200px;
+    height: 30px;
+    border-radius: 4px;
+    margin: 20px;
+}
+#apply{
+    background: orange;
+    border:none;
+    color: #000000;
+    width: 90px;
+    height: 30px;
+    border-radius: 4px;
+    margin: 10px;
+}
+.wrapper-main .calculating{
+    padding: 20px;
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+    background: #848383;
+    margin-right: 60%;
+}
+.wrapper-main .calculating #total{
+    font-size: 40px;
+    padding: 20px;
+}
+.wrapper-web .wrapper-main .recommended{
+    margin-left: 14%;
+}
+.card {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 300px;
+    position: relative;
+    width: 300px;
+}
+.card-2 {
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.card-2 h3{
+    font-size: 40px;
+}
+
+.wrapper-main .wrapper-calculador{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+.wrapper-main .wrapper-calculador .discount{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.wrapper-main .wrapper-calculador .calculating{
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+.wrapper-main .wrapper-calculador #card1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-top:20px;
+}
+.wrapper-main .wrapper-calculador #card2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-top:20px;
+    margin-left: 16%;
+}
+.wrapper-main .wrapper-calculador #card3{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-top:20px;
+}
+#continue-buying{
+    width: 200px;
+    height: 40px;
+    grid-column: 3/4;
+    margin: 20px;
+    background: greenyellow;
+    border-radius: 4px;
+    color: black;
+}
+#finish-buying{
+    width: 200px;
+    height: 40px;
+    grid-column: 4/5;
+    margin: 20px;
+    background: red;
+    border-radius: 4px;
+    color: #fff;
+}
+
