@@ -1,0 +1,13 @@
+.demo{
+    width: 60%;
+    height: 250px;
+}
+.contenedor{
+    display: flex;
+}
+.contenedor img{
+     width: 10%;
+}
+.contenedorBoxes{
+    width: 40%;
+}
