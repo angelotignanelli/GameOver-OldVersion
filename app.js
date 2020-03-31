@@ -23,8 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/productCart',proyectoRouter);
-app.use('/productDetail', proyectoRouter);
+app.use("/product", proyectoRouter);
 app.use('/users', usersRouter);
 app.use("/home", homeRouter);
 
