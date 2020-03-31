@@ -14,6 +14,9 @@ router.get('/productCart', function(req, res, next) {
 router.get('/productDetail', function(req, res, next) {
   res.render('productDetail', req.params.id);
 });
+router.get('/productdetalle', function(req, res, next) {
+  res.render('productdetalle', req.params.id);
+});
 
 
 module.exports = router;
