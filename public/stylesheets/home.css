@@ -1,5 +1,7 @@
 body {
   font: 14px 'Exo 2', Helvetica, Arial, sans-serif;
+  background-image: url(//images/home-images/bgimg2.jpg);
+  background-size: cover;
 }
 
 .bannerhome {
@@ -56,17 +58,59 @@ h1 {
   justify-content: space-between;
   padding-left: 130px;
   padding-right: 130px;
+  margin-top: -10px;
 }
 
 .card{
   margin-top: 60px;
 }
 
+.card-body {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  height: 100px;
+}
+
+.card-title{
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#textodetarjetas{
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.btn-primary {
+  padding-bottom: 4px;
+  padding-top: 4px;
+  width: 100%;
+  font-size: 14px;
+}
+
 #imgfirstcards{
-  height: 58%;
+  height: 60%;
+}
+
+.secondcards .card-body {
+  height: 80px;
+}
+
+#titulodetarjetas2{
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#textodetarjetas2{
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.secondcards .btn-primary {
+  font-size: 12px;
 }
 
 #imgfirstcards2{
-  height: 45%;
+  height: 60%;
 }
 
