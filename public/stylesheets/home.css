@@ -3,13 +3,18 @@ body {
 }
 
 .bannerhome {
-  background-image: url(/images/bgimg2.jpg);
+  background-image: url(//images/bgimg2.jpg);
   background-size: cover;
   height: 100vh;
 }
 
+.contenedordeentrada {
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
 h1 {
-  color: white;
+  color: rgb(100, 97, 97);
   font-weight: 700;
   font-size: 60px;
   text-align: center;
@@ -18,7 +23,7 @@ h1 {
 
 .titulobanner{
   font-family: 'Nothing You Could Do', cursive;
-  color: white;
+  color: rgb(100, 97, 97);
   font-weight: 700;
   font-size: 30px;
   text-align: center;
@@ -27,34 +32,41 @@ h1 {
 }
 
 #carouselExampleControls {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .carousel-inner {
-  height: 350px;
+  height: 380px;
   margin-bottom: 50px;
+  border-radius: 3px;
 }
 
 .firstcards{
   height: 100vh;
 }
 
+.secondcards{
+  height: 100vh;
+}
+
 .cardcontainer{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  padding-left: 130px;
+  padding-right: 130px;
 }
 
 .card{
-  margin-right: 40px;
   margin-top: 60px;
 }
 
-.card:last-child{
-  margin-right: 0px;
-}
-
-.card-img-top{
+#imgfirstcards{
   height: 58%;
 }
+
+#imgfirstcards2{
+  height: 45%;
+}
+
