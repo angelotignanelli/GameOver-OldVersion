@@ -1,13 +1,18 @@
-.demo{
-    width: 60%;
-    height: 250px;
+body {
+    font-family:  "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+    *{
+    margin: 0;
+    padding: 0;
+  }
+.contenedorDemo{
+    display:grid;
+    grid-template-columns: 600px ; 
+    grid-template-rows: 400px ;
 }
-.contenedor{
-    display: flex;
-}
-.contenedor img{
-     width: 10%;
-}
-.contenedorBoxes{
-    width: 40%;
+.contenedorDemo > div{
+    display: block;
+    padding: 20px;
 }
