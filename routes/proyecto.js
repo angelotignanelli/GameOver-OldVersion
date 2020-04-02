@@ -17,6 +17,9 @@ router.get('/productDetail', function(req, res, next) {
 router.get('/productdetalle', function(req, res, next) {
   res.render('productdetalle');
 });
+router.get('/productdetalle2', function(req, res, next) {
+  res.render('productdetalle2');
+});
 /* GET PANEL ADMIN */
 router.get('/admin', function(req, res, next) {
   res.render('admin');
