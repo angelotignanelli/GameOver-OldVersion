@@ -1,0 +1,72 @@
+body {
+  font-family:  "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper-web{
+  background-color: #fff;
+  width: 100%;
+}
+.wrapper-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper-web .wrapper-header .search{
+  margin-right: 10%;
+}
+.wrapper-web .wrapper-header .search input{
+  border: none;
+  border-bottom: 2px solid red;
+  height: 40px;
+  width: 500px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+.wrapper-web .wrapper-header .search button{
+  border: none;
+  border-bottom: 2px solid red;
+  height: 40px;
+  width: 80px;
+  background: lightgrey;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+.wrapper-web .wrapper-header .search button:hover{
+  background: #777373;
+  color: #fff;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+.wrapper-web .wrapper-header .logo img{
+  width: 35%;
+}
+.wrapper-web  .wrapper-nav .menu{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+}
+.wrapper-web  .wrapper-nav .menu{
+  width: 100%;
+  background: red;
+  font-family: 'Roboto', sans-serif;
+}
+.wrapper-web  .wrapper-nav .menu li{
+  list-style: none;
+  margin: 20px;
+}
+.wrapper-web  .wrapper-nav .menu a{
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+}
+.wrapper-web  .wrapper-nav .menu a:hover{
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
+  transition: ease-in-out 0.2s;
+}
