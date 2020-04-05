@@ -137,8 +137,8 @@ h2 {
 }
 
 .contenedorjuegosprox{
-  width: 75%;
-  height: auto;
+  width: 85%;
+  height: 80vh;
 }
 
 .contenidoproximamente1 {
@@ -170,6 +170,7 @@ h2 {
 
 .imagenproximamente {
   width: 100%;
+  height: 25vh;
 }
 
 .nombrejuegoproximamente{
@@ -185,12 +186,17 @@ h2 {
 }
 
 .advproximamente {
-  height: auto;
-  width: 25%;
+  height: 100%;
+  width: 15%;
   background-color: tomato;
   float: right;
   margin-right: 130px;
   margin-top: 5px;
   margin-left: 5px;
   margin-bottom: 7px;
+}
+
+.advproximamente img{
+  width: 100%;
+  height: 79vh;
 }
