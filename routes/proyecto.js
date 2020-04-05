@@ -3,19 +3,26 @@ var router = express.Router();
 
 /* GET Home */
 router.get('/home', function(req, res, next) {
-  res.render('home', { title: 'Express' });
+  res.render('home');
 });
 
 /* GET Product page. */
 router.get('/productCart', function(req, res, next) {
-  res.render('productCart', req.params.id);
+  res.render('productCart');
 });
 
 router.get('/productDetail', function(req, res, next) {
-  res.render('productDetail', req.params.id);
+  res.render('productDetail');
 });
 router.get('/productdetalle', function(req, res, next) {
-  res.render('productdetalle', req.params.id);
+  res.render('productdetalle');
+});
+router.get('/productdetalle2', function(req, res, next) {
+  res.render('productdetalle2');
+});
+/* GET PANEL ADMIN */
+router.get('/admin', function(req, res, next) {
+  res.render('admin');
 });
 
 

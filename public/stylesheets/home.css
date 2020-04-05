@@ -1,11 +1,11 @@
 body {
   font: 14px 'Exo 2', Helvetica, Arial, sans-serif;
-  background-image: url(//images/home-images/bgimg2.jpg);
+  _background-image: url(/images/home-images/bgimg2.jpg);
   background-size: cover;
 }
 
 .bannerhome {
-  background-image: url(//images/bgimg2.jpg);
+  _background-image: url(/images/bgimg2.jpg);
   background-size: cover;
   height: 100vh;
 }
@@ -52,11 +52,13 @@ h2 {
 }
 
 .firstcards{
-  height: 100vh;
+  height: auto;
+  margin-bottom: 60px;
 }
 
 .secondcards{
-  height: 100vh;
+  height: auto;
+  margin-bottom: 60px;
 }
 
 .cardcontainer{
@@ -65,7 +67,7 @@ h2 {
   justify-content: space-between;
   padding-left: 130px;
   padding-right: 130px;
-  margin-top: -10px;
+  margin-top: -40px;
 }
 
 .card{
@@ -121,3 +123,74 @@ h2 {
   height: 60%;
 }
 
+.seccionproximamente {
+  height: auto;
+}
+
+.tituloproximamente {
+  margin-bottom: 20px;
+} 
+
+.contenedorseccionprox{
+  display: flex;
+  justify-content: center;
+}
+
+.contenedorjuegosprox{
+  width: 75%;
+  height: auto;
+}
+
+.contenidoproximamente1 {
+  display: flex;
+  justify-content: left;
+  padding-left: 130px;
+  width: 100%;
+}
+
+.contenidoproximamente2 {
+  display: flex;
+  justify-content: left;
+  padding-left: 130px;
+  width: 100%;
+}
+
+.contenidoproximamente3 {
+  display: flex;
+  justify-content: left;
+  padding-left: 130px;
+  width: 100%;
+}
+
+.juegoproximamente {
+  width: 33%;
+  margin: 5px;
+  margin-bottom: -25px;
+}
+
+.imagenproximamente {
+  width: 100%;
+}
+
+.nombrejuegoproximamente{
+  position: relative;
+  bottom: 30px;
+  background-color: #007bff;
+  color: white;
+  width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 0px 2px 2px 0px;
+  text-align: center;
+}
+
+.advproximamente {
+  height: auto;
+  width: 25%;
+  background-color: tomato;
+  float: right;
+  margin-right: 130px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 7px;
+}
