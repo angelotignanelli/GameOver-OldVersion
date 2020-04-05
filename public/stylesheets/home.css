@@ -63,8 +63,9 @@ h2 {
 
 .cardcontainer{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding-left: 130px;
   padding-right: 130px;
   margin-top: -40px;
@@ -72,6 +73,16 @@ h2 {
 
 .card{
   margin-top: 60px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.remfirstscards{
+  width: 13rem;
+}
+
+.remsecondcards{
+  width: 12rem;
 }
 
 .card-body {
@@ -199,4 +210,29 @@ h2 {
 .advproximamente img{
   width: 100%;
   height: 79vh;
+}
+
+@media (max-width: 460px){
+  
+body{
+  background-color: tomato;
+}
+
+.cardcontainer {
+ padding-left: 20px;
+ padding-right: 20px; 
+}
+
+.remfirstscards{
+  width: 11rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.remsecondcards{
+  width: 11rem;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
 }
