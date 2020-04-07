@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "build-css": "node-sass --include-path scss scss/style.scss css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -15,6 +17,7 @@
   },
   "devDependencies": {
     "node": "^13.12.0",
+    "node-sass": "^4.13.1",
     "nodemon": "^2.0.2"
   },
   "main": "app.js",

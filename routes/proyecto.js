@@ -5,6 +5,9 @@ var router = express.Router();
 router.get('/home', function(req, res, next) {
   res.render('home');
 });
+router.get('/prueba', function(req, res, next) {
+  res.render('prueba');
+});
 
 /* GET Product page. */
 router.get('/productCart', function(req, res, next) {
