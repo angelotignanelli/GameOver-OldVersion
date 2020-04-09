@@ -1,0 +1,31 @@
+h1 {
+    padding: 0px 0px 100px 450px;
+
+}
+
+.footer{
+    background-color: #f51616;
+    border-radius: 15px;
+    grid-column: 1/5;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.footer img{
+    width: 20vh;
+}
+.footer .menu-footer{
+    display: flex;
+}
+.footer .menu-footer ul li{
+    list-style: none;
+    margin-right: 20px;
+}
+.footer .menu-footer a{
+    color: #fff;
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
+}
+.footer .menu-footer a:hover{
+    color: #000000
+}
