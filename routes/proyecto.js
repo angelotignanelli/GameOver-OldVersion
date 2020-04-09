@@ -31,6 +31,17 @@ router.get('/productdetalle', function(req, res, next) {
 router.get('/productdetalle2', function(req, res, next) {
   res.render('productdetalle2');
 });
+
+/*GET FAN ZONE */
+router.get('/fanZone', function(req, res, next) {
+  res.render('fanZone');
+});
+
+/* GET CHECKOUT */
+router.get('/checkout', function(req, res, next) {
+  res.render('checkout');
+});
+
 /* GET PANEL ADMIN */
 router.get('/admin', function(req, res, next) {
   res.render('admin');
