@@ -1,6 +1,14 @@
 h1 {
-    padding: 0px 0px 100px 500px;
+    padding: 0px 0px 100px 80px;
 
+}
+
+.box {
+    width: 700px;
+    margin: 0 auto;
+    background: #848383;
+    border-radius: 4px;
+    padding: 10px;
 }
 
 .footer{
