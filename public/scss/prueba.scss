@@ -247,7 +247,7 @@
             }
         }
     }
-    .whatsapp{
+    .arriba{
         position: fixed;
         bottom: 20px;
         right: 20px;
@@ -287,8 +287,7 @@
     }
 
 }
-
-@-webkit-keyframes logo-move {
+@keyframes logo-move {
     0%,
     100% {
     -webkit-transform: translateX(0%);
@@ -317,32 +316,39 @@
             transform: translateX(-6px) rotate(-1.2deg);
     }
 }
-@keyframes logo-move {
-    0%,
-    100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    }
-    15% {
-    -webkit-transform: translateX(-30px) rotate(-6deg);
-            transform: translateX(-30px) rotate(-6deg);
-    }
-    30% {
-    -webkit-transform: translateX(15px) rotate(6deg);
-            transform: translateX(15px) rotate(6deg);
-    }
-    45% {
-    -webkit-transform: translateX(-15px) rotate(-3.6deg);
-            transform: translateX(-15px) rotate(-3.6deg);
-    }
-    60% {
-    -webkit-transform: translateX(9px) rotate(2.4deg);
-            transform: translateX(9px) rotate(2.4deg);
-    }
-    75% {
-    -webkit-transform: translateX(-6px) rotate(-1.2deg);
-            transform: translateX(-6px) rotate(-1.2deg);
+
+
+@media (max-width: 992px) { 
+    .container{
+        header{
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 1fr auto;
+            .menu-responsive{
+                grid-column: 1/4;
+                grid-row: 2/3;
+                font-family: 'Timmana', sans-serif;
+                background: red;
+
+                ul{
+                    display: flex;
+                    justify-content: center;
+                    li{
+                        margin: 20px;
+                        list-style: none;
+                        a{
+                            color: white;
+                            text-decoration: none;
+                            transition: ease-in-out 0.3s;
+                            &:hover{
+                            color: #000000;
+                            }
+                        }
+                    }
+                }
+            }
+            .menu{
+                display: none;
+            }
+        }
     }
 }
