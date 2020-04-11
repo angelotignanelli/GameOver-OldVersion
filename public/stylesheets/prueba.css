@@ -4,6 +4,8 @@ section .container{
     flex-wrap:wrap;
     justify-content: row;
     align-items: center;
+    margin:0;
+    padding: 0;
 }
 section .container1{
     background:lightgrey;
