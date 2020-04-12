@@ -133,52 +133,63 @@
     border-bottom: 2px solid red;
   }
   /*CONTENIDO MAIN*/
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto repeat(2,1fr);
+.contenedor{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
-.container .visual{
-    grid-column: 1/3;
-    grid-row: 2/3;
+.contenedor .visual{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 3px solid red;
 }
-.container .visual img{
-    width: 20%;
+.contenedor .visual iframe{
+  width: 1000px;
+  height: 90vh;
+  margin: 10px;
 }
-.container .visual iframe{
-    width: 100%;
-    height: 70vh;
+.contenedor .visual img{
+  width:22%;
+  margin:10px;
 }
-.container .info{
-    font-family: 'Timmana', sans-serif;
-    grid-column: 3/4;
-    grid-row: 2/3;
+.contenedor .info{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  font-family: 'Timmana', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  border-bottom: 3px solid red;
 }
-.container .detalle{
-    grid-column: 1/3;
-    grid-row: 3/4;
+.contenedor .info img{
+  width: 40%;
+  margin-left: 60%;
 }
-.container .info .descripcion strong{
-    font-size: 40px;
+.contenedor .info p{
+  font-size:20px;
+  text-align: justify;
+  margin: 10px;
+  border-bottom: black 2px solid;
 }
-.container .info .descripcion{
-    text-align: right;
+.contenedor .info .descripcion p{
+  font-size:20px;  
+  margin:20px;
 }
-.container .info img{
-    width: 30%;
-    margin-left: 70%;
+.contenedor .info .descripcion strong{
+  font-size:30px;
+  color: red;
 }
-.container .clasificacion{
-    grid-column: 3/4;
-    grid-row: 3/4;
-}
-.container .clasificacion .imagenes{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.container .clasificacion .imagenes img{
-    width: 30%;
+.contenedor .info .btn-comprar button{
+  width: 150px;
+  background-color: red;
+  color:black;
+  font-family:'Timmana', sans-serif;
+  font-size:20px;
+  margin-top: 220px;
 }
 @keyframes cambio{
   0% {
@@ -237,4 +248,4 @@
   75% {
   -webkit-transform: translateX(-6px) rotate(-1.2deg);
           transform: translateX(-6px) rotate(-1.2deg);
-  }
+  }}
