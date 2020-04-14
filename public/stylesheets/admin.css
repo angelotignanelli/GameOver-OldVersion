@@ -137,8 +137,41 @@ header h1{
     grid-column: 1/5;
     margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
+.footer .nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 70px;
+    margin-left: 70px;
+}
+.footer h1{
+    color: silver;
+    text-shadow: 2px 3px black;
+}
+.footer .contacto{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 70px;
+    margin-left: 70px;
+    text-align: center;
+}
+.footer .redes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right:70px;
+    margin-left: 70px;
+    text-align: center;
+}
+
 .footer img{
     width: 20vh;
 }
@@ -147,7 +180,12 @@ header h1{
 }
 .footer .menu-footer ul li{
     list-style: none;
-    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 .footer .menu-footer a{
     color: #fff;
@@ -156,6 +194,9 @@ header h1{
 }
 .footer .menu-footer a:hover{
     color: #000000
+}
+.copy{
+    margin-left: 100px;
 }
 
 /*ANIMACIONES*/
