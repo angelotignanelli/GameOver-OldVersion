@@ -18,8 +18,8 @@ router.get('/registry', function(req, res, next) {
 });
 
 /* GET Product page. */
-router.get('/productCart', function(req, res, next) {
-  res.render('productCart');
+router.get('/productCar', function(req, res, next) {
+  res.render('productCar');
 });
 
 router.get('/productDetail', function(req, res, next) {
