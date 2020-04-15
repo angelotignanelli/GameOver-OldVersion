@@ -1,60 +1,67 @@
-
-.fanZone{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    margin: 20px;
-    padding-left: 20px;
-}
-.fanZone h1{
-    font-family: 'Timmana', sans-serif;
-    text-shadow: 2px 3px #747A6E;
-    font-size: 50px;
+.container #row1{
+    background-color: #A70000;
     text-align: center;
-    grid-column: 1/3;
-    grid-row: 1/2;
-}
-.fanZone .usuario{
-    grid-column: 1/3;
-    grid-row:2/3;
-    border: 4px black solid;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    border-radius: 10px;
-    background-color: #5B898E;
-}
-.fanZone .usuario img{
-    width: 100px;
-    border: 2px black solid;
-}
-.fanZone .usuario ul{
-    font-size: 30px;
+    text-shadow: 2px 3px #747A6E;
     font-family: 'Timmana', sans-serif;
-    list-style-type: square;
+    font-size:50px;
+}
+.container #row1 h1{
+    text-shadow: 2px 3px #747A6E;
+    font-family: 'Timmana', sans-serif;
+    font-size:100px;
+}
+.container #row2{
+    background-color: #5B898E;
+    margin-top:30px;
+}
+.container #row2 .col-3 img{
+    width: 150px;
+    height: 150px;
+}
+.container #row2 .col-5 ul{
+    font-family: 'Timmana', sans-serif;
+    font-size:25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 30px;
 }
-.fanZone .usuario .btn-editar button{
+.container #row2 .col-4 button{
     width: 200px;
-    background-color: #A70000;
-    color:#D1D1D1D1;
-    font-family:'Timmana', sans-serif;
-    font-size:20px;
-    text-shadow: 1px 2px black;
-    margin-top: 35px;
+    border: solid 5px;
+    font-weight: bold;
+    font-family: 'Timmana', sans-serif;
+    color: black;
+    font-size: 20px;
+    margin-top: 45px;
 }
-.fanZone .reviews{
-    grid-column: 1/2;
-    grid-row: 3/4;
-    border: 4px black solid;
-    border-radius: 2px;
+.container #row3 #reviews{
+    border: 3px black solid;
+    margin-top: 30px;
 }
-.fanZone .reviews
-
-.fanZone .recientes{
-    grid-column: 2/3;
-    grid-row: 3/4;
-    border: 2px black solid;
+.container #row3 h1{
+    text-shadow: 2px 3px #747A6E;
+    font-family: 'Timmana', sans-serif;
+    font-size:50px;
+    color:  #A70000;
+    text-align: center;
+}
+.container #row3 .list-group{
+    border:  #747A6E 1px solid;
+    font-family: 'Timmana', sans-serif;
+    font-size:30px;
+    margin-bottom: 20px;
+}
+.container #row3 #recientes{
+    border: 3px black solid;
+    border-left: none;
+    margin-top: 30px;   
+}
+.container #row4{
+    margin-top: 30px;
+}
+.container #row4 button{
+    font-family: 'Timmana', sans-serif;
+    font-size: 30px;
+    text-shadow: 2px 3px  #A70000;
 }
