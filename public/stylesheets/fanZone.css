@@ -1,31 +1,60 @@
-h1 {
-    padding: 0px 0px 100px 450px;
 
+.fanZone{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 20px;
+    padding-left: 20px;
 }
-
-.footer{
-    background-color: #f51616;
-    border-radius: 15px;
-    grid-column: 1/5;
-    margin-top: 20px;
+.fanZone h1{
+    font-family: 'Timmana', sans-serif;
+    text-shadow: 2px 3px #747A6E;
+    font-size: 50px;
+    text-align: center;
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+.fanZone .usuario{
+    grid-column: 1/3;
+    grid-row:2/3;
+    border: 4px black solid;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    border-radius: 10px;
+    background-color: #5B898E;
 }
-.footer img{
-    width: 20vh;
+.fanZone .usuario img{
+    width: 100px;
+    border: 2px black solid;
 }
-.footer .menu-footer{
+.fanZone .usuario ul{
+    font-size: 30px;
+    font-family: 'Timmana', sans-serif;
+    list-style-type: square;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.footer .menu-footer ul li{
-    list-style: none;
-    margin-right: 20px;
+.fanZone .usuario .btn-editar button{
+    width: 200px;
+    background-color: #A70000;
+    color:#D1D1D1D1;
+    font-family:'Timmana', sans-serif;
+    font-size:20px;
+    text-shadow: 1px 2px black;
+    margin-top: 35px;
 }
-.footer .menu-footer a{
-    color: #fff;
-    text-decoration: none;
-    transition: ease-in-out 0.3s;
+.fanZone .reviews{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    border: 4px black solid;
+    border-radius: 2px;
 }
-.footer .menu-footer a:hover{
-    color: #000000
+.fanZone .reviews
+
+.fanZone .recientes{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    border: 2px black solid;
 }
