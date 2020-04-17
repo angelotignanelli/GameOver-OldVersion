@@ -1,0 +1,395 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 1fr auto;
+      grid-template-columns: 300px 1fr auto;
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  border-bottom: 4px solid red;
+  -webkit-box-shadow: 1px 1px 3px black;
+          box-shadow: 1px 1px 3px black;
+}
+
+.container header .logo img {
+  width: 15vw;
+  -webkit-animation: 5s infinite;
+          animation: 5s infinite;
+  -webkit-animation-name: logo-move;
+          animation-name: logo-move;
+}
+
+.container header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  font-family: "Timmana", sans-serif;
+}
+
+.container header .menu nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.container header .menu nav ul li {
+  margin: 20px;
+  margin-left: 20px;
+  list-style: none;
+}
+
+.container header .menu nav ul li:hover .submenu {
+  position: absolute;
+  left: 70px;
+  display: block;
+}
+
+.container header .menu nav ul li .submenu {
+  display: none;
+  background: #f2f2f2;
+  -webkit-box-shadow: 1px 2px 3px black;
+          box-shadow: 1px 2px 3px black;
+  border-radius: 4px;
+  margin: 0;
+}
+
+.container header .menu nav ul li .submenu li {
+  margin-left: 20px;
+}
+
+.container header .menu nav ul li .submenu strong {
+  color: red;
+}
+
+.container header .menu nav ul li .submenu .videojuegos {
+  position: relative;
+}
+
+.container header .menu nav ul li .submenu .videojuegos ul {
+  display: none;
+}
+
+.container header .menu nav ul li .submenu .videojuegos:hover ul {
+  background: #f2f2f2;
+  -webkit-box-shadow: 1px 2px 3px black;
+          box-shadow: 1px 2px 3px black;
+  border-radius: 4px;
+  position: absolute;
+  top: -20px;
+  left: 88px;
+  margin: 0;
+  display: inline-block;
+}
+
+.container header .menu nav ul li a {
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+  color: #000000;
+  text-decoration: none;
+}
+
+.container header .menu nav ul li a:hover {
+  color: #ff2244;
+}
+
+.container header .buscador {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  margin: 0 auto;
+  margin-top: 15%;
+  text-align: center;
+}
+
+.container header .buscador label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container header .buscador label #enviar {
+  font-family: "Timmana", sans-serif;
+  background: #fff;
+  text-align: center;
+  border: none;
+  border: 2px solid red;
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+
+.container header .buscador label #enviar:hover {
+  background: black;
+  color: white;
+  text-decoration: underline;
+}
+
+.container header .buscador label #buscador {
+  font-family: "Timmana", sans-serif;
+  width: 30vw;
+  max-width: 100%;
+  background: #fff;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid red;
+}
+
+.box {
+  width: 500px;
+  margin: 0 auto;
+  background: #848383;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #ff2244;
+  padding: 10px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.box .title h2 {
+  text-align: center;
+  font-family: "Baloo Paaji 2", cursive;
+  color: #fff;
+  text-shadow: 1px 2px 1px black;
+}
+
+.box .form-control {
+  width: 200px;
+  border-radius: 5px;
+}
+
+.box .information {
+  font-family: "Baloo Paaji 2", cursive;
+  color: #fff;
+  text-align: center;
+  display: inherit;
+  width: 200px;
+  margin: auto;
+  padding: 0.75rem;
+}
+
+.box button {
+  border: none;
+  font-family: "Baloo Paaji 2", cursive;
+  font-size: inherit;
+}
+
+.box .login-button {
+  display: inherit;
+  width: 150px;
+  margin: 10px 0px 10px 25px;
+  padding: 0.75rem;
+  background: #ff5733;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+footer {
+  font-family: "Timmana", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  background: red;
+}
+
+footer .pestanias {
+  margin-top: 10%;
+  margin: 25px;
+}
+
+footer .pestanias li {
+  list-style: none;
+}
+
+footer .pestanias li a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+
+footer .pestanias li a:hover {
+  color: black;
+}
+
+footer .contacto {
+  margin-top: 10%;
+  margin: 25px;
+}
+
+footer .contacto li {
+  list-style: none;
+}
+
+footer .contacto li a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+
+footer .contacto li a #facebook {
+  width: 200px;
+}
+
+footer .contacto li a:hover {
+  color: black;
+}
+
+footer .redes {
+  margin: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .redes li {
+  list-style: none;
+}
+
+footer .redes li a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+
+footer .redes li a:hover {
+  color: black;
+}
+
+@media (max-width: 950px) {
+  .container header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr auto;
+        grid-template-rows: 1fr auto;
+  }
+  .container header .menu {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    margin: 0 auto;
+  }
+  .container header .buscador {
+    position: relative;
+    top: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr auto;
+        grid-template-rows: 1fr auto;
+  }
+  .container header .menu {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    margin: 0 auto;
+  }
+  .container header .buscador {
+    position: relative;
+    top: -20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr auto;
+        grid-template-rows: 1fr auto;
+  }
+  .container header .menu {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    margin: 0 auto;
+  }
+  .container header .buscador {
+    position: relative;
+    top: -20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr auto;
+        grid-template-rows: 1fr auto;
+  }
+  .container header .menu {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    margin: 0 auto;
+    font-size: 12px;
+  }
+  .container header .buscador {
+    position: relative;
+    top: -20px;
+  }
+}
+/*# sourceMappingURL=login.css.map */

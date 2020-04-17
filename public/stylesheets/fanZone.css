@@ -1,31 +1,67 @@
-h1 {
-    padding: 0px 0px 100px 450px;
-
+.container #row1{
+    background-color: #A70000;
+    text-align: center;
+    text-shadow: 2px 3px #747A6E;
+    font-family: 'Timmana', sans-serif;
+    font-size:50px;
 }
-
-.footer{
-    background-color: #f51616;
-    border-radius: 15px;
-    grid-column: 1/5;
-    margin-top: 20px;
+.container #row1 h1{
+    text-shadow: 2px 3px #747A6E;
+    font-family: 'Timmana', sans-serif;
+    font-size:100px;
+}
+.container #row2{
+    background-color: #5B898E;
+    margin-top:30px;
+}
+.container #row2 .col-3 img{
+    width: 150px;
+    height: 150px;
+}
+.container #row2 .col-5 ul{
+    font-family: 'Timmana', sans-serif;
+    font-size:25px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
 }
-.footer img{
-    width: 20vh;
+.container #row2 .col-4 button{
+    width: 200px;
+    border: solid 5px;
+    font-weight: bold;
+    font-family: 'Timmana', sans-serif;
+    color: black;
+    font-size: 20px;
+    margin-top: 45px;
 }
-.footer .menu-footer{
-    display: flex;
+.container #row3 #reviews{
+    border: 3px black solid;
+    margin-top: 30px;
 }
-.footer .menu-footer ul li{
-    list-style: none;
-    margin-right: 20px;
+.container #row3 h1{
+    text-shadow: 2px 3px #747A6E;
+    font-family: 'Timmana', sans-serif;
+    font-size:50px;
+    color:  #A70000;
+    text-align: center;
 }
-.footer .menu-footer a{
-    color: #fff;
-    text-decoration: none;
-    transition: ease-in-out 0.3s;
+.container #row3 .list-group{
+    border:  #747A6E 1px solid;
+    font-family: 'Timmana', sans-serif;
+    font-size:30px;
+    margin-bottom: 20px;
 }
-.footer .menu-footer a:hover{
-    color: #000000
+.container #row3 #recientes{
+    border: 3px black solid;
+    border-left: none;
+    margin-top: 30px;   
+}
+.container #row4{
+    margin-top: 30px;
+}
+.container #row4 button{
+    font-family: 'Timmana', sans-serif;
+    font-size: 30px;
+    text-shadow: 2px 3px  #A70000;
 }
