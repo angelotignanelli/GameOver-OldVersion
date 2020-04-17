@@ -165,6 +165,7 @@
                         color: #fff;
                         box-shadow: 1px 1px 3px #000000;
                         font-size: 25px;
+                        cursor: pointer;
                     }
                     .quitar{
                         width: 40%;
@@ -177,6 +178,7 @@
                         box-shadow: 1px 1px 3px #000000;
                         grid-column: 3/4;
                         font-size: 25px;
+                        cursor: pointer;
                     }
                 }
                 .informacion-juego{
@@ -212,6 +214,7 @@
                 border-radius: 5px;
                 color: #fff;
                 box-shadow: 1px 1px 3px #000000;
+                cursor: pointer;
             }
         }
         .descuento{
@@ -269,6 +272,7 @@
                 height: 10vh;
                 border-radius: 4px;
                 margin-top:20px;
+                cursor: pointer;
             }
         }
         .comprar{
@@ -285,6 +289,7 @@
                 height: 10vh;
                 border-radius: 4px;
                 margin-top:20px;
+                cursor: pointer;
             }
         }
         section{
