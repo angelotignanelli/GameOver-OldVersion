@@ -156,41 +156,52 @@
   border-bottom: 2px solid red;
 }
 
-h1 {
-  padding: 0px 0px 100px 60px;
-}
-
-h2 {
-  text-align: center;
-  font-family: 'Righteous', cursive;
-  color: #fff;
-  text-shadow: 1px 2px 1px black;
-}
-
 .box {
   width: 500px;
   margin: 0 auto;
   background: #848383;
-  border-radius: 4px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #ff2244;
   padding: 10px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-button {
-  margin: 0;
-  border: none;
-  font-family: inherit;
-  font-size: inherit;
+.box .title h2 {
+  text-align: center;
+  font-family: "Baloo Paaji 2", cursive;
+  color: #fff;
+  text-shadow: 1px 2px 1px black;
 }
 
-.login-button {
+.box .form-control {
+  width: 200px;
+  border-radius: 5px;
+}
+
+.box .information {
+  font-family: "Baloo Paaji 2", cursive;
+  color: #fff;
+  text-align: center;
   display: inherit;
   width: 200px;
   margin: auto;
   padding: 0.75rem;
+}
+
+.box button {
+  border: none;
+  font-family: "Baloo Paaji 2", cursive;
+  font-size: inherit;
+}
+
+.box .login-button {
+  display: inherit;
+  width: 150px;
+  margin: 10px 0px 10px 25px;
+  padding: 0.75rem;
   background: #ff5733;
-  color: inherit;
   border-radius: 2px;
   cursor: pointer;
 }

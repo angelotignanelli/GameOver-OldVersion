@@ -116,45 +116,54 @@
     }
 }
 
-h1 {
-    padding: 0px 0px 100px 450px;
-
-}
-
-h2 {
-    text-align: center;
-    font-family: 'Righteous', cursive;
-    color: #fff;
-    text-shadow: 1px 2px 1px black;
-}
-
 .box {
     width: 500px;
     margin: 0 auto;
     background: #848383;
-    border-radius: 4px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #ff2244;
+    border-radius: 10px;
     padding: 10px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    h2 {
+        text-align: center;
+        font-family: "Baloo Paaji 2", cursive;
+        color: #fff;
+        text-shadow: 1px 2px 1px black;
+    }
+    .form-control {
+        width: 200px;
+        border-radius: 5px;
+    }
+    .information{
+        font-family: "Baloo Paaji 2", cursive;
+        justify-content: center;
+        display: grid;
+        color: #fff;
+        width: 100%;
+        margin: auto;
+        padding: 0.75rem;
+    }
+
+    button {
+        border: none;
+        font-family: "Baloo Paaji 2", cursive;
+        font-size: inherit;
+    }
+    .registry-button {
+        display: inherit;
+        width: 150px;
+        margin: auto;
+        padding: 0.75rem;
+        color: #fff;
+        background: #ff5733;
+        border-radius: 2px;
+        cursor: pointer;
+    }
 }
 
-button {
-    margin: 0;
-    border: none;
-    font-family: inherit;
-    font-size: inherit;
 
-}
-
-.login-button {
-    display: inherit;
-    width: 200px;
-    margin: auto;
-    padding: 0.75rem;
-    background: #ff5733;
-    color: inherit;
-    border-radius: 2px;
-    cursor: pointer;
-}
 
 footer {
         font-family: "Timmana", sans-serif;
