@@ -153,11 +153,21 @@
   background: blue;
 }
 
+.container-fluid section .precio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 40px;
+}
+
 .container-fluid .probando {
   background: blue;
 }
 
-.container-fluid #prueba {
+.container-fluid #top-venta {
   background: url(/images/bg.jpg);
   background-attachment: fixed;
   background-position: center;

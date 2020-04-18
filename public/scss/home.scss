@@ -115,13 +115,17 @@
         .mas-vendidos{
             background: blue;
         }
-        
+        .precio{
+            display: flex;
+            justify-content: center;
+            font-size: 40px;
+        }
 
     }
         .probando{
             background: blue;
         }
-    #prueba{
+    #top-venta{
         background:url(/images/bg.jpg);
         background-attachment: fixed;
         background-position: center;
