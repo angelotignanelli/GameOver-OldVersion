@@ -12,6 +12,67 @@
     <title>Final Fantasy VII Remake</title>
 </head>
 <body>
+  <!--HEADER-->
+  <div class="container-fluid">
+    <header class="row d-flex justify-content-between">
+        <div class="logo col-5 col-sm-4 col-md-3 col-lg-2 ">
+            <img class="img-fluid" src="/images/logo.png" alt="logo">
+        </div>
+        <div class="search col-7  col-md-5 col-lg-6  align-self-center">
+            <div class="input-group md-3">
+                <input type="text" class="form-control" placeholder="Buscar productos,marcas y mas!"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="lupa btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- MENU ESCRITORIO -->
+    <nav class="row">
+        <nav class="menu col-12">
+            <ul>
+                <li><a href="">Home</a></li><span class="border-right"></span>
+                <li><a href="">Catalogo</a>
+                    <ul class="sub-menu">
+                        <li><a href="">Merchandising</a></li>
+                        <li><a href="">Accesorios</a></li>
+                        <li><a href="">Video Juegos</a></li>
+                    </ul>
+                </li><span class="border-right"></span>
+                <li><a href="">FanZone</a></li><span class="border-right"></span>
+                <li><a href="">Carrito</a></li><span class="border-right"></span>
+                <li><a href="">Login</a></li>
+            </ul>
+        </nav>
+    </nav>
+    <!--  MENU MOBILE  -->
+    <nav class="mobile row">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Merchandising</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Video Juegos</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar productos">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+              </form>
+            </div>
+          </nav>
+    </nav>
+    <!--CAROUSEL PRODUCTO-->
     <section class="container-fluid">
         <article class="carousel row">
             <div class="col-12">
@@ -43,26 +104,30 @@
                   </div>
             </div>
         </article>
+      <!--LOGO-->
         <article class="logo row">
             <div class="col-12">
-                <img src="/images/product-images/logo.png">
+                <img src="/images/product-images/logo.png"class="d-block w-100" alt="logo">
             </div>
         </article>
+        <!--DESCRIPCION-->
         <article class="descripcion row">
             <div class="col-12">
                 <div class="texto">
-                    <p><br>El mundo ha caído bajo el dominio de Shinra Electric Power Company 
+                    <p>El mundo ha caído bajo el dominio de Shinra Electric Power Company 
                         una siniestra corporación que controla la energía mako, la fuente de vida del planeta.</br> 
-                        <br>En la extensa ciudad de Midgar, una organización antishinra autodenominada Avalancha ha iniciado la resistencia. 
+                        En la extensa ciudad de Midgar, una organización antishinra autodenominada Avalancha ha iniciado la resistencia. 
                         Cloud Strife, un exmiembro de la unidad de elite SOLDADO de Shinra devenido mercenario</p>
                 </div>
             </div>
         </article>
+        <hr>
+        <!--ESPECIFICACIONES-->
         <article class="especificaciones row">
-            <div class="col-6">
-                <div class="lista">
-                    <ul>
-                        <li><strong>FECHA LANZAMIENTO:</strong>05/04/2020</li>
+            <div class="col-12">
+                <div class="lista d-flex flex-column align-items-center">
+                      <ul>
+                        <li><strong>LANZAMIENTO:</strong>05/04/2020</li>
                         <hr>
                         <li><strong>DESARROLLADOR:</strong>Square Enix</li>
                         <hr>
@@ -73,17 +138,22 @@
                         <li><strong>RATING ESRB:</strong>TEEN</li>
                         <hr>
                         <li><strong>PRECIO:</strong>$4900</li>
-                    </ul>
+                        </ul>
                 </div>
-                <div class="class-6">
-                    <button type="button" class="btn btn-outline-danger">Añadir al carrito</button>
+              </div>
+                <!--BOTON AÑADIR CARRITO-->
+              <div class="boton row">
+                <div class="col-12">
+                  <button type="button" class="btn btn-outline-dark">Añadir al carrito</button> 
                 </div>
             </div>
         </article>
+        <hr>
+        <!--RESUMEN-->
         <article class="resumen row">
             <div class="col-12">
                 <div class="texto">
-                    <h1>ACERCA DE ESTE JUEGO</h1>
+                    <h4>ACERCA DE ESTE JUEGO</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit sit consequuntur doloribus 
                     ab ipsum quae repudiandae fugit cumque veniam molestias, soluta, fuga corrupti deserunt. 
                     Impedit totam optio veritatis error blanditiis.
@@ -95,40 +165,45 @@
                     Numquam magnam repellat error ut exercitationem adipisci quibusdam laboriosam, vero incidunt consectetur ipsa quisquam molestias nesciunt hic expedita ab accusantium harum iusto modi esse, quasi asperiores alias? Asperiores, cumque sint.
                     Cupiditate beatae at libero natus asperiores officiis id atque, saepe error mollitia, aspernatur et quia porro dolore voluptate alias expedita placeat. Quidem suscipit ipsa placeat voluptatum quod cupiditate ipsum in.
                     Sequi dicta nobis officia commodi doloremque, nam saepe quam at praesentium beatae fuga nihil ratione reiciendis corporis iusto id nesciunt, alias, perferendis minima esse sint. Rem et quia molestias aliquam?
-                    Veritatis quae quis rerum non, temporibus obcaecati quo! Natus dicta rem aspernatur reprehenderit? Ratione, nobis eos. Ut qui eaque et in ad repellat fugit, sapiente sed, officiis aliquid eveniet ipsum?
-                    Asperiores eligendi inventore officiis libero doloribus qui, nisi labore perspiciatis atque id veritatis hic magni minus laudantium nulla odio similique quibusdam, recusandae molestiae culpa esse iste, voluptate odit maxime. Impedit?</p>
+                    </p>
                 </div>
             </div>
         </article>
+        <hr>
+        <!--RESEÑA-->
         <article class="resenias row">
             <div class="col-12">
-                <div class="usuarios">
-                    <h1>RESEÑAS</h1>
-                    <h4>felicia@gmail.com</h4>
+                <div class="texto">
+                    <h4>RESEÑAS</h4>
+                    <h5>felicia@gmail.com</h5>
                     <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat mollitia dolorem consequuntur, voluptates voluptatum veniam ipsam ut nesciunt culpa dolor nostrum, in explicabo asperiores ratione natus aut, accusamus velit porro!"</p>
-                    <h4>diego@yahoo</h4>
+                    <h5>diego@yahoo</h5>
                     <p>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis doloremque recusandae reiciendis, molestiae quas sed ipsum facere maiores perferendis sint necessitatibus iure voluptatem eligendi, accusamus tenetur in aliquid illo. Eaque."</p>
-                    <h4>contanza@gmail.com</h4>
+                    <h5>contanza@gmail.com</h5>
                     <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab maiores consequuntur sequi tempore reprehenderit autem. Distinctio aliquam asperiores praesentium natus mollitia quia, veritatis eum delectus debitis quas totam, aspernatur repudiandae!"</p>
-                    <h4>griselda@hotmail.com</h4>
+                    <h5>griselda@hotmail.com</h5>
                     <p>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur dolorem accusamus, quo unde blanditiis quasi, voluptas sint eaque, quae cumque quod eius consequuntur corrupti reiciendis aperiam. Harum neque aut reiciendis."</p>
-                    <h4>sebastian@yahoo.com</h4>
+                    <h5>sebastian@yahoo.com</h5>
                     <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius aut dicta, numquam fugiat ratione autem dolorum voluptas consequuntur officia sunt rerum odio maiores. Mollitia, explicabo illum labore necessitatibus quae aspernatur?"</p>
-                    <h4>fernando@hotmail.com</h4>
+                    <h5>fernando@hotmail.com</h5>
                     <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste doloremque, minima quos repellendus quod aperiam debitis! Quo, alias fugiat dignissimos, doloribus, non expedita atque autem odio impedit saepe nostrum facilis."</p>
                 </div>
             </div>
         </article>
+        <hr>
+        <!--PRODUCT CARDS-->
         <section class="row justify-content-around">
+          <!--TITLE PRODUCT-->
             <div class="titulo-product col-12">
-                <h3 class="estilo-fuente-1">🎮 <mark class="estilo-fuente-2">PUEDEN INTERESARTE</mark></h3>
+                <h4 class="estilo-fuente-1">🎮 <mark class="estilo-fuente-2">PUEDEN INTERESARTE</mark></h4>
                 <hr>
               </div>
+              <!--CAJA 1-->
               <section class="card col-dm-3">
                 <div class="card" style="width: 18rem;">
                   <img class="card-img-top" src="/images/product-images/days-gone-201912413193876_1.jpg" alt="Card image cap">
                   <div class="card-body">
-                    <h4 class="card-title">Days Gone</h4>
+                    <h5 class="card-title">Days Gone</h5>
                     <hr>
                     <strong class="precio">$3.500</strong>
                     <hr>
@@ -136,11 +211,12 @@
                   </div>
                 </div>
               </section>
+              <!--CAJA 2-->
               <section class="card col-dm-3">
                 <div class="card" style="width: 18rem;">
                   <img class="card-img-top" src="/images/product-images/dragon-ball-z-kakarot-20201311445449_1.jpg" alt="Card image cap">
                   <div class="card-body">
-                    <h4 class="card-title">Dragonball Z</h4>
+                    <h5 class="card-title">Dragonball Z</h5>
                     <hr>
                     <strong class="precio">$3.500</strong>
                     <hr>
@@ -148,11 +224,12 @@
                   </div>
                 </div>
               </section>
+              <!--CAJA 3-->
               <section class="card col-dm-3">
                 <div class="card" style="width: 18rem;">
                   <img class="card-img-top" src="/images/product-images/ghost-of-tsushima-20203517513223_1.jpg" alt="Card image cap">
                   <div class="card-body">
-                    <h4 class="card-title">Ghost of Tsushima</h4>
+                    <h5 class="card-title">Ghost of Tsushima</h5>
                     <hr>
                     <strong class="precio">$3.500</strong>
                     <hr>
@@ -160,11 +237,12 @@
                   </div>
                 </div>
               </section>
+              <!--CAJA 4-->
               <section class="card col-dm-3">
                 <div class="card" style="width: 18rem;">
                   <img class="card-img-top" src="/images/product-cart/r3.webp" alt="Card image cap">
                   <div class="card-body">
-                    <h4 class="card-title">Resident Evil 3 Remake</h4>
+                    <h5 class="card-title">Resident Evil 3 Remake</h5>
                     <hr>
                     <strong class="precio">$3.500</strong>
                     <hr>
@@ -174,6 +252,7 @@
               </section>
         </section>
     </section>
+    <!--FOOTER-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
