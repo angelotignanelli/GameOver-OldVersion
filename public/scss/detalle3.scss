@@ -1,0 +1,97 @@
+:root{
+--color1: #ef233c;
+--color2: #d90429;
+--color3: #cacaca;
+--color4: #ffffff;
+--color5: #000000;
+}
+
+.container-fluid{
+    .section{
+        &__info{
+            background: var(--color3);
+            border-radius: 5px;
+            padding: 10px;
+        }
+        &__especificaciones{
+            background: var(--color3);
+            margin-top: 20px;
+            color: var(--color4);
+            text-shadow: 1px 1px 1px var(--color5);
+            border-radius: 5px;
+            padding: 10px;
+        }
+        &__strong{
+            color: var(--color5);
+            text-shadow: none;
+        }
+        &__acerca{
+            background: var(--color3);
+            margin-top: 20px;
+            color: var(--color4);
+            text-shadow: 1px 1px 1px var(--color5);
+            border-radius: 5px;
+            padding: 10px;
+        }
+        &__h5{
+            color: var(--color5);
+            text-shadow: none;
+            font-size: 30px;
+            text-align: center;
+        }
+        &__h3{
+            color: var(--color4);
+            font-size:40px;
+        }
+        &__comentarios{
+            margin-top: 30px;
+            background: var(--color2);
+            color: var(--color4);
+        }
+        &__img-perfil{
+            width: 64px;
+            height: 64px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media(max-width:768px){
+    .container-fluid{
+        .section{
+            &__video{
+                display: none;
+            }
+            &__boton{
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media (min-width:768px){
+    .container-fluid{
+        .section{
+            &__video{
+                display: flex;
+                order: 1;
+            }
+            &__logo{
+                display: flex;
+                order: 2;
+            }
+            &__info{
+                display: flex;
+                order: 3;
+            }
+            &__especificaciones{
+                display: flex;
+                order: 4;
+            }
+            &__boton{
+                margin: 0 auto;
+            }
+        }
+    }
+}

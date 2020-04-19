@@ -1,58 +1,225 @@
-section .container{
-    width: 100%;
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: row;
-    align-items: center;
+*{
+    padding:0;
+    margin: 0;
+}
+
+.container-fluid{
     margin:0;
     padding: 0;
+    background: rgba(239, 35, 60, 1);
+    position: relative;
+} 
+
+.container-fluid header {
+    background: #d90429;
 }
-section .container1{
-    background:lightgrey;
-    width: 60%;
+
+.container-fluid header .input-group {
+    background: #cacaca;
+  }
+  
+  .container-fluid header .lupa {
+    color: #fff;
+    -webkit-transition: ease-in-out 0.6s;
+    transition: ease-in-out 0.6s;
+  }
+  
+  .container-fluid header .lupa:hover {
+    background: #FFFFFF;
+    color: #000000;
+  }
+  
+  .container-fluid .menu {
+    background: #cacaca;
+  }
+  
+  .container-fluid .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap:wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-family: "Timmana", sans-serif;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .container-fluid .menu ul li {
+    list-style: none;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .container-fluid .menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000000;
+    -webkit-transition: ease-in-out 0.4s;
+    transition: ease-in-out 0.4s;
+  }
+  
+  .container-fluid .menu ul li a:hover {
+    color: #EF233C;
+  }
+  
+  .container-fluid .menu ul li:hover .sub-menu {
+    display: block;
+    position: absolute;
+    background: #ef233c;
+    border-radius: 4px;
+    -webkit-box-shadow: -1px 1px 3px #000000;
+            box-shadow: -1px 1px 3px #000000;
+    font-size: 15px;
+    z-index: 1;
+  }
+  
+  .container-fluid .menu ul li:hover .sub-menu a {
+    color: #fff;
+  }
+  
+  .container-fluid .menu ul li:hover .sub-menu a:hover {
+    color: #b2ef23;
+  }
+  
+  .container-fluid .menu ul li ul {
+    display: none;
+  }
+
+  .container-fluid .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .container-fluid .mobile .btn {
+    color: #EF233C;
+    border: 1px solid #EF233C;
+  }
+  
+  .container-fluid .mobile .btn:hover {
+    background: #EF233C;
+    color: #fff;
+    -webkit-box-shadow: 1px 1px 2px #000000;
+            box-shadow: 1px 1px 2px #000000;
+  }
+
+.container-fluid .descripcion .texto p{
+    background: rgba(202, 202, 202, 1);
+    margin:10px;
+    font-family:  "Timmana", sans-serif;
+    text-align: center;
+    border: 2px solid #fff;
+    border-style: groove;
+    border-radius: 4px;
 }
-section iframe{
-    border: 1px;
-    width: 55%;
-    height: 600px;
-    margin-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    flex-grow: 1;
-    align-self: stretch;
+
+.container-fluid .especificaciones ul li{
+    font-family:  "Timmana", sans-serif;
+    font-size: auto;
+    list-style: square;
+    margin-left: 30px;
 }
-section img{
-    width: 15%;
-    height: 10%;
-    margin-top: 20px;
+
+.container-fluid .btn button{
+    background: rgba(202, 202, 202, 1);
+    font-family:  "Timmana", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-self: center;
+    margin-left:100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container-fluid .texto h4{
+    font-family:  "Timmana", sans-serif;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 2px 3px  rgba(202, 202, 202, 1);
+    text-align: center;
+    border-radius: 4px;
+}
+
+.container-fluid h5{
+    font-family:  "Timmana", sans-serif;
+    margin:10px;
+    color:rgba(202, 202, 202, 1);
+    text-shadow: 1px 2px black;
+    text-align: center;
+}
+
+.container-fluid .texto p{
+    background: rgba(255, 255, 255, 1);
+    font-family:  "Timmana", sans-serif;
+    text-align: justify;
+    margin:10px;
+    line-height: 30px;
+    border-radius: 4px;
+    border: 2px solid rgba(202, 202, 202, 1);
+    border-style: groove;
+}
+
+.container-fluid .titulo-product {
+    margin: 30px 0px;
+    font-family: "Baloo Paaji 2", cursive;
+  }
+  
+  .container-fluid .titulo-product .estilo-fuente-1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #c9ff07;
+  }
+  
+  .container-fluid .titulo-product .estilo-fuente-2 {
+    font-size: 20px;
+    color: #fff;
+    background: transparent;
+  }
+  
+  .container-fluid section {
+    background: #ef233c;
+    font-family: "Baloo Paaji 2", cursive;
+  }
+  
+  .container-fluid section section {
     margin-bottom: 20px;
-    padding-left:20px;
-    padding-right: 20px;
-    flex-grow: 1;
-    align-self: stretch;   
-}
-section .container2{
-    background: lightgrey;
-    width: 40%;
+  }
+  
+  .container-fluid section .btn {
+    background: #ef233c;
+    border: 1px solid #000000;
+    -webkit-transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.5s;
+  }
+  
+  .container-fluid section .btn:hover {
+    background: #cacaca;
+    color: #000000;
+  }
+  
+  .container-fluid section .card:hover {
+    background: #3b3b3b;
+    color: #fff;
+    -webkit-transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.3s;
+  }
+
+  .container-fluid section .precio {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-}
-section .container3{
-    background: whitesmoke;
-    width: 100%;
-    height: max-content;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.estejuego{
-    width: 50%;
-}
-.calificaciones{
-    width:50%
-}
-.resenia{
-    width: 100%;
-}
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 20px;
+  }
+
+  .container_productos{
+    margin: 0;
+    padding: 0;
+  }

@@ -35,6 +35,10 @@ router.get('/detalle', function(req, res, next) {
   res.render('detalle');
 });
 
+router.get('/detalle3', function(req, res, next) {
+  res.render('detalle3');
+});
+
 /*GET FAN ZONE */
 router.get('/fanZone', function(req, res, next) {
   res.render('fanZone');
