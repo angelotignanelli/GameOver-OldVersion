@@ -1,9 +1,8 @@
-section .container{
-    width: 100%;
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: row;
-    align-items: center;
+*{
+    padding:0;
+    margin: 0;
+}
+.container-fluid{
     margin:0;
     padding: 0;
 }
