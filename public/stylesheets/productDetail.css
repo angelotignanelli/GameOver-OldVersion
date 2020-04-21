@@ -1,3 +1,4 @@
+
 :root {
   --color1: #ef233c;
   --color2: #d90429;
@@ -5,11 +6,15 @@
   --color4: #ffffff;
   --color5: #000000;
 }
+.container-fluid{
+  background: var(--color1);
+}
 
 .container-fluid .section__info {
   background: var(--color3);
   border-radius: 5px;
   padding: 10px;
+
 }
 
 .container-fluid .section__especificaciones {
