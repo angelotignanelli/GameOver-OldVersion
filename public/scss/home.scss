@@ -122,9 +122,6 @@
         }
 
     }
-        .probando{
-            background: blue;
-        }
     #top-venta{
         background:url(/images/bg.jpg);
         background-attachment: fixed;
@@ -134,18 +131,7 @@
         margin: 0;
         width: 100vw;
     }
-        footer{
-        .up{
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            font-size: 30px;
-            text-shadow: 1px 1px 1px #000000;
-            a{
-            color: rgb(195, 239, 35);
-            }
-        }
-    }
+        
 }
 @media (min-width:992px){
     .navbar{

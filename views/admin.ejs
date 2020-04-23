@@ -1,153 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/admin.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
-    <title>Panel Administrador - GamerOver</title>
-</head>
+<!-- HEAD HTML-->
+<%- include('./partials/head') %>
+
 <body>
-    <div class="container">
-        <!--INICIO DEL HEADER-->
-        <header>
-            <img src="images/logo.png" alt="logo" class="logo-img" >
-            <h1>ADMINISTRADOR GAME OVER</h1>
-        </header>
-        <!--BARRA DE NAVECACION-->
-        <div class="buscador">
-            <h3>GameOver</h3>
-            <label for="buscador">
-                <i class="fas fa-search" id="lupa"></i>
-                <input type="search" name="buscador" id="buscador" placeholder="¿QUE BUSCAS?">
-            </label> 
-            <a href=""><i class="fas fa-sign-out-alt" id="sign-out"></i></a>
-            <a href=""><i class="far fa-bell" id="notificacion"></i></a> 
-        </div>
-        <!--MENU LATERAL-->
-        <nav class="nav-lateral">
-            <ul>
-                <li><a href=""><i class="far fa-envelope"></i> CORREO</a></li>
-                <li><a href=""><i class="fas fa-chart-bar"></i> ESTADISTICAS</a></li>
-                <li><a href=""><i class="fas fa-gamepad"></i> FAN-ZONE</a></li>
-            </ul>
-        </nav>
-        <!--INICIO DEL DETALLE ADMIN-->
-        <main class="detalle-admin">
-            <div class="agrego">
-                <h4>AGREGAR</h4>
-                <a href=""><img src="/images/admin/agregar.png" alt="agregar"></a>
+    <div class="container-fluid">
+        <!-- HEADER -->
+        <%- include('./partials/header') %>
+        <!-- MENU LATERAL-->
+        <div class="main row">
+            <div class="menu col d-none d-md-block">
+                <a href="">FanZone</a>
+                <a href="">E-mail</a>
+                <a href="">Estadisticas</a>
             </div>
-            <div class="elimino">
-                <h4>BORRAR</h4>
-                <a href=""><img src="/images/admin/borrar.png" alt="borrar"></a>
+            <div class="menu-responsive col-12 d-sm-block d-md-none d-lg-none d-xl-none">
+                <a href="">FanZone</a>
+                <a href="">E-mail</a>
+                <a href="">Estadisticas</a>
             </div>
-            <div class="modificar-producto">
-                <h4>MODIFICAR PRODUCTO</h4>
-                <a href=""><img src="/images/admin/modificar.png" alt="modificar"></a>
-            </div>
-            <div class="metodo-envio">
-                <h4>METODO DE ENVIO</h4>
-                <a href=""><img src="/images/admin/envio.png" alt="envio"></a>
-            </div>
-            <div class="usuarios">
-                <h4>MODIFICAR USUARIOS</h4>
-                <a href=""><img src="/images/admin/usuario.png" alt="usuario"></a>
-            </div>
-            <div class="estadisticas">
-                <h4>ESTADISTICAS</h4>
-                <a href=""><img src="/images/admin/estadisticas.png" alt="estadisticas"></a>
-            </div>
-        </main>
-        <div class="informacion-actualizada">
-            <div class="ventas">
-                <h3>Ventas de hoy</h3>
-                <p>50 PEDIDOS</p>
-            </div>
-            <div class="usuarios-registrador">
-                <h3>Usuarios Registrador</h3>
-                <p>20 Usuarios Nuevos</p>
-            </div>
-            <div class="fan-zone-box">
-                <h3>FAN-ZONE</h3>
-                <p>10 Usuarios Nuevos</p>
+
+            <div class="main_contenedor col-10" >
+                <div class="main_titulo col-12">
+                    <h2>PANEL ADMINISTRADOR</h2>
+                </div>
+                <div class="main-boxes row d-flex align-items-center">
+                    <div class="main_agregar d-flex flex-column align-items-center col-sm-6 col-md-2 ">
+                        <div class="agregar_img"><img src="/images/admin/agregar.png" alt=""></div>
+                        <button type="button" class="btn btn-outline-success">Agregar</button>
+                    </div>
+                    <div class="main_borrar d-flex flex-column align-items-center col-sm-6 col-md-2">
+                        <div class="agregar_img"><img src="/images/admin/borrar.png" alt=""></div>
+                        <button type="button" class="btn btn-outline-danger">Eliminar</button>
+                    </div>
+                    <div class="main_editar d-flex flex-column align-items-center col-sm-6 col-md-2">
+                        <div class="agregar_img"><img src="/images/admin/modificar.png" alt=""></div>
+                        <button type="button" class="btn btn-outline-danger">Eliminar</button>
+                    </div>
+                    <div class="main_editar d-flex flex-column align-items-center col-sm-6 col-md-2">
+                        <div class="agregar_img"><img src="/images/admin/estadisticas.png" alt=""></div>
+                        <button type="button" class="btn btn-outline-danger">Eliminar</button>
+                    </div>
+                    <div class="main_usuario d-flex flex-column align-items-center col-sm-6 col-md-2">
+                        <div class="agregar_img"><img src="/images/admin/usuario.png" alt=""></div>
+                        <button type="button" class="btn btn-outline-danger">Eliminar</button>
+                    </div>
+                    <div class="main_envio d-flex flex-column align-items-center col-6 col-md-2">
+                        <div class="agregar_img"><img src="/images/admin/envio.png" alt=""></div>
+                        <button type="button" class="btn btn-outline-danger">Eliminar</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <!--DETALLES DE LOS ULTIMOS PEDIDOS-->
-        <section class="detalle-pedido">
-            <div class="usuario">
-                <img src="/images/admin/usuario-detalle.png" alt="usuario-detalle">
-                <h4>Nombre del cliente</h4>
-                <p>ID:   #20123</p>
-                <a href=""><img src="/images/admin/detalle.png" alt="detalle-usuario"></a>
-                <a href=""><img src="/images/admin/modificar.png" alt="modificar"></a>
-                <a href=""><img src="/images/admin/usuario-detalle.png" alt="modificar-usuario"></a>
-            </div>
-        </section>
-        <section class="detalle-pedido">
-            <div class="usuario">
-                <img src="/images/admin/usuario-detalle.png" alt="usuario-detalle">
-                <h4>Nombre del cliente</h4>
-                <p>ID:   #20123</p>
-                <a href=""><img src="/images/admin/detalle.png" alt="detalle-usuario"></a>
-                <a href=""><img src="/images/admin/modificar.png" alt="modificar"></a>
-                <a href=""><img src="/images/admin/usuario-detalle.png" alt="modificar-usuario"></a>
-            </div>
-        </section>
-        <section class="detalle-pedido">
-            <div class="usuario">
-                <img src="/images/admin/usuario-detalle.png" alt="usuario-detalle">
-                <h4>Nombre del cliente</h4>
-                <p>ID:   #20123</p>
-                <a href=""><img src="/images/admin/detalle.png" alt="detalle-usuario"></a>
-                <a href=""><img src="/images/admin/modificar.png" alt="modificar"></a>
-                <a href=""><img src="/images/admin/usuario-detalle.png" alt="modificar-usuario"></a>
-            </div>
-        </section>
-        <section class="detalle-pedido">
-            <div class="usuario">
-                <img src="/images/admin/usuario-detalle.png" alt="usuario-detalle">
-                <h4>Nombre del cliente</h4>
-                <p>ID:   #20123</p>
-                <a href=""><img src="/images/admin/detalle.png" alt="detalle-usuario"></a>
-                <a href=""><img src="/images/admin/modificar.png" alt="modificar"></a>
-                <a href=""><img src="/images/admin/usuario-detalle.png" alt="modificar-usuario"></a>
-            </div>
-        </section>
-        <!--INICIO DEL FOOTER-->
-    <footer class="footer">
-        <nav class="menu-footer">
-            <div class="nosotros">
-            <h1>GAME OVER</h1>
-            <ul>
-                <a href=""><li>INICIO</li></a>
-                <a href=""><li>CATALOGO</li></a>
-                <a href=""><li>FAN ZONE</li></a>
-            </ul>
-            </div>
-            <div class="contacto">
-            <h1>CONTACTANOS</h1>
-            <ul>
-                <a href=""><li>TELEFONO</li></a>
-                <a href=""><li>EMAIL</li></a>
-                <a href=""><li>CONTACTO</li></a>
-            </ul>
-            </div>
-            <div class="redes">
-            <h1>REDES</h1>
-            <ul>
-                <a href=""><li>INSTAGRAM</li></a>
-                <a href=""><li>FACEBOOK</li></a>
-                <a href=""><li>TWITTER</li></a>
-            </ul>
-            </div>
-        </nav>
-            <img src="images/logo.png" alt="">
-        </footer>
-        <div class="copy">
-            <p>&copy; 2020 www.GameOver.com.ar<p></p>
-        </div>
+        <%- include('./partials/footer') %> 
+
+
+
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>
