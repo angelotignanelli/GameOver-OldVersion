@@ -1,7 +1,10 @@
 .footer {
   -webkit-box-shadow: 0px 0 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0 10px rgba(0, 0, 0, 0.2);
+<<<<<<< HEAD
           background: #fff;
+=======
+>>>>>>> 38886328aadd5e0d839ac54829678ef7190d0c48
 }
 
 .footer .footer__menu-responsive #responsive-menu {
