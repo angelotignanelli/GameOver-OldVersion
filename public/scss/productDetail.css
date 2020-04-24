@@ -1,0 +1,109 @@
+:root {
+  --color1: #ef233c;
+  --color2: #d90429;
+  --color3: #cacaca;
+  --color4: #ffffff;
+  --color5: #000000;
+}
+
+.container-fluid .section__info {
+  background: var(--color3);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.container-fluid .section__especificaciones {
+  background: var(--color3);
+  margin-top: 20px;
+  color: var(--color4);
+  text-shadow: 1px 1px 1px var(--color5);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.container-fluid .section__strong {
+  color: var(--color5);
+  text-shadow: none;
+}
+
+.container-fluid .section__acerca {
+  background: var(--color3);
+  margin-top: 20px;
+  color: var(--color4);
+  text-shadow: 1px 1px 1px var(--color5);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.container-fluid .section__h5 {
+  color: var(--color5);
+  text-shadow: none;
+  font-size: 30px;
+  text-align: center;
+}
+
+.container-fluid .section__h3 {
+  color: var(--color4);
+  font-size: 40px;
+}
+
+.container-fluid .section__comentarios {
+  margin-top: 30px;
+  background: var(--color2);
+  color: var(--color4);
+}
+
+.container-fluid .section__img-perfil {
+  width: 64px;
+  height: 64px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .container-fluid .section__video {
+    display: none;
+  }
+  .container-fluid .section__boton {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-fluid .section__video {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .container-fluid .section__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .container-fluid .section__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .container-fluid .section__especificaciones {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .container-fluid .section__boton {
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=productDetail.css.map */

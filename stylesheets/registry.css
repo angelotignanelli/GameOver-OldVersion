@@ -163,12 +163,13 @@
   border-style: solid;
   border-radius: 10px;
   border-color: #ff2244;
+  border-radius: 10px;
   padding: 10px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.box .title h2 {
+.box h2 {
   text-align: center;
   font-family: "Baloo Paaji 2", cursive;
   color: #fff;
@@ -182,10 +183,13 @@
 
 .box .information {
   font-family: "Baloo Paaji 2", cursive;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
   color: #fff;
-  text-align: center;
-  display: inherit;
-  width: 200px;
+  width: 100%;
   margin: auto;
   padding: 0.75rem;
 }
@@ -196,11 +200,12 @@
   font-size: inherit;
 }
 
-.box .login-button {
+.box .registry-button {
   display: inherit;
   width: 150px;
-  margin: 10px 0px 10px 25px;
+  margin: auto;
   padding: 0.75rem;
+  color: #fff;
   background: #ff5733;
   border-radius: 2px;
   cursor: pointer;
@@ -392,4 +397,4 @@ footer .redes li a:hover {
     top: -20px;
   }
 }
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=registry.css.map */

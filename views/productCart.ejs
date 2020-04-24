@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('./partials/head') %>
+
+  <body>
+    <div class="container-fluid">
+      <!--HEADER-->
+      <%- include('./partials/header') %>
+      <!--MENU-->
+      <%- include('./partials/navbar') %>
+      <!--  CONTENIDO -->
+      <div class="container">
+        <div class="row">
+          <div class="box-product col-12">
+            <div class="row d-flex justify-content-around">
+              <img class="col-2 img-fluid p-4" src="/images/product-cart/r3.webp" alt="">
+              <div class="titulo col-12 col-md-4">
+                <h3>Resident Evil 3 Remake</h3>
+                <hr>
+                <p>Biohazard RE: 3—​ es un videojuego perteneciente al género de horror de supervivencia, desarrollado y publicado por la empresa Capcom, se trata un nueva versión del videojuego homónimo de 1999.</p>
+              </div>
+              <div class="detalle col-12 col-md-3 ">
+                <h3>Detalle</h3>
+                <hr>
+                <p>Plataforma:</br> <i class="fab fa-playstation"></i> Playstation 4 - <i class="fab fa-xbox"></i> Xbox One - <i class="fab fa-windows"></i> Windows</p>
+              </div>
+              <div class="cantidad col-12 col-md-3">
+                <h3>Cantidad</h3>
+                <hr>
+                <div class="input-group">
+                  <input type="text" class="form-control col-12 col-sm-12 col-md-12 align-self-center" placeholder="Cant" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <div class="input-group-append row m-4">
+                    <button class="btn btn-outline-success col-12 col-md-auto m-1 col-lg-auto" type="button">Agregar</button>
+                    <button class="btn btn-outline-danger col-12 col-md-auto m-1 col-lg-auto" type="button">Quitar</button>
+                    <button type="button" class="btn btn-danger col-12 col-md-auto m-1 col-lg-auto"><i class="fas fa-trash-alt"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <%- include('./partials/footer') %>
+      </footer>
+    </div>
+
+    <%- include('./partials/scripts') %>
+  </body>
+</html>

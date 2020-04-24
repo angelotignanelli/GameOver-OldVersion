@@ -1,133 +1,82 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Timmana&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/scss/registry.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registry</title>
-    <script
-        src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
-    ></script>
-</head>
+<html lang="en">
+<%- include('./partials/head') %>
+
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <img src="/images/logo.png" alt="logo" id="logo">
-            </div>
-            <div class="menu">
-                <nav>
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Catalogo</a>
-                            <ul class="submenu">
-                                <li><a href="">Mercandising</a></li>
-                                <li><a href="">Accesorios</a></li>
-                                <li class="videojuegos"><a href="">VideoJuegos <strong>></strong></a>
-                                    <ul>
-                                        <li><a href="">Accion</a></li>
-                                        <li><a href="">Aventura</a></li>
-                                        <li><a href="">Conduccion</a></li>
-                                        <li><a href="">Deportes</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="">Fan Zone</a></li>
-                        <li><a href="">Carrito</a></li>
-                        <li><a href="">Login</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="buscador">
-                <label for="buscador">
-                    <i class="fas fa-search" id="lupa"></i>
-                    <input type="search" name="buscador" id="buscador" placeholder="¿Que desea buscar?">
-                    <input type="submit" value="ENVIAR" id="enviar">
-                </label>
-            </div>
-        </header>
-        <div class="wrapper-main">  
-            <div class="box">
-                <div class="title">
-                <h2>REGISTRO DE USUARIO</h2>
-                </div>
-                <div class="information">
-                  <div class="form-group">
-                    <label id="user-label" for="email">Ingresa tu correo eletronico</label>
-                    <input type="text" name="email" id="email" class="form-control" placeholder="Email" required="">
-                </div>
-                <div class="form-group">
-                    <label id="user-label" for="username">Ingresa tu usuario</label>
-                    <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Nickname/Username" required="">
-                </div>
-                <div class="form-group">
-                    <label id="password-label" for="password">Ingresa tu contraseña</label>
-                    <input type="text" name="password" id="password" class="form-control" placeholder="Contraseña" required="">
-                </div>
-                <div class="form-group">
-                    <label id="password-label" for="password">Confirma tu contraseña</label>
-                    <input type="text" name="password" id="password" class="form-control" placeholder="Contraseña" required="">
-                </div>
-                <div class="form-group">
-                    <label id="number-label" for="number">Edad</label>
-                    <input type="number" name="age" id="number" min="13" max="99" class="form-control" placeholder="Edad">
-                </div>
-                <div class="form-group">
-                    <p>Sexo</p>
-                    <label>
-                        <input name="user-gender" value="masculino" type="radio" class="input-radio" checked>
-                        Masculino
-                    </label>
-                    <label>
-                        <input name="user-gender" value="femenino" type="radio" class="input-radio" checked>
-                        Femenino
-                    </label>
-                    <label>
-                        <input name="user-gender" value="otro" type="radio" class="input-radio" checked>
-                        Otro
-                    </label>
+    <div class="container-fluid">
+        <%- include('./partials/header') %>
+        <%- include('./partials/navbar') %>
+
+        <div id="login-container" class="container-fluid">
+            <form id="formulario">
+                <form class="row">
+                    
+                    <div class="title col-12">
+                        <h2>REGISTRO DE USUARIO</h3>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-6 col-md-6">
+                        <label for="inputuser">Nombre usuario</label>
+                        <input type="user" class="form-control" id="inputEmail4" placeholder="Usuario">
+                      </div>
+                      <div class="form-group col-5 col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                      </div>
+                      <div class="form-group col-6 col-md-6">
+                        <label for="inputPassword4">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                      </div>
+                      <div class="form-group col-6 col-md-6">
+                        <label for="inputPassword4">Rep Password</label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                      </div>
+                    </div>
                     <div class="form-group">
-                        <p>Quiero recibir correos promocionales de Game Over Shop</p>
-                        <label>
-                            <input name="user-choice" value="yes" type="radio" class="input-radio" checked>
-                            Si
+                      <label for="inputAddress">Direccion</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="Avenida Siempreviva 742">
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-6 col-md-6">
+                        <label for="inputCity">Ciudad</label>
+                        <input type="text" class="form-control" id="inputCity">
+                      </div>
+                      <div class="form-group col-4 col-md-4">
+                        <label for="inputState">Barrio</label>
+                        <select id="inputState" class="form-control">
+                          <option selected>Elegir...</option>
+                          <option>Almagro</option>
+                          <option>Abasto</option>
+                          <option>Balvanera</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-4 col-md-2">
+                        <label for="inputZip">Codigo Postal</label>
+                        <input type="text" class="form-control" id="inputZip">
+                      </div>
+                    </div>
+                    <div class="form-group col-4">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                          Acepto terminos
                         </label>
-                        <label>
-                            <input name="user-choice" value="no" type="radio" class="input-radio" checked>
-                            No
-                        </label>
-                </div>
-                </div>
-                <button type="registry" id="registry" class="registry-button">
-                    Registrarse
-                    </button>
-            </div>
-            </div>
-            
-            <footer>
-                <ul class="pestanias">
-                    <li><a href=""> Inicio</a></li>
-                    <li><a href="">Catalogo</a></li>
-                    <li><a href="">Fan Zone</a></li>
-                    <li><a href="">Login</a></li>
-                </ul>
-                <ul class="contacto">
-                    <li><a href="">Telefono</a></li>
-                    <li><a href="">Email</a></li>
-                    <li><a href="">Contacto</a></li>
-                </ul>
-                <ul class="redes">
-                    <li><a href=""><i class="fab fa-facebook-square" id="facebook"></a></i></li>
-                    <li><a href=""><i class="fab fa-instagram" id="instagram"></i></a></li>
-                    <li><a href=""><i class="fab fa-twitter-square" id="twitter"></i></a></li>
-                </ul>
-            </footer>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrarme</button>
+                  </form>
+            </form>
+
         </div>
+
+       
+            <%- include('./partials/footer') %>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>

@@ -1,4 +1,3 @@
-
 :root {
   --color1: #ef233c;
   --color2: #d90429;
@@ -6,17 +5,15 @@
   --color4: #ffffff;
   --color5: #000000;
 }
-.container-fluid{
-  background: var(--color1);
-}
 
 .container-fluid .section__info {
   background: var(--color3);
   border-radius: 5px;
   padding: 10px;
-
 }
-
+.section__logo{
+  
+}
 .container-fluid .section__especificaciones {
   background: var(--color3);
   margin-top: 20px;
@@ -49,7 +46,7 @@
 
 .container-fluid .section__h3 {
   color: var(--color4);
-  font-size: 40px
+  font-size: 40px;
 }
 
 .container-fluid .section__comentarios {
@@ -65,26 +62,26 @@
   margin-top: 20px;
 }
 
-.container-fluid .cards{
-  background: var(--color2);
-  margin-top:30px;
-  padding:0px;
+.container-fluid .container__cards{
+  background: #ef233c;
+}
+.card{
+  border: none;
+  margin-bottom: 20px;
 }
 
-.container-fluid .cards h3{
-  text-align: center;
-  text-shadow: 1px 2px var(--color5);
-  font-family:"Timmana", sans-serif;
-  color: var(--color3);
-  padding-top: 20px;
+#h3-cards{
+ background: #fff;
+  color: #ef233c;
+  margin: 0;
+  padding: 0;
+}
+#video-demo{
+  height: 50vh;
+  margin: 0;
+  padding: 0;
 }
 
-.container-fluid .cards .card{
-  margin-top:20px;
-  text-align: center;
-  font-family:"Timmana", sans-serif;
-  font-size: 20px;
-}
 
 @media (max-width: 768px) {
   .container-fluid .section__video {
@@ -96,40 +93,9 @@
 }
 
 @media (min-width: 768px) {
-  .container-fluid .section__video {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .container-fluid .section__logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-  .container-fluid .section__info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-  .container-fluid .section__especificaciones {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
-  }
+  
   .container-fluid .section__boton {
     margin: 0 auto;
   }
 }
-/*# sourceMappingURL=detalle3.css.map */
+/*# sourceMappingURL=productDetail.css.map */

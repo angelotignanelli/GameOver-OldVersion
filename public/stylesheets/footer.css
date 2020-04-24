@@ -1,83 +1,63 @@
-footer{
-  display:flex;
-  justify-content: space-around;
-}
-footer div{
-  width:30%;
-}
-footer div.rrss{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-}
-footer div.rrss ul{
-  display:flex;
-  padding-left:0;
-  justify-content: space-around;
-}
-footer div.rrss ul li{
-  list-style: none;
+.footer {
+  -webkit-box-shadow: 0px 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0 10px rgba(0, 0, 0, 0.2);
+          background: #fff;
 }
 
-.fa{padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
+.footer .footer__menu-responsive #responsive-menu {
+  background-color: #fff !important;
 }
 
-  .fa:hover {
-    opacity: 0.7;
+.footer .fab {
+  font-size: 50px;
+  color: red;
+  margin-right: 40px;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+.footer .fab:hover {
+  color: #000000;
+}
+
+.footer .footer__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer .footer__menu a {
+  border-left: 3px solid red;
+  padding: 10px;
+  color: black;
+}
+
+.footer .footer__menu a:nth-child(1) {
+  border: none;
+}
+
+.footer .footer__menu a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+@media (max-width: 992px) {
+  .footer__redes {
+    margin-left: 80%;
   }
-  
-  /* Facebook */
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
+}
+
+@media (max-width: 768px) {
+  .footer__redes {
+    margin-left: 60%;
   }
-  
-  /* Twitter */
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
+}
+
+@media (max-width: 576px) {
+  .footer__redes {
+    margin-left: 40%;
   }
-
-  /* Instagram */
-  .fa-instagram {
-    background: #125688;
-    color: white;
-  }
-
-footer div h5{
-    text-align:center;
-    font-family: "Timmana", sans-serif;
 }
-
-footer div.contact form{
-    display:flex;
-    flex-direction: column;
-    width:80%;
-    align-items: center;
-    margin-left:10%;
-}
-footer div.contact form textarea{
-    width:80%;
-}
-footer div.copy{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-@media (max-width:800px){
-    footer{
-        flex-direction: column;
-        align-items: center;
-    }
-    footer div{
-        width:90%;
-        margin:10px;
-    }
-}
+/*# sourceMappingURL=footer.css.map */

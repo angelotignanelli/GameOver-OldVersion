@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,8EAA8E;AAE9E,SAAS;AAOT,SAAS",
+    "mappings": "AAAA,8EAA8E;AAE9E,SAAS;AAOT,OAAO;AAOP;;GAEG;AAEH;;EAEE;AAEF;;GAEG;AAEH;;GAEG",
     "sources": [
         "palette.scss"
     ],

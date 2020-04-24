@@ -14,9 +14,8 @@
     background-color: #5B898E;
     margin-top:30px;
 }
-.container #row2 .col-3 img{
-    width: 150px;
-    height: 150px;
+.container .imagen img{
+    width: 25%;
 }
 .container #row2 .col-5 ul{
     font-family: 'Timmana', sans-serif;
@@ -65,3 +64,4 @@
     font-size: 30px;
     text-shadow: 2px 3px  #A70000;
 }
+

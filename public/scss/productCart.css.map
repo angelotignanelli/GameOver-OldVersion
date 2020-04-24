@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAA;EACR,UAAU,EAAE,OAAO;EACnB,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,GAAG;CACrB;;AACD,AAAA,SAAS,CAAA;EACL,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,GAAG;CACjB",
+    "sources": [
+        "productCart.scss"
+    ],
+    "names": [],
+    "file": "productCart.css"
+}
