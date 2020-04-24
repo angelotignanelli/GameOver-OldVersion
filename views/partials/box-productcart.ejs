@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-  <%- include('./partials/head') %>
-
-  <body>
-    <div class="container-fluid">
-      <!--HEADER-->
-      <%- include('./partials/header') %>
-      <!--MENU-->
-      <%- include('./partials/navbar') %>
-      <!--  CONTENIDO -->
-      <div class="container">
-        <div class="row">
-          <div class="box-product col-12">
+<div class="box-product col-12">
             <div class="row d-flex justify-content-around">
               <img class="col-2 img-fluid p-4" src="/images/product-cart/r3.webp" alt="">
               <div class="titulo col-12 col-md-4">
@@ -38,16 +25,3 @@
               </div>
             </div>
           </div>
-          <%-include('./partials/box-productcart')  %> 
-          <%-include('./partials/box-productcart')  %>
-          <%-include('./partials/box-productcart')  %>
-        </div>
-      </div>
-      <footer>
-        <%- include('./partials/footer') %>
-      </footer>
-    </div>
-
-    <%- include('./partials/scripts') %>
-  </body>
-</html>
