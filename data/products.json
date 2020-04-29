@@ -1,0 +1,151 @@
+[{
+    "name": "Call of Duty Modern Warfare",
+    "release_date": "25/10/2019",
+    "age_clasification": 18,
+    "price": 7000,
+    "genre": "Accion",
+    "developer": "Infinity Ward",
+    "distributor": "Activision",
+    "platform": "PS4, XBOX, PC",
+    "id_number": 1916
+  }, {
+    "name": "Death Stranding",
+    "release_date": "08/11/19",
+    "age_clasification": 18,
+    "price": 4000,
+    "genre": "Accion",
+    "developer": "PS4, PC",
+    "distributor": "Kojima Productions",
+    "platform": "Sony IE",
+    "id_number": 1995
+  }, {
+    "name": "Stinky Regan",
+    "release_date": "25/05/2019",
+    "age_clasification": 14,
+    "price": 3759,
+    "genre": "accumsan odio curabitur",
+    "developer": "Stinky Snodin",
+    "distributor": "Stinky Halsworth",
+    "platform": "Stinky",
+    "id_number": 1429
+  }, {
+    "name": "Rance Poulsen",
+    "release_date": "06/12/2019",
+    "age_clasification": 8,
+    "price": 9163,
+    "genre": "quam pede",
+    "developer": "Rance Finden",
+    "distributor": "Rance Dillicate",
+    "platform": "Rance",
+    "id_number": 1546
+  }, {
+    "name": "Frazier Yallop",
+    "release_date": "05/12/2019",
+    "age_clasification": 12,
+    "price": 2592,
+    "genre": "hac habitasse",
+    "developer": "Frazier Persse",
+    "distributor": "Frazier Bilsford",
+    "platform": "Frazier",
+    "id_number": 1302
+  }, {
+    "name": "Saundra Humberstone",
+    "release_date": "02/05/2019",
+    "age_clasification": 10,
+    "price": 9193,
+    "genre": "consectetuer adipiscing elit",
+    "developer": "Saundra Milton",
+    "distributor": "Saundra Bolderstone",
+    "platform": "Saundra",
+    "id_number": 1700
+  }, {
+    "name": "Bren Berrisford",
+    "release_date": "20/01/2020",
+    "age_clasification": 12,
+    "price": 5984,
+    "genre": "curabitur gravida nisi",
+    "developer": "Bren Benzi",
+    "distributor": "Bren Belt",
+    "platform": "Bren",
+    "id_number": 1462
+  }, {
+    "name": "Kiah Blazey",
+    "release_date": "02/01/2020",
+    "age_clasification": 18,
+    "price": 5493,
+    "genre": "turpis nec",
+    "developer": "Kiah Parade",
+    "distributor": "Kiah Kynforth",
+    "platform": "Kiah",
+    "id_number": 1572
+  }, {
+    "name": "Yorgos Shellsheere",
+    "release_date": "13/10/2019",
+    "age_clasification": 13,
+    "price": 3502,
+    "genre": "feugiat non",
+    "developer": "Yorgos Kalkofer",
+    "distributor": "Yorgos Capehorn",
+    "platform": "Yorgos",
+    "id_number": 1793
+  }, {
+    "name": "Trenton Cambell",
+    "release_date": "25/11/2019",
+    "age_clasification": 17,
+    "price": 5638,
+    "genre": "magna vestibulum aliquet",
+    "developer": "Trenton Segebrecht",
+    "distributor": "Trenton Le Breton De La Vieuville",
+    "platform": "Trenton",
+    "id_number": 1879
+  }, {
+    "name": "Darice Talkington",
+    "release_date": "30/09/2019",
+    "age_clasification": 10,
+    "price": 8382,
+    "genre": "vestibulum ante",
+    "developer": "Darice Gillott",
+    "distributor": "Darice Atheis",
+    "platform": "Darice",
+    "id_number": 1090
+  }, {
+    "name": "Huey Streak",
+    "release_date": "07/11/2019",
+    "age_clasification": 18,
+    "price": 3390,
+    "genre": "et ultrices posuere",
+    "developer": "Huey Ackerley",
+    "distributor": "Huey Calvie",
+    "platform": "Huey",
+    "id_number": 1707
+  }, {
+    "name": "Emmalee Tenney",
+    "release_date": "20/04/2020",
+    "age_clasification": 15,
+    "price": 3111,
+    "genre": "aliquam sit",
+    "developer": "Emmalee Bourdon",
+    "distributor": "Emmalee Jiroudek",
+    "platform": "Emmalee",
+    "id_number": 1363
+  }, {
+    "name": "Elfie Fewless",
+    "release_date": "27/12/2019",
+    "age_clasification": 11,
+    "price": 4204,
+    "genre": "velit eu",
+    "developer": "Elfie Minette",
+    "distributor": "Elfie Cuttell",
+    "platform": "Elfie",
+    "id_number": 1685
+  }, {
+    "name": "Kliment Leaver",
+    "release_date": "03/03/2020",
+    "age_clasification": 10,
+    "price": 9922,
+    "genre": "pellentesque volutpat dui",
+    "developer": "Kliment Krugmann",
+    "distributor": "Kliment MacMenamy",
+    "platform": "Kliment",
+    "id_number": 1638
+  }]
