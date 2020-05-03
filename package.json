@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "nodemon ./bin/www",
     "build-css": "node-sass --include-path scss scss/style.scss css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
