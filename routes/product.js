@@ -19,5 +19,9 @@ router.get('/create/', productsController.create); /* GET - Form to create */
 /*** DELETE ONE PRODUCT***/ 
 //router.delete('/delete/:productId', productsController.destroy); /* DELETE - Delete from DB */
 
+/* CHECKOUT PRODUCT */
+router.get('/checkout',productsController.checkout)
+/* CART PRODUCT */
+router.get('/productcart',productsController.cart)
 module.exports = router;
 

@@ -44,7 +44,7 @@ const controller = {
 		// Do the magic	
 		res.render("product-create-form")		
 	},
-	
+
 /*
 	// Create -  Method to store
 	store: (req, res) => {
@@ -110,6 +110,12 @@ const controller = {
 		let productosModificadosJSON = JSON.stringify(productsQueQuedan)
 		fs.writeFileSync(productsFilePath, productosModificadosJSON)
 		res.send(productsQueQuedan)
+	},
+	checkout: (req,res) => {
+		res.render('checkout')
+	},
+	cart: (req,res) => {
+		res.render('productCart')
 	}*/
 };
 
