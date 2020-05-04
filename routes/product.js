@@ -19,5 +19,9 @@ router.put('/edit/:productId', productsController.update); /* PUT - Update in DB
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:productId', productsController.destroy); /* DELETE - Delete from DB */
 
+/* CHECKOUT PRODUCT */
+router.get('/checkout',productsController.checkout)
+/* CART PRODUCT */
+router.get('/productcart',productsController.cart)
 module.exports = router;
 
