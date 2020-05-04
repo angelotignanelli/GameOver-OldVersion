@@ -10,9 +10,22 @@ const controller = {
 	// Root - Show all products
 	root: (req, res) => {
 		// Do the magic
-		res.render("index", {
-			products: products,
-		})
+		let recomendados = products.filter(function(element) {
+			return element.seccion == "Recomendados";
+		  });
+		  let vendidos = products.filter(function(element) {
+			return element.seccion == "Vendidos";
+		  });
+		  let ofertas = products.filter(function(element) {
+			return element.seccion == "Ofertas";
+		  });
+		  res.render('index', {
+			recomendados: recomendados,
+			vendidos: vendidos,
+			ofertas: ofertas,
+			aMiles: toThousand,
+		});
+		console.log(productos);
 	},
 	
 	// Detail - Detail from one product
@@ -31,7 +44,8 @@ const controller = {
 		// Do the magic	
 		res.render("product-create-form")		
 	},
-
+	
+/*
 	// Create -  Method to store
 	store: (req, res) => {
 		// Do the magic
@@ -96,7 +110,7 @@ const controller = {
 		let productosModificadosJSON = JSON.stringify(productsQueQuedan)
 		fs.writeFileSync(productsFilePath, productosModificadosJSON)
 		res.send(productsQueQuedan)
-	}
+	}*/
 };
 
 module.exports = controller;

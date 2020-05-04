@@ -2,13 +2,14 @@
     "name": "Call of Duty Modern Warfare",
     "release_date": "25/10/2019",
     "age_clasification": 18,
-    "image": "imagen",
+    "image": "r3.webp",
     "price": 7000,
     "category": "Accion",
     "developer": "Infinity Ward",
     "distributor": "Activision",
     "platform": "PS4, XBOX, PC",
-    "id_number": 1916
+    "id": 1,
+    "seccion": "Recomendados"
   }, {
     "name": "Death Stranding",
     "release_date": "08/11/19",
@@ -19,7 +20,8 @@
     "developer": "PS4, PC",
     "distributor": "Kojima Productions",
     "platform": "Sony IE",
-    "id_number": 1995
+    "id": 2,
+    "seccion": "Recomendados"
   }, {
     "name": "FIFA 20",
     "release_date": "27/09/2019",
@@ -30,7 +32,8 @@
     "developer": "EA",
     "distributor": "Electronic Arts",
     "platform": "PS4, XBOX, PC, Nintendo Switch",
-    "id_number": 1429
+    "id": 3,
+    "seccion": "Recomendados"
   }, {
     "name": "Resident Evil 2",
     "release_date": "25/01/2019",
@@ -41,7 +44,8 @@
     "developer": "Capcom",
     "distributor": "Capcom",
     "platform": "PS4, XBOX, PC",
-    "id_number": 1546
+    "id": 4,
+    "seccion": "Recomendados"
   }, {
     "name": "The Last of Us 2",
     "release_date": "19/06/2020",
@@ -52,7 +56,8 @@
     "developer": "Naughty Dog",
     "distributor": "Sony IE",
     "platform": "PS4",
-    "id_number": 1302
+    "id": 5,
+    "seccion": "Vendidos"
   }, {
     "name": "Borderlands 3",
     "release_date": "21/09/2019",
@@ -63,7 +68,8 @@
     "developer": "Gearbox Software",
     "distributor": "2K Games",
     "platform": "PS4, XBOX, PC",
-    "id_number": 1700
+    "id": 6,
+    "seccion": "Vendidos"
   }, {
     "name": "Marvel's Spiderman",
     "release_date": "07/09/2018",
@@ -74,7 +80,8 @@
     "developer": "Insomniac Games",
     "distributor": "Sony IE",
     "platform": "PS4",
-    "id_number": 1465
+    "id": 7,
+    "seccion": "Vendidos"
   }, {
     "name": "Uncharted 4",
     "release_date": "10/05/2016",
@@ -85,7 +92,8 @@
     "developer": "Naughty Dog",
     "distributor": "Sony IE",
     "platform": "PS4",
-    "id_number": 1572
+    "id": 8,
+    "seccion": "Vendidos"
   }, {
     "name": "Assasin's Creed Odyssey",
     "release_date": "05/10/2018",
@@ -96,7 +104,8 @@
     "developer": "Ubisoft",
     "distributor": "Ubisoft",
     "platform": "PS4, XBOX, PC",
-    "id_number": 1793
+    "id": 9,
+    "seccion": "Ofertas"
   }, {
     "name": "Doom Eternal",
     "release_date": "20/03/2020",
@@ -106,8 +115,9 @@
     "category": "Accion",
     "developer": "id Software",
     "distributor": "Bethesda Softworks",
-    "platform": "PS4, XBOX, PC, Nintendo Switch",
-    "id_number": 1879
+    "platform": "PS4, XBOX, PC",
+    "id": 10,
+    "seccion": "Ofertas"
   }, {
     "name": "Final Fantasy 7 Remake",
     "release_date": "10/04/2020",
@@ -118,7 +128,8 @@
     "developer": "Square Enix",
     "distributor": "Square Enix",
     "platform": "PS4",
-    "id_number": 1090
+    "id": 11,
+    "seccion": "Ofertas"
   }, {
     "name": "GTA 5",
     "release_date": "17/09/2013",
@@ -129,7 +140,8 @@
     "developer": "Rockstar North",
     "distributor": "Rockstar Games",
     "platform": "PS4, XBOX, PC",
-    "id_number": 1707
+    "id": 12,
+    "seccion": "Ofertas"
   }, {
     "name": "God of War",
     "release_date": "20/04/2018",
@@ -140,7 +152,8 @@
     "developer": "SCE",
     "distributor": "Sony IE",
     "platform": "PS4",
-    "id_number": 1363
+    "id": 13,
+    "seccion": "Ofertas"
   }, {
     "name": "Read Dead Redemption 2",
     "release_date": "26/10/2018",
@@ -151,7 +164,8 @@
     "developer": "Rockstar Games",
     "distributor": "Rockstar Games",
     "platform": "PS4, XBOX, PC",
-    "id_number": 1685
+    "id": 14,
+    "seccion": "Ofertas"
   }, {
     "name": "UFC 3",
     "release_date": "02/02/2018",
@@ -162,5 +176,42 @@
     "developer": "EA Canada",
     "distributor": "EA Sports",
     "platform": "PS4, XBOX",
-    "id_number": 1638
+    "id": 15,
+    "seccion": "Ofertas"
+  }, {
+    "name": "UFC 3",
+    "release_date": "02/02/2018",
+    "age_clasification": 16,
+    "image": "imagen",
+    "price": 2500,
+    "category": "Deporte",
+    "developer": "EA Canada",
+    "distributor": "EA Sports",
+    "platform": "PS4, XBOX",
+    "id": 16,
+    "seccion": "Ofertas"
+  }, {
+    "name": "UFC 3",
+    "release_date": "02/02/2018",
+    "age_clasification": 16,
+    "image": "imagen",
+    "price": 2500,
+    "category": "Deporte",
+    "developer": "EA Canada",
+    "distributor": "EA Sports",
+    "platform": "PS4, XBOX",
+    "id": 17,
+    "seccion": "Ofertas"
+  }, {
+    "name": "UFC 3",
+    "release_date": "02/02/2018",
+    "age_clasification": 16,
+    "image": "imagen",
+    "price": 2500,
+    "category": "Deporte",
+    "developer": "EA Canada",
+    "distributor": "EA Sports",
+    "platform": "PS4, XBOX",
+    "id": 18,
+    "seccion": "Ofertas"
   }]

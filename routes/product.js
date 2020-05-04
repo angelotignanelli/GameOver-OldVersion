@@ -10,14 +10,14 @@ router.get('/detail/:productId/', productsController.detail); /* GET - Product d
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create/', productsController.create); /* GET - Form to create */
-router.post('/create/', productsController.store); /* POST - Store in DB */
+//router.post('/create/', productsController.store); /* POST - Store in DB */
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/edit/:productId', productsController.edit); /* GET - Form to create */
-router.put('/edit/:productId', productsController.update); /* PUT - Update in DB */
+//router.get('/edit/:productId', productsController.edit); /* GET - Form to create */
+//router.put('/edit/:productId', productsController.update); /* PUT - Update in DB */
 
 /*** DELETE ONE PRODUCT***/ 
-router.delete('/delete/:productId', productsController.destroy); /* DELETE - Delete from DB */
+//router.delete('/delete/:productId', productsController.destroy); /* DELETE - Delete from DB */
 
 module.exports = router;
 

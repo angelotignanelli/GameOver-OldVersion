@@ -30,17 +30,17 @@
       <!-- ESPECIFICACION -->
       <div class="section__especificaciones col-11 col-md-4 col-lg-4">
         <ul>
-          <li><strong class="section__strong">LANZAMIENTO:</strong> 05/04/2020</li>
+          <li><strong class="section__strong">LANZAMIENTO:</strong> <%=producto.release_date%></li>
           <hr>
-          <li><strong class="section__strong">DESARROLLADOR:</strong> Square Enix</li>
+          <li><strong class="section__strong">DESARROLLADOR:</strong> <%=producto.distributor%></li>
           <hr>
-          <li><strong class="section__strong">EDITOR:</strong> Square Enix</li>
+          <li><strong class="section__strong">EDITOR:</strong> <%=producto.developer%></li>
           <hr>
-          <li><strong class="section__strong">PLATAFORMAS:</strong> PS4</li>
+          <li><strong class="section__strong">PLATAFORMAS:</strong> <%=producto.platform%></li>
           <hr>
-          <li><strong class="section__strong">RATING ESRB:</strong> TEEN</li>
+          <li><strong class="section__strong">RATING ESRB:</strong> <%=producto.age_clasification%></li>
           <hr>
-          <li><strong class="section__strong">PRECIO:</strong> $4900</li>
+          <li><strong class="section__strong">PRECIO:</strong> $<%=producto.price%></li>
           <a href="#" class="section__boton btn btn-primary offset-4">Añadir al carrito</a>
         </div>
         </ul>
