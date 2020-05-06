@@ -9,7 +9,7 @@
     "distributor": "Activision",
     "platform": "PS4, XBOX, PC",
     "id": 1,
-    "seccion": "Recomendados"
+    "section": "Recomendados"
   }, {
     "name": "Death Stranding",
     "release_date": "08/11/19",
@@ -21,7 +21,7 @@
     "distributor": "Kojima Productions",
     "platform": "Sony IE",
     "id": 2,
-    "seccion": "Recomendados"
+    "section": "Recomendados"
   }, {
     "name": "FIFA 20",
     "release_date": "27/09/2019",
@@ -33,7 +33,7 @@
     "distributor": "Electronic Arts",
     "platform": "PS4, XBOX, PC, Nintendo Switch",
     "id": 3,
-    "seccion": "Recomendados"
+    "section": "Recomendados"
   }, {
     "name": "Resident Evil 2",
     "release_date": "25/01/2019",
@@ -45,7 +45,7 @@
     "distributor": "Capcom",
     "platform": "PS4, XBOX, PC",
     "id": 4,
-    "seccion": "Recomendados"
+    "section": "Recomendados"
   }, {
     "name": "The Last of Us 2",
     "release_date": "19/06/2020",
@@ -57,7 +57,7 @@
     "distributor": "Sony IE",
     "platform": "PS4",
     "id": 5,
-    "seccion": "Vendidos"
+    "section": "Vendidos"
   }, {
     "name": "Borderlands 3",
     "release_date": "21/09/2019",
@@ -69,7 +69,7 @@
     "distributor": "2K Games",
     "platform": "PS4, XBOX, PC",
     "id": 6,
-    "seccion": "Vendidos"
+    "section": "Vendidos"
   }, {
     "name": "Marvel's Spiderman",
     "release_date": "07/09/2018",
@@ -81,7 +81,7 @@
     "distributor": "Sony IE",
     "platform": "PS4",
     "id": 7,
-    "seccion": "Vendidos"
+    "section": "Vendidos"
   }, {
     "name": "Uncharted 4",
     "release_date": "10/05/2016",
@@ -93,7 +93,7 @@
     "distributor": "Sony IE",
     "platform": "PS4",
     "id": 8,
-    "seccion": "Vendidos"
+    "section": "Vendidos"
   }, {
     "name": "Assasin's Creed Odyssey",
     "release_date": "05/10/2018",
@@ -105,7 +105,7 @@
     "distributor": "Ubisoft",
     "platform": "PS4, XBOX, PC",
     "id": 9,
-    "seccion": "Ofertas"
+    "section": "Ofertas"
   }, {
     "name": "Doom Eternal",
     "release_date": "20/03/2020",
@@ -117,7 +117,7 @@
     "distributor": "Bethesda Softworks",
     "platform": "PS4, XBOX, PC",
     "id": 10,
-    "seccion": "Ofertas"
+    "section": "Ofertas"
   }, {
     "name": "Final Fantasy 7 Remake",
     "release_date": "10/04/2020",
@@ -129,7 +129,7 @@
     "distributor": "Square Enix",
     "platform": "PS4",
     "id": 11,
-    "seccion": "Ofertas"
+    "section": "Ofertas"
   }, {
     "name": "GTA 5",
     "release_date": "17/09/2013",
@@ -141,7 +141,7 @@
     "distributor": "Rockstar Games",
     "platform": "PS4, XBOX, PC",
     "id": 12,
-    "seccion": "Ofertas"
+    "section": "Ofertas"
   }, {
     "name": "God of War",
     "release_date": "20/04/2018",
@@ -153,7 +153,7 @@
     "distributor": "Sony IE",
     "platform": "PS4",
     "id": 13,
-    "seccion": "Ofertas"
+    "section": "Ofertas"
   }, {
     "name": "Read Dead Redemption 2",
     "release_date": "26/10/2018",
@@ -165,7 +165,7 @@
     "distributor": "Rockstar Games",
     "platform": "PS4, XBOX, PC",
     "id": 14,
-    "seccion": "Ofertas"
+    "section": "Ofertas"
   }, {
     "name": "UFC 3",
     "release_date": "02/02/2018",
@@ -177,7 +177,7 @@
     "distributor": "EA Sports",
     "platform": "PS4, XBOX",
     "id": 15,
-    "seccion": "Ofertas"
+    "section": "Ofertas"
   }, {
     "name": "UFC 3",
     "release_date": "02/02/2018",
@@ -189,7 +189,7 @@
     "distributor": "EA Sports",
     "platform": "PS4, XBOX",
     "id": 16,
-    "seccion": "Ofertas"
+    "section": "Ofertas"
   }, {
     "name": "UFC 3",
     "release_date": "02/02/2018",
@@ -201,7 +201,7 @@
     "distributor": "EA Sports",
     "platform": "PS4, XBOX",
     "id": 17,
-    "seccion": "Ofertas"
+    "section": "Ofertas"
   }, {
     "name": "UFC 3",
     "release_date": "02/02/2018",
@@ -213,5 +213,5 @@
     "distributor": "EA Sports",
     "platform": "PS4, XBOX",
     "id": 18,
-    "seccion": "Ofertas"
+    "section": "Ofertas"
   }]
