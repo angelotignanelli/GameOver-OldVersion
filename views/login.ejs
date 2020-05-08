@@ -8,6 +8,16 @@
         <%- include('./partials/navbar') %>
 
         <div id="login-container" class="container-fluid">
+            <% if(typeof errors != "undefined") { %>
+                <p style="color:red">ERROR</p>
+                <ul>
+                    <% for(let i = 0; i < errors.length; i++) { %>
+                        <li>
+                            <%=errors[i].msg%> 
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
             <form action="" id="formulario">
                 <div class="title col-12">
                     <h2>LOGIN DE USUARIO</h3>
