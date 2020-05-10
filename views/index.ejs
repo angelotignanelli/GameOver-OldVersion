@@ -44,7 +44,7 @@
           <%recomendados.forEach(recomendado => { %>
           <section class="card col-dm-3">
             <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="/images/product-cart/<%= recomendado.image %> " alt="Card image cap">
+              <img class="card-img-top" src="<%= recomendado.image %> " alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title"><%= recomendado.name %></h5>
                 <hr>
@@ -52,8 +52,6 @@
                   <strong>Fecha de estreno inicial: </strong> <%= recomendado.release_date %>
                   <hr>
                   <strong>Desarrollador: </strong><%= recomendado.distributor %>
-                  <hr>
-                  <strong>Serie: </strong><%= recomendado.name %>
                   <hr>
                   <strong>Plataformas: </strong><%= recomendado.platform %>
                   <hr>
@@ -78,14 +76,12 @@
               <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="/images/product-cart/<%= vendido.image %>" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title"><%= vendido.title %></h5>
+                  <h5 class="card-title"><%= vendido.name %></h5>
                   <hr>
                   <p class="card-text">
                     <strong>Fecha de estreno inicial: </strong> <%= vendido.release_date %>
                     <hr>
                     <strong>Desarrollador: </strong><%= vendido.distributor %>
-                    <hr>
-                    <strong>Serie: </strong><%= vendido.name %>
                     <hr>
                     <strong>Plataformas: </strong><%= vendido.platform %>
                     <hr>
@@ -109,7 +105,7 @@
               <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="/images/product-cart/<%= oferta.image %>" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title"><%= oferta.title %></h5>
+                  <h5 class="card-title"><%= oferta.name %></h5>
                   <hr>
                   <p class="card-text">
                     <strong>Fecha de estreno inicial: </strong> <%= oferta.release_date %>
