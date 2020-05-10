@@ -20,8 +20,9 @@ router.post('/create/', productsController.store); /* POST - Store in DB */
 //router.delete('/delete/:productId', productsController.destroy); /* DELETE - Delete from DB */
 
 /* CHECKOUT PRODUCT */
-//router.get('/checkout',productsController.checkout)
+router.get('/checkout',productsController.checkout);
 /* CART PRODUCT */
-//router.get('/productcart',productsController.cart)
+router.get('/productcart',productsController.cart);
+
 module.exports = router;
 

@@ -117,13 +117,15 @@ const controller = {
 		let productosModificadosJSON = JSON.stringify(productsQueQuedan)
 		fs.writeFileSync(productsFilePath, productosModificadosJSON)
 		res.send(productsQueQuedan)
-	},
+	},}*/
+
 	checkout: (req,res) => {
 		res.render('checkout')
 	},
+
 	cart: (req,res) => {
 		res.render('productCart')
-	}*/
+	},
 };
 
 module.exports = controller;
