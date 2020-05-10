@@ -9,6 +9,30 @@ controller ={
     register: function(req, res, next) {
     res.render('register');
     },
+    createUser: function(req,res,next){
+        let nuevoUsuario={}
+    if(usersJSON==""){
+        nuevoUsuario.id=1
+    } else { 
+    let ultimoUsuario=usersJSON[usersJSON.length-1]
+    nuevoUsuario.id=ultimoUsuario.id+1
+    }
+    
+    nuevoUsuario.first_name=req.body.first_name
+    nuevoUsuario.last_name=req.body.last_name
+    nuevoUsuario.age=req.body.age
+    nuevoUsuario.email=req.body.email
+    nuevoUsuario.password=req.body.password
+    nuevoUsuario.avatar=req.body.avatar
+   
+    products.push(nuevoUsuario)
+
+    let usuarioAgregadoJSON = JSON.stringify(usersJSON)
+    fs.writeFileSync(usersFilePath, usuarioAgregadoJSON)
+
+    res.render("addUsuario");
+
+    },
     login: function(req, res, next) {
         res.render('login');
     },
