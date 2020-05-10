@@ -18,74 +18,76 @@
                 </nav>
                 <div class="card">
                     <div class="card-body">
-                        <form>
+                        <form action="/products/create/" method="POST">
                             <div class="form-group">
                               <label for="name">Nombre de producto</label>
-                              <input type="name" class="form-control" id="name" placeholder="Producto">
+                              <input name="name" type="name" class="form-control" id="name" placeholder="Producto">
                             </div>
 
                             <div class="form-group">
                                 <label for="date">Fecha de lanzamiento</label>
-                                <input type="date" class="form-control" id="release_date" placeholder="Fecha">
+                                <input name="release_date" type="date" class="form-control" id="release_date" placeholder="Fecha">
                               </div>
 
                             <div class="form-group">
                                 <label for="number">Clasificacion de edad</label>
-                                <input type="number" class="form-control" id="age" placeholder="Edad">
+                                <input name="age" type="number" class="form-control" id="age" placeholder="Edad">
                               </div>
 
                             <div class="form-group">
                                 <label for="number">Precio</label>
-                                <input type="number" class="form-control" id="price" placeholder="Precio">
+                                <input name="price" type="number" class="form-control" id="price" placeholder="Precio">
                               </div>
 
                             <div class="form-group">
                                 <label for="name">Categoria/Genero</label>
-                                <input type="name" class="form-control" id="category" placeholder="Categoria">
+                                <input name="category" type="name" class="form-control" id="category" placeholder="Categoria">
                               </div>
 
                             <div class="form-group">
                                 <label for="name">Desarrollador</label>
-                                <input type="name" class="form-control" id="developer" placeholder="Desarrollador">
+                                <input name="developer" type="name" class="form-control" id="developer" placeholder="Desarrollador">
                               </div>
 
                             <div class="form-group">
                                 <label for="name">Distribuidor</label>
-                                <input type="name" class="form-control" id="distributor" placeholder="Distribuidor">
+                                <input name="distributor" type="name" class="form-control" id="distributor" placeholder="Distribuidor">
                               </div>
 
                             <div class="form-check form-check-inline">
                                 <label for="platform">Consola/Plataforma de juego</label>
-                                <input class="platform" type="checkbox" id="inlineCheckbox1" value="PS4">
+                                <input class="platform" type="checkbox" name="platform" id="inlineCheckbox1" value="PS4">
                                 <label class="form-check-label" for="inlineCheckbox1">PS4</label>
                               </div>
                               <div class="form-check form-check-inline">
-                                <input class="platform" type="checkbox" id="inlineCheckbox2" value="XBOX">
+                                <input class="platform" type="checkbox" name="platform" id="inlineCheckbox2" value="XBOX">
                                 <label class="form-check-label" for="inlineCheckbox2">XBOX</label>
                               </div>
                               <div class="form-check form-check-inline">
-                                <input class="platform" type="checkbox" id="inlineCheckbox3" value="PC">
+                                <input class="platform" type="checkbox" name="platform" id="inlineCheckbox3" value="PC">
                                 <label class="form-check-label" for="inlineCheckbox3">PC</label>
                               </div>
                               <div class="form-check form-check-inline">
-                                <input class="platform" type="checkbox" id="inlineCheckbox2" value="Nintendo Switch">
+                                <input class="platform" type="checkbox" name="platform" id="inlineCheckbox2" value="Nintendo Switch">
                                 <label class="form-check-label" for="inlineCheckbox4">Nintendo Switch</label>
                               </div>
 
-                            <div class="form-group">
+                            <!--<div class="form-group">
                                 <label for="number">ID</label>
                                 <input type="number" class="form-control" id="id" placeholder="">
-                              </div>
+                              </div>-->
 
                             <div class="form-group">
                                 <label for="name">Seccion</label>
-                                <input type="name" class="form-control" id="section" placeholder="Seccion">
+                                <input name="section" type="name" class="form-control" id="section" placeholder="Seccion">
                               </div>
 
-                            <div class="custom-file">
+                            <!--<div class="custom-file">
                                 <input type="image" class="custom-file-input" id="image" aria-describedby="inputGroupFileAddon01">
                                 <label class="custom-file-label" for="image">Imagen del producto</label>
-                              </div>
+                              </div>-->
+
+                            <button type="submit">Enviar</button>
 
                           </form>
                     </div>

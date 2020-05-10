@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({secret:"Es un secreto"}));
 
 app.use('/', indexRouter);
-app.use('/product', productRouter);
+app.use('/products', productRouter);
 app.use('/admin', adminRouter);
 app.use('/addProduct', adminRouter);
 app.use('/user', usersRouter);

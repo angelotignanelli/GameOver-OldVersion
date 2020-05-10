@@ -10,7 +10,7 @@ router.get('/detail/:productId/', productsController.detail); /* GET - Product d
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create/', productsController.create); /* GET - Form to create */
-//router.post('/create/', productsController.store); /* POST - Store in DB */
+router.post('/create/', productsController.store); /* POST - Store in DB */
 
 /*** EDIT ONE PRODUCT ***/ 
 //router.get('/edit/:productId', productsController.edit); /* GET - Form to create */

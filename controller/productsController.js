@@ -11,13 +11,13 @@ const controller = {
 	root: (req, res) => {
 		// Do the magic
 		let recomendados = products.filter(function(element) {
-			return element.seccion == "Recomendados";
+			return element.section == "Recomendados";
 		  });
 		  let vendidos = products.filter(function(element) {
-			return element.seccion == "Vendidos";
+			return element.section == "Vendidos";
 		  });
 		  let ofertas = products.filter(function(element) {
-			return element.seccion == "Ofertas";
+			return element.section == "Ofertas";
 		  });
 		  res.render('index', {
 			recomendados: recomendados,
@@ -25,7 +25,7 @@ const controller = {
 			ofertas: ofertas,
 			aMiles: toThousand,
 		});
-		console.log(productos);
+		console.log(products);
 	},
 	
 	// Detail - Detail from one product
@@ -42,10 +42,10 @@ const controller = {
 	// Create - Form to create
 	create: (req, res) => {
 		// Do the magic	
-		res.render("product-create-form")		
+		res.render("addProduct")		
 	},
 
-/*
+
 	// Create -  Method to store
 	store: (req, res) => {
 		// Do the magic
@@ -56,19 +56,26 @@ const controller = {
 		let ultimoProducto=products[products.length-1]
 		nuevoProducto.id=ultimoProducto.id+1
 		}
+		
 		nuevoProducto.name=req.body.name
+		nuevoProducto.release_date=req.body.release_date
+		nuevoProducto.age=req.body.age
 		nuevoProducto.price=req.body.price
-		nuevoProducto.discount=req.body.discount
 		nuevoProducto.category=req.body.category
-		nuevoProducto.description=req.body.description
+		nuevoProducto.developer=req.body.developer
+		nuevoProducto.distributor=req.body.distributor
+		nuevoProducto.platform=req.body.platform
+		nuevoProducto.section=req.body.section
 		//res.send(nuevoProducto)
 		products.push(nuevoProducto)
 
 		let productosModificadosJSON = JSON.stringify(products)
 		fs.writeFileSync(productsFilePath, productosModificadosJSON)
+
+		res.render("addProduct");
 	},
 		
-
+/*
 	// Update - Form to edit
 	edit: (req, res) => {
 		// Do the magic
