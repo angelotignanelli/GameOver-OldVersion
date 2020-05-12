@@ -5,7 +5,10 @@
 .container-fluid header {
   background: #d90429;
 }
-
+#discount{
+  color: red;
+  font-size: 20px;
+}
 .container-fluid header .input-group {
   background: #cacaca;
 }

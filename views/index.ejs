@@ -40,6 +40,11 @@
             <h5 class="estilo-fuente-1">🎮JUEGOS  <mark class="estilo-fuente-2">RECOMENDADOS</mark></h5>
             <hr>
           </div>
+
+          
+
+
+
           <!--CAJA 1-->
           <%recomendados.forEach(recomendado => { %>
           <section class="card col-dm-3">
@@ -71,59 +76,102 @@
               <hr>
             </div>
             <!--CAJA 1-->
-            <% vendidos.forEach(vendido => { %>
-            <section class="card col-dm-3">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="/images/product-cart/<%= vendido.image %>" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title"><%= vendido.name %></h5>
-                  <hr>
-                  <p class="card-text">
-                    <strong>Fecha de estreno inicial: </strong> <%= vendido.release_date %>
+
+           
+
+
+            <% for( let i = 0; i < vendidos.length; i++ ) { %>
+              <section class="card col-dm-3">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="<%= vendidos[i].image %>" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= vendidos[i].name %></h5>
                     <hr>
-                    <strong>Desarrollador: </strong><%= vendido.distributor %>
-                    <hr>
-                    <strong>Plataformas: </strong><%= vendido.platform %>
-                    <hr>
-                    </p>
-                      <strong class="precio">$<%= vendido.price %></strong>
+                    <p class="card-text">
+                      <strong>Fecha de estreno inicial: </strong> <%= vendidos[i].release_date %>
                       <hr>
-                  <a href="/products/detail/<%= vendido.id %>" class="btn btn-primary offset-4">Comprar</a>
+                      <strong>Desarrollador: </strong><%= vendidos[i].distributor %>
+                      <hr>
+                      <strong>Plataformas: </strong><%= vendidos[i].platform %>
+                      <hr>
+                      </p>
+                      
+                      <% if (vendidos[i].discount > 0 ) { %>
+                        <strong class="precio">$<%= vendidos[i].price %><div id="discount">
+                          %<%= vendidos[i].discount %>
+                        </div></strong>
+                        <% } else {%>
+                          
+                          <strong class="precio">$<%= vendidos[i].price %></strong>
+                        <%}%>
+                        <hr>
+                    <a href="/products/detail/<%= vendidos.id %>" class="btn btn-primary offset-4">Comprar</a>
+                  </div>
                 </div>
-              </div>
-            </section>
-            <% }) %>
+              </section>
+              <% } %>
+              
+
+
+           
             </div>
           <!--OFERTAS-->
           <div class="titulo-product col-12">
             <h5 class="estilo-fuente-1">🏴‍☠️OFERTAS <mark class="estilo-fuente-2">SEMANALES</mark></h5>
             <hr>
           </div>
+
           <!--CAJA 1-->
-          <% ofertas.forEach(oferta => { %>
-          <section class="card col-dm-3">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="/images/product-cart/<%= oferta.image %>" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title"><%= oferta.name %></h5>
-                  <hr>
-                  <p class="card-text">
-                    <strong>Fecha de estreno inicial: </strong> <%= oferta.release_date %>
+          <% for( let i = 0; i < ofertas.length; i++ ) { %>
+          
+            <section class="card col-dm-3">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="<%= ofertas[i].image %>" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= ofertas[i].name %></h5>
                     <hr>
-                    <strong>Desarrollador: </strong><%= oferta.distributor %>
-                    <hr>
-                    <strong>Serie: </strong><%= oferta.name %>
-                    <hr>
-                    <strong>Plataformas: </strong><%= oferta.platform %>
-                    <hr>
-                    </p>
-                      <strong class="precio">$<%= oferta.price %></strong>
+                    <p class="card-text">
+                      <strong>Fecha de estreno inicial: </strong> <%= ofertas[i].release_date %>
                       <hr>
-                  <a href="/products/detail/<%= oferta.id %>" class="btn btn-primary offset-4">Comprar</a>
+                      <strong>Desarrollador: </strong><%= ofertas[i].distributor %>
+                      <hr>
+                      <strong>Serie: </strong><%= ofertas[i].name %>
+                      <hr>
+                      <strong>Plataformas: </strong><%= ofertas[i].platform %>
+                      <hr>
+                      </p>
+                      
+                    
+                      
+                      
+  
+  
+  
+  
+  
+  
+                      
+                        <strong class="precio">
+                          
+                          
+                          $<%= ofertas[i].price %>
+
+                          <div id="discount">
+                           
+                            <p>%<%= ofertas[i].discount %></p> 
+                          </div>
+
+                        </strong>
+                        <hr>
+                    <a href="/products/detail/<%= ofertas[i].id %>" class="btn btn-primary offset-4">Comprar</a>
+                  </div>
                 </div>
-              </div>
-            </section>
-            <% }) %>
+              </section>
+          <% } %>
+
+
+
+            
         </section>
         <%- include('./partials/footer') %> 
 

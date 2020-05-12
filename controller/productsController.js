@@ -6,10 +6,13 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+
 const controller = {
 	// Root - Show all products
 	root: (req, res) => {
 		// Do the magic
+		
+
 		let recomendados = products.filter(function(element) {
 			return element.section == "Recomendados";
 		  });
@@ -24,6 +27,7 @@ const controller = {
 			vendidos: vendidos,
 			ofertas: ofertas,
 			aMiles: toThousand,
+			porcentaje: porcentaje
 		});
 		console.log(products);
 	},
