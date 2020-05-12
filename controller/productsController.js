@@ -91,7 +91,6 @@ const controller = {
 	// Update - Method to update
 	update: (req, res) => {
 		// Do the magic
-		console.log(products)
 		products.forEach(element=>{
 			if(element.id==req.params.productId){
 				element.name=req.body.name
@@ -110,9 +109,9 @@ const controller = {
 		let productosModificadosJSON = JSON.stringify(products)
 		fs.writeFileSync(productsFilePath, productosModificadosJSON)
 		
-		//res.render("index");	
+		res.redirect("../");	
 	},
-/*
+
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
 		// Do the magic
@@ -123,7 +122,7 @@ const controller = {
 		let productosModificadosJSON = JSON.stringify(productsQueQuedan)
 		fs.writeFileSync(productsFilePath, productosModificadosJSON)
 		res.send(productsQueQuedan)
-	},}*/
+	},
 
 	checkout: (req,res) => {
 		res.render('checkout')

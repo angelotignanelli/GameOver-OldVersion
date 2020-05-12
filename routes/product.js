@@ -17,7 +17,7 @@ router.get('/edit/:productId', productsController.edit); /* GET - Form to create
 router.put('/edit/:productId', productsController.update); /* PUT - Update in DB */
 
 /*** DELETE ONE PRODUCT***/ 
-//router.delete('/delete/:productId', productsController.destroy); /* DELETE - Delete from DB */
+router.delete('/delete/:productId', productsController.destroy); /* DELETE - Delete from DB */
 
 /* CHECKOUT PRODUCT */
 router.get('/checkout',productsController.checkout);
