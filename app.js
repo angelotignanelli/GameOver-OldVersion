@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session=require('express-session');
+const methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
 var adminRouter = require('./routes/admin');
@@ -22,11 +23,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({secret:"Es un secreto"}));
+app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/products', productRouter);
 app.use('/admin', adminRouter);
 app.use('/addProduct', adminRouter);
+app.use('/editProduct', adminRouter);
 app.use('/user', usersRouter);
 app.use('/register', usersRouter);
 

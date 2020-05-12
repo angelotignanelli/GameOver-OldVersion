@@ -54,6 +54,20 @@
           aliquam inventore laboriosam vel quibusdam. Qui illum nulla dolores, non suscipit eveniet praesentium ipsam
           ipsum assumenda aliquam aut recusandae.</p>
       </div>
+
+      <div class="main-boxes row m-auto">
+        <div class="main_borrar  col-5">
+        <img src="/images/admin/borrar.png" alt=""> 
+        <form action="/products/delete/<%=producto.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+        <button type="submit" class="btn btn-outline-danger">Eliminar</button>
+        </form>
+    </div>
+    <div class="main_editar  col-5">
+        <img src="/images/admin/modificar.png" alt="">
+        <a href="/products/edit/<%=producto.id%>"><button type="button" class="btn btn-outline-danger">Editar</button></a>
+    </div>
+  </div>
+      
       <section class="section__comentarios col-11">
         <h3 class="section__h3">Comentarios</h3>
         <hr>

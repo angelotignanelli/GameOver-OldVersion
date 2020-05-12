@@ -4,6 +4,9 @@ controller ={
       },
     addProduct: function(req, res, next) {
         res.render('addProduct');
+      },
+    editProduct: function(req, res, next) {
+        res.render('editProduct');
       }
 }
 

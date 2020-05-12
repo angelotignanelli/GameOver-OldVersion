@@ -79,7 +79,7 @@ const controller = {
 		res.render("addProduct");
 	},
 		
-/*
+
 	// Update - Form to edit
 	edit: (req, res) => {
 		// Do the magic
@@ -87,7 +87,7 @@ const controller = {
 			return element.id == req.params.productId;
 		});
 
-		res.render("product-edit-form", {
+		res.render("editProduct", {
 			productToEdit: product,
 		});	
 	},
@@ -98,13 +98,18 @@ const controller = {
 		products.forEach(element=>{
 			if(element.id==req.params.productId){
 				element.name=req.body.name
+				element.release_date=req.body.release_date
+				element.age=req.body.age
 				element.price=req.body.price
-				element.discount=req.body.discount
 				element.category=req.body.category
-				element.description=req.body.description
+				element.developer=req.body.developer
+				element.distributor=req.body.distributor
+				element.platform=req.body.platform
+				element.section=req.body.section
+				
 			}
 		})
-
+		
 		let productosModificadosJSON = JSON.stringify(products)
 		fs.writeFileSync(productsFilePath, productosModificadosJSON)
 		
@@ -121,7 +126,7 @@ const controller = {
 		let productosModificadosJSON = JSON.stringify(productsQueQuedan)
 		fs.writeFileSync(productsFilePath, productosModificadosJSON)
 		res.send(productsQueQuedan)
-	},}*/
+	},
 
 	checkout: (req,res) => {
 		res.render('checkout')
