@@ -27,6 +27,7 @@ app.use('/', indexRouter);
 app.use('/products', productRouter);
 app.use('/admin', adminRouter);
 app.use('/addProduct', adminRouter);
+app.use('/editProduct', adminRouter);
 app.use('/user', usersRouter);
 app.use('/register', usersRouter);
 
