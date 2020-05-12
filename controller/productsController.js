@@ -75,7 +75,7 @@ const controller = {
 		res.render("addProduct");
 	},
 		
-/*
+
 	// Update - Form to edit
 	edit: (req, res) => {
 		// Do the magic
@@ -83,7 +83,7 @@ const controller = {
 			return element.id == req.params.productId;
 		});
 
-		res.render("product-edit-form", {
+		res.render("editProduct", {
 			productToEdit: product,
 		});	
 	},
@@ -91,22 +91,28 @@ const controller = {
 	// Update - Method to update
 	update: (req, res) => {
 		// Do the magic
+		console.log(products)
 		products.forEach(element=>{
 			if(element.id==req.params.productId){
 				element.name=req.body.name
+				element.release_date=req.body.release_date
+				element.age=req.body.age
 				element.price=req.body.price
-				element.discount=req.body.discount
 				element.category=req.body.category
-				element.description=req.body.description
+				element.developer=req.body.developer
+				element.distributor=req.body.distributor
+				element.platform=req.body.platform
+				element.section=req.body.section
+				
 			}
 		})
-
+		
 		let productosModificadosJSON = JSON.stringify(products)
 		fs.writeFileSync(productsFilePath, productosModificadosJSON)
 		
-		res.redirect("../");	
+		//res.render("index");	
 	},
-
+/*
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
 		// Do the magic
