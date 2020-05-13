@@ -11,7 +11,7 @@
     <%- include('./partials/navbar') %>
     <!-- Video -->
     <div class="row">
-      <iframe class="col-12" id="video-demo" height="215vh" src="https://www.youtube.com/embed/f2Bsx4Gnadk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="col-12" id="video-demo" height="215vh" src="<%= producto.videoProduct %> " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <!-- SECCION SOBRE LA INFO DEL JUEGO-->
     <section class="section row justify-content-around">
@@ -21,11 +21,7 @@
       </div>
       <!-- INFORMACION-->
       <div class="section__info col-11 col-lg-3 d-flex justify-content-center m-4">
-        <p>El mundo ha caído bajo el dominio de Shinra Electric Power Company
-          una siniestra corporación que controla la energía mako, la fuente de vida del planeta.</br>
-          En la extensa ciudad de Midgar, una organización antishinra autodenominada Avalancha ha iniciado la
-          resistencia.
-          Cloud Strife, un exmiembro de la unidad de elite SOLDADO de Shinra devenido mercenario</p>
+        <%= producto.description %> 
       </div>
       <!-- ESPECIFICACION -->
       <div class="section__especificaciones col-11 col-md-4 col-lg-4">
