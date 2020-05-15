@@ -7,12 +7,12 @@ const usersController = require('../controller/usersController');
 
 router.get('/register', usersController.register);
 
-router.post('register', [
+router.post('/register', [
     check('first_name').isEmpty().withMessage("Este campo es obligatorio"),
     check('last_name').isEmpty().withMessage("Este campo es obligatorio"),
     check('age').isNumeric().withMessage("Debe ser un numero"),
     check('password').isAlphanumeric().isLength({min:8, max:15}).withMessage("El password ser alfanumérico, mínimo 8 caracteres y máximo 15"),
-    check('avatar').isEmpty(). withMessage("Debes elegir un Avatar")
+    //check('avatar').isEmpty(). withMessage("Debes elegir un Avatar")
 ],usersController.createUser);
 
 router.get('/login', usersController.login);

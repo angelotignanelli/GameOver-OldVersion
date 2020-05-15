@@ -9,28 +9,41 @@ controller ={
     register: function(req, res, next) {
     res.render('register');
     },
-    createUser: function(req,res,next){
+    createUser: function(req,res,next){console.log(req.body)
         let nuevoUsuario={}
     if(usersJSON==""){
         nuevoUsuario.id=1
-    } else { 
+    }else{ 
     let ultimoUsuario=usersJSON[usersJSON.length-1]
     nuevoUsuario.id=ultimoUsuario.id+1
     }
-    
+    if(req.body.password === req.body.password2){
+        console.log('Passwords iguales')
     nuevoUsuario.first_name=req.body.first_name
     nuevoUsuario.last_name=req.body.last_name
     nuevoUsuario.age=req.body.age
     nuevoUsuario.email=req.body.email
-    nuevoUsuario.password=req.body.password
+    nuevoUsuario.password=bcrypt.hashSync(req.body.password,10)
     nuevoUsuario.avatar=req.body.avatar
    
-    products.push(nuevoUsuario)
+    usersJSON.push(nuevoUsuario)
 
     let usuarioAgregadoJSON = JSON.stringify(usersJSON)
     fs.writeFileSync(usersFilePath, usuarioAgregadoJSON)
 
-    res.render("addUsuario");
+    res.render('mensaje',{
+        mensaje:'Gracias por registrarse',
+        tipo:'alert-success'
+    });
+    }else{
+        console.log('Passwords distintas')
+    res.render('mensaje',{
+        mensaje:'Las passwords deben ser iguales',
+        tipo:'alert-danger'
+    });    
+    }
+    
+    
 
     },
     login: function(req, res, next) {
