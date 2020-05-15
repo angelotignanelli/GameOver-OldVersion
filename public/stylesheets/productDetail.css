@@ -78,14 +78,16 @@
 }
 
 .container-fluid .section__h3 {
-  color: var(--color4);
+  color: black;
   font-size: 40px;
 }
 
 .container-fluid .section__comentarios {
   margin-top: 30px;
-  background: var(--color2);
+  background: lightgray;
   color: var(--color4);
+  color: black;
+  border-radius: 5px;
 }
 
 .container-fluid .section__img-perfil {
