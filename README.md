@@ -42,3 +42,22 @@ Action Items:
 
 
 >>>>>>> 2399a5e3db6bca10055254fa73757500fdc0b9c2
+=======
+# 1-GameOver-Retro Sprint 2
+
+-En el aspecto positivo el grupo trabajó bien pudiendo completar las fechas estipuladas.
+
+-En el aspecto negativo este sprint costó más que el anterior para organizarnos y cumplir las metas de programación. Destacándose según su conocimmiento algún integrante sobre otro. Pero dentro de ese desorden, nunca dejó de haber comunicación y buena energía. Todos tiramos para adelante y hacia un mismo objetivo.
+
+-Para mejorar, el grupo debe administrar mejor el tiempo, cumplir individualmente los objetivos a cumplir para que grupalmente sólo haya que solucionar problemas de código.
+
+Action Items:
+
+-Comunicación entre todos: Usamos tres canales, Slack, Trello y Whatsapp.
+
+-División de tareas: Esta vez divimos para trabajar bajo la modalidad 'Pair programming'. 
+
+-Trello: https://trello.com/b/51LHFIbU/proyecto-int
+
+
+>>>>>>> 2399a5e3db6bca10055254fa73757500fdc0b9c2

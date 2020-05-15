@@ -11,13 +11,13 @@
     <%- include('./partials/navbar') %>
     <!-- Video -->
     <div class="row">
-      <iframe class="col-12" id="video-demo" height="215vh" src="<%= producto.videoProduct %> " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <iframe class="col-12" id="video-demo" height="215vh" src="<%= producto.videoProduct %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <!-- SECCION SOBRE LA INFO DEL JUEGO-->
     <section class="section row justify-content-around">
       <!-- LOGO IMG-->
       <div class="section__logo col-12 col-md-5 col-lg-3">
-        <img src="/images/product-images/logo.png" alt="logo producto" class="section__logoimg img-fluid">
+        <img src="/images/product-images/<%=producto.logoProduct %>" alt="logo producto" class="section__logoimg img-fluid">
       </div>
       <!-- INFORMACION-->
       <div class="section__info col-11 col-lg-3 d-flex justify-content-center m-4">

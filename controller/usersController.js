@@ -13,7 +13,7 @@ controller ={
         let nuevoUsuario={}
     if(usersJSON==""){
         nuevoUsuario.id=1
-    } else { 
+    }else{ 
     let ultimoUsuario=usersJSON[usersJSON.length-1]
     nuevoUsuario.id=ultimoUsuario.id+1
     }
@@ -25,7 +25,7 @@ controller ={
     nuevoUsuario.password=req.body.password
     nuevoUsuario.avatar=req.body.avatar
    
-    products.push(nuevoUsuario)
+    usersJSON.push(nuevoUsuario)
 
     let usuarioAgregadoJSON = JSON.stringify(usersJSON)
     fs.writeFileSync(usersFilePath, usuarioAgregadoJSON)

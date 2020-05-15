@@ -36,7 +36,8 @@ const controller = {
 	detail: function(req, res, next) {
 		var product = products.find(function(element) {
 		return element.id == req.params.productId;
-	  	});
+		  });
+		  console.log(product)
         res.render("productDetail", {
             aMiles: toThousand,
 			producto: product,
