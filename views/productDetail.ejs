@@ -11,13 +11,13 @@
     <%- include('./partials/navbar') %>
     <!-- Video -->
     <div class="row">
-      <iframe class="col-12" id="video-demo" height="215vh" src="<%= producto.videoProduct %> " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="col-12" id="video-demo" height="415vh" src="<%= producto.videoProduct %> " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <!-- SECCION SOBRE LA INFO DEL JUEGO-->
     <section class="section row justify-content-around">
       <!-- LOGO IMG-->
       <div class="section__logo col-12 col-md-5 col-lg-3">
-        <img src="/images/product-images/logo.png" alt="logo producto" class="section__logoimg img-fluid">
+        <img src="/images/product-games/logo/<%= producto.logoProduct%>" alt="logo producto" class="section__logoimg img-fluid mt-4">
       </div>
       <!-- INFORMACION-->
       <div class="section__info col-11 col-lg-3 d-flex justify-content-center m-4">
@@ -52,15 +52,16 @@
       </div>
 
       <div class="main-boxes row m-auto">
-        <div class="main_borrar  col-5">
-        <img src="/images/admin/borrar.png" alt=""> 
-        <form action="/products/delete/<%=producto.id%>?_method=DELETE" method="POST" style="display: inline-flex">
-        <button type="submit" class="btn btn-outline-danger">Eliminar</button>
+        <div class="main_borrar  col-6">
+          <form id="eliminar" action="/products/delete/<%=producto.id%>?_method=DELETE" method="POST">
+            <img src="/images/admin/borrar.png" alt=""> 
+        <button type="submit" class="btn-eliminar">Eliminar</button>
         </form>
     </div>
     <div class="main_editar  col-5">
         <img src="/images/admin/modificar.png" alt="">
-        <a href="/products/edit/<%=producto.id%>"><button type="button" class="btn btn-outline-danger">Editar</button></a>
+        <a href="/products/edit/<%=producto.id%>">
+          <button type="button" class="editar-boton" style="">Editar</button></a>
     </div>
   </div>
       
@@ -103,20 +104,24 @@
             </div>
           </li>
         </ul>
-
+      
         
+        
+      
       </section>
     </section>
     <!--SECCION CARDS-->
-    <section class="cards row d-flex justify-content-center m-4">
+    <!--
+    <section class="cards row d-flex justify-content-center m-2">
       <h3 class="cards__h3 col-12" id="h3-cards">PUEDEN INTERESARTE</h3>
     </section>
-    <div class="container__cards row d-flex justify-content-around">
+    <div class="container__cards col-12 d-flex align-self-center">
       <%- include('./partials/box-card-interesante.ejs') %>
       <%- include('./partials/box-card-interesante.ejs') %> 
       <%- include('./partials/box-card-interesante.ejs') %> 
       <%- include('./partials/box-card-interesante.ejs') %> 
   </div>
+  -->
     <%- include('./partials/footer') %>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
