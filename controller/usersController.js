@@ -9,7 +9,10 @@ controller ={
     register: function(req, res, next) {
     res.render('register');
     },
-    createUser: function(req,res,next){console.log(req.body)
+    createUser: function(req,res,next){
+        console.log(req.body)
+        const errors=validationResult(req)
+        if(errors.isEmpty()){
         let nuevoUsuario={}
     if(usersJSON==""){
         nuevoUsuario.id=1
@@ -21,7 +24,6 @@ controller ={
         console.log('Passwords iguales')
     nuevoUsuario.first_name=req.body.first_name
     nuevoUsuario.last_name=req.body.last_name
-    nuevoUsuario.age=req.body.age
     nuevoUsuario.email=req.body.email
     nuevoUsuario.password=bcrypt.hashSync(req.body.password,10)
     nuevoUsuario.avatar=req.body.avatar
@@ -42,9 +44,10 @@ controller ={
         tipo:'alert-danger'
     });    
     }
+}else{
+    return res.render('register',{errors:errors.errors})
+}
     
-    
-
     },
     login: function(req, res, next) {
         res.render('login');
@@ -62,14 +65,13 @@ controller ={
           for(let i=0;i < users.length; i++){
               if(users[i].email == req.body.email){
               //console.log(req.body.password + ' ' + users[i].password);
-              let passwordHash=bcrypt.hashSync(users[i].password, 10);
+              let passwordHash=users[i].password;
               if(bcrypt.compareSync(req.body.password, passwordHash)){
-              if(req.body.password==users[i].password){
               usuarioALoguearse=users[i];
               break;
           }
           }
-          }
+        }
               //console.log(usuarioALoguearse); 
           if(usuarioALoguearse==undefined){
               return res.render('login',{errors:[
@@ -79,7 +81,6 @@ controller ={
 
           req.session.usuarioLogueado=usuarioALoguearse;
           res.send('Success');
-          }
       }else{
           return res.render('login',{errors:errors.errors});
           }

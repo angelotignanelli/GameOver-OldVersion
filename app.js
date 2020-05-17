@@ -31,7 +31,7 @@ app.use('/admin', adminRouter);
 app.use('/addProduct', adminRouter);
 app.use('/editProduct', adminRouter);
 app.use('/user', usersRouter);
-app.use('/register', usersRouter);
+//app.use('/register', usersRouter);
 
 
 
