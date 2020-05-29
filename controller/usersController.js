@@ -26,7 +26,7 @@ controller ={
     nuevoUsuario.last_name=req.body.last_name
     nuevoUsuario.email=req.body.email
     nuevoUsuario.password=bcrypt.hashSync(req.body.password,10)
-    nuevoUsuario.avatar=req.body.avatar
+    nuevoUsuario.avatar=req.files[0].filename
    
     usersJSON.push(nuevoUsuario)
 
@@ -87,6 +87,12 @@ controller ={
   },
     fanZone: function(req, res) {
     res.render('fanZone');
+    },
+    perfilUser : (req,res,next)=>{
+        res.render('perfilUser',{
+            users: usersJSON
+        })
+
     }
 }
 

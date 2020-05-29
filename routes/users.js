@@ -1,13 +1,29 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
+var multer = require('multer');
 const {check, validationResults, body} = require('express-validator');
-
 const usersController = require('../controller/usersController');
 
 
-router.get('/register', usersController.register);
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, './public/images/img-perfil')
+    },
+    filename: function (req, file, cb) {    
+      cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    }
+  })
 
-router.post('/register', [
+  var upload = multer({ storage: storage })
+
+
+
+
+
+router.get('/register', usersController.register);
+router.get('/perfil', usersController.perfilUser)
+router.post('/register',upload.any() ,[
     check('first_name').isAlpha().withMessage("El nombre es obligatorio"),
     check('last_name').isAlpha().withMessage("El apellido es obligatorio"),
     check('email').isEmail().withMessage("Debe ser un email"),
