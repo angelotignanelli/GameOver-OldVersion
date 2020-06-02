@@ -13,7 +13,11 @@
                     <li><a href="/user/fanzone">FanZone</a></li><span class="border-right"></span>
                     <li><a href="/products/productcart">Carrito</a></li><span class="border-right"></span>
                     <li><a href="/user/register">Registrarme</a></li><span class="border-right"></span>
-                    <li><a href="/user/login">Login</a></li></span>
+                    <% if (logeadoUser) { %>
+                      <li><a href="/user/perfilUser">Bienvenido : <%= logeadoUser %> <i class="fas fa-user"></i></a></li></span>
+                    <% } else {%>
+                      <li><a href="/user/login">Login</a></li></span>                      
+                      <%}%>
                 </ul>
             </nav>
         </nav>

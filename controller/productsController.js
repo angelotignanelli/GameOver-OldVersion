@@ -27,18 +27,22 @@ const controller = {
 			vendidos: vendidos,
 			ofertas: ofertas,
 			aMiles: toThousand,
-			porcentaje: porcentaje
+			porcentaje: porcentaje,
+			logeadoUser:req.session.logged
 		});
 		console.log(products);
 	},
 	//TODOS LOS PRODUCTOS
 	allProducts:(req,res,next)=>{
 		res.render('products.ejs',{
-			products : products
+			products : products,
+			logeadoUser:req.session.logged
 		})
 	},
 	products:(req,res,next)=>{
-		res.render('addProduct')
+		res.render('addProduct',{
+			logeadoUser:req.session.logged
+		})
 	},
 	
 	// Detail - Detail from one product
@@ -50,13 +54,16 @@ const controller = {
         res.render("productDetail", {
             aMiles: toThousand,
 			producto: product,
+			logeadoUser:req.session.logged
         });
     },
 	
 	// Create - Form to create
 	create: (req, res) => {
 		// Do the magic	
-		res.render("addProduct")		
+		res.render("addProduct",{
+			logeadoUser:req.session.logged
+		})		
 	},
 
 
@@ -99,6 +106,7 @@ const controller = {
 
 		res.render("editProduct", {
 			productToEdit: product,
+			logeadoUser:req.session.logged
 		});	
 	},
 
@@ -139,11 +147,15 @@ const controller = {
 	},
 
 	checkout: (req,res) => {
-		res.render('checkout')
+		res.render('checkout',{
+			logeadoUser:req.session.logged
+		})
 	},
 
 	cart: (req,res) => {
-		res.render('productCart')
+		res.render('productCart',{
+			logeadoUser:req.session.logged
+		})
 	},
 };
 

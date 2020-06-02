@@ -20,10 +20,8 @@ controller ={
         vendidos: vendidos,
         ofertas: ofertas,
         aMiles: toThousand,
+        logeadoUser:req.session.logged,
       });
-      res.render('index',{
-        recomendados:recomendados
-      })
     }
 }
 

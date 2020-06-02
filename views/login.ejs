@@ -15,26 +15,26 @@
                     <% if (typeof errors !="undefined")  { %>
                       <div class="alert alert-danger" role="alert">
                         Chequeá tu formulario
+                        <% for(let i = 0; i < errors.length; i++) { %>
+                            <li>
+                                <%=errors[i].msg%> 
+                            </li>
+                        <% } %>
                       </div>
                       <ul>
-                          <% for(let i = 0; i < errors.length; i++) { %>
-                              <li>
-                                  <%=errors[i].msg%> 
-                              </li>
-                          <% } %>
                       </ul>
                   <% } %>
                   </div>
                 </div>               
                 <div class="row">
                 <div class="title col-12">
-                    <h2>LOGIN DE USUARIO</h3>
+                    <h2>LOGIN DE USUARIO</h3>                        
                 </div>
                 </div>
                 <div class="information row" id="informacion">
                     <div class="form-group col-12">
-                        <label id="user-label" for="username">Usuario</label>
-                        <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Ingresa tu usuario"
+                        <label id="user-label" for="email">Usuario</label>
+                        <input type="email" name="email" id="usuario" class="form-control" placeholder="Ingresa tu usuario"
                             required="">
                     </div>
                     <div class="form-group col-12">
