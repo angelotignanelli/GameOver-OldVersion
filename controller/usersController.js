@@ -96,6 +96,8 @@ controller = {
         });
     },
     perfilUser: (req, res, next) => {
+        
+
         res.render('perfilUser', {
             users: usersJSON,
             logeadoUser: req.session.logged
@@ -105,10 +107,10 @@ controller = {
     processPerfil: (req, res, next) => {
 
 
-        for (let i = 0; i < usersJSON.length; i++) {
-
-            
-        }
+        let usuarioPerfil = usersJSON.find(function(element){ 
+            return element.email == logeadoUser 
+        });
+        console.log(usuarioPerfil)
 
         //console.log(usersJSON)
     }
