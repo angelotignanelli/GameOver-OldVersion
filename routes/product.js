@@ -15,7 +15,7 @@ router.get('/detail/:productId/', productsController.detail); /* GET - Product d
 //router.post('/create/', productsController.store); /* POST - Store in DB */
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/edit/:productId', productsController.edit); /* GET - Form to create */
+router.get('/edit/products', productsController.edit); /* GET - Form to create */
 router.put('/edit/:productId', productsController.update); /* PUT - Update in DB */
 
 /*** DELETE ONE PRODUCT***/ 

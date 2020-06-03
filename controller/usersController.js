@@ -5,10 +5,17 @@ const bcrypt = require('bcryptjs');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
+let admin = usersJSON.filter(function(element) {
+    return element.admin;
+});
+
+console.log(admin)
+
 controller = {
     register: function (req, res, next) {
-        res.render('register',{
-            logeadoUser:req.session.logged
+        res.render('register', {
+            logeadoUser: req.session.logged,
+            users:usersJSON
         });
     },
     createUser: function (req, res, next) {
@@ -35,58 +42,75 @@ controller = {
                 let usuarioAgregadoJSON = JSON.stringify(usersJSON)
                 fs.writeFileSync(usersFilePath, usuarioAgregadoJSON)
 
-                res.render('mensaje', {logeadoUser:req.session.logged,
+                res.render('mensaje', {
+                    logeadoUser: req.session.logged,
                     mensaje: 'Gracias por registrarse',
-                    tipo: 'alert-success'
+                    tipo: 'alert-success',
+                    users:usersJSON
                 });
             } else {
                 console.log('Passwords distintas')
-                res.render('mensaje', {logeadoUser:req.session.logged,
+                res.render('mensaje', {
+                    logeadoUser: req.session.logged,
                     mensaje: 'Las passwords deben ser iguales',
-                    tipo: 'alert-danger'
+                    tipo: 'alert-danger',
+                    users:usersJSON
                 });
             }
         } else {
-            return res.render('register', { logeadoUser:req.session.logged,errors: errors.errors })
+            return res.render('register', { logeadoUser: req.session.logged, errors: errors.errors })
         }
 
     },
     login: function (req, res, next) {
-        res.render('login',{
-            logeadoUser:req.session.logged
+        res.render('login', {
+            logeadoUser: req.session.logged,
+            users:usersJSON,
+            admin:admin
         });
     },
     processLogin: function (req, res, next) {
-        let errors= validationResult(req);
+        let errors = validationResult(req);
         
         for (let i = 0; i < usersJSON.length; i++) {
-            if(req.body.email == usersJSON[i].email && bcrypt.compareSync(req.body.password,usersJSON[i].password)){
+            if (req.body.email == usersJSON[i].email && bcrypt.compareSync(req.body.password, usersJSON[i].password)) {
                 req.session.logged = usersJSON[i].email;
                 var logeadoUser = req.session.logged;
-                console.log(logeadoUser);
-            }            
+                //console.log(logeadoUser);
+            }
         }
         res.redirect('/')
-                if(logeadoUser == undefined){
-                    return res.render('login',{errors:[
-                        {msg:"Credenciales inválidas"}
-                        ]});
-                }
-        
-        
+        if (logeadoUser == undefined) {
+            return res.render('login', {
+                errors: [
+                    { msg: "Credenciales inválidas" }
+                ]
+            });
+        }
+
+
     },
     fanZone: function (req, res) {
-        res.render('fanZone',{
-            logeadoUser:req.session.logged
+        res.render('fanZone', {
+            logeadoUser: req.session.logged
         });
     },
     perfilUser: (req, res, next) => {
-        
         res.render('perfilUser', {
             users: usersJSON,
-            logeadoUser:req.session.logged
+            logeadoUser: req.session.logged
         })
 
+    },
+    processPerfil: (req, res, next) => {
+
+
+        for (let i = 0; i < usersJSON.length; i++) {
+
+            
+        }
+
+        console.log(usersJSON)
     }
 }
 

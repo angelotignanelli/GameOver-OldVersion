@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+<body>
+  <div class="container-fluid">
+    <!--HEADER-->
+    <%- include('./partials/header')  %>
+
+
+
+    <div class="card">
+      <div class="card-body">
+        <h2 class="col-12">EDICION DE PRODUCTO</h2>
+        <form action="/products" method="POST">
+          <div class="form-group">
+            <label for="name">Nombre de producto</label>
+            <input name="name" type="name" class="form-control" id="name" value="<%=producto.name%> ">
+          </div>
+
+          <div class="form-group">
+            <label for="date">Fecha de lanzamiento</label>
+            <input name="release_date" class="form-control" id="release_date" value="<%=producto.release_date%>">
+          </div>
+
+          <div class="form-group">
+            <label for="number">Clasificacion de edad</label>
+            <input name="age" type="number" class="form-control" id="age" value="<%=producto.age_clasification%>">
+          </div>
+
+          <div class="form-group">
+            <label for="number">Precio</label>
+            <input name="price" type="number" class="form-control" id="price" value="<%=producto.price%>">
+          </div>
+
+          <div class="form-group">
+            <label for="name">Categoria/Genero</label>
+            <input name="category" type="name" class="form-control" id="category" value="<%=producto.category%>">
+          </div>
+
+          <div class="form-group">
+            <label for="name">Desarrollador</label>
+            <input name="developer" type="name" class="form-control" id="developer" value="<%=producto.developer%>">
+          </div>
+
+          <div class="form-group">
+            <label for="name">Distribuidor</label>
+            <input name="distributor" type="name" class="form-control" id="distributor"
+              value="<%=producto.distributor%>">
+          </div>
+
+          <div class="form-check form-check-inline">
+            <label for="platform">Consola/Plataforma de juego</label>
+            <input class="platform" type="checkbox" name="platform" id="inlineCheckbox1" value="PS4">
+            <label class="form-check-label" for="inlineCheckbox1">PS4</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="platform" type="checkbox" name="platform" id="inlineCheckbox2" value="XBOX">
+            <label class="form-check-label" for="inlineCheckbox2">XBOX</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="platform" type="checkbox" name="platform" id="inlineCheckbox3" value="PC">
+            <label class="form-check-label" for="inlineCheckbox3">PC</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="platform" type="checkbox" name="platform" id="inlineCheckbox2" value="Nintendo Switch">
+            <label class="form-check-label" for="inlineCheckbox4">Nintendo Switch</label>
+          </div>
+
+          <!--<div class="form-group">
+                                <label for="number">ID</label>
+                                <input type="number" class="form-control" id="id" placeholder="">
+                              </div>-->
+
+          <form>
+            <div class="form-row align-items-center">
+              <div class="col-auto my-1">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Seccion</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                  <option selected>Elige</option>
+                  <option value="Recomendados">Recomendada</option>
+                  <option value="vendidos">Mas vendidos</option>
+                </select>
+              </div>
+              <div class="col-auto my-1">
+                
+              </div>
+            </div>
+           <button type="submit" class="btn btn-success">EDITAR</button>
+          </form>
+
+          <!--<div class="custom-file">
+                                <input type="image" class="custom-file-input" id="image" aria-describedby="inputGroupFileAddon01">
+                                <label class="custom-file-label" for="image">Imagen del producto</label>
+                              </div>-->
+
+
+
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <%- include('./partials/footer') %>
+  </div>
+
+  <!--Optional JavaScript-->
+  <!--jQuery first, then Popper.js, then Bootstrap JS-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

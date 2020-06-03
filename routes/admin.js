@@ -21,8 +21,9 @@ router.get('/', adminController.admin);
 //AGREGAR PRODUCTO
 router.get('/addProduct', adminController.product);
 router.post('/addProduct',upload.any(),adminController.addProduct)
-//LISTAR PRODUCTOS
-router.get('/adminProducts',adminController.adminProducts)
+//LISTADO DE PRODUCTOS A EDITAR
 router.get('/editProduct', adminController.editProduct);
+//VISTA DE PRODUCTO A EDITAR
+router.get('/editProduct/detail/:id', adminController.detailEdit);
 
 module.exports = router;

@@ -1,23 +1,25 @@
-        <!-- MENU ESCRITORIO -->
-        <nav class="row">
-            <nav class="menu col-12 d-none d-md-block">
-                <ul>
-                    <li><a href="/">Home</a></li><span class="border-right"></span>
-                    <li><a href="/products">Catalogo</a>
-                        <ul class="sub-menu">
-                            <li><a href="">Merchandising</a></li>
-                            <li><a href="">Accesorios</a></li>
-                            <li><a href="">Video Juegos</a></li>
-                        </ul>
-                    </li><span class="border-right"></span>
-                    <li><a href="/user/fanzone">FanZone</a></li><span class="border-right"></span>
-                    <li><a href="/products/productcart">Carrito</a></li><span class="border-right"></span>
-                    <li><a href="/user/register">Registrarme</a></li><span class="border-right"></span>
-                    <% if (logeadoUser) { %>
-                      <li><a href="/user/perfilUser">Bienvenido : <%= logeadoUser %> <i class="fas fa-user"></i></a></li></span>
-                    <% } else {%>
-                      <li><a href="/user/login">Login</a></li></span>                      
-                      <%}%>
+<!-- MENU ESCRITORIO -->
+<nav class="row">
+  <nav class="menu col-12 d-none d-md-block">
+    <ul>
+      <li><a href="/">Home</a></li><span class="border-right"></span>
+      <li><a href="/products">Catalogo</a>
+        <ul class="sub-menu">
+          <li><a href="">Merchandising</a></li>
+          <li><a href="">Accesorios</a></li>
+          <li><a href="">Video Juegos</a></li>
+        </ul>
+      </li><span class="border-right"></span>
+      <li><a href="/user/fanzone">FanZone</a></li><span class="border-right"></span>
+      <li><a href="/products/productcart">Carrito</a></li><span class="border-right"></span>
+      <% if (logeadoUser) { %>
+      <li><a href="/admin">ADMIN</a></li><span class="border-right"></span>
+      <li><a href="/user/perfilUser">Bienvenido : <%= logeadoUser %></a></li></span>
+      <% } else {%>
+      <li><a href="/user/register">Registrarme</a></li><span class="border-right"></span>
+      <li><a href="/user/login">Login</a></li></span>
+      <%}%>
+                      
                 </ul>
             </nav>
         </nav>
