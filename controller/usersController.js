@@ -9,7 +9,7 @@ let admin = usersJSON.filter(function(element) {
     return element.admin;
 });
 
-console.log(admin)
+
 
 controller = {
     register: function (req, res, next) {
@@ -19,7 +19,7 @@ controller = {
         });
     },
     createUser: function (req, res, next) {
-        console.log(req.body)
+        
         const errors = validationResult(req)
         if (errors.isEmpty()) {
             let nuevoUsuario = {}
@@ -110,7 +110,7 @@ controller = {
             
         }
 
-        console.log(usersJSON)
+        //console.log(usersJSON)
     }
 }
 

@@ -42,21 +42,56 @@ controller = {
   },
   editProduct: function (req, res, next) {
     res.render('editProduct', {
-      products: products
+      products: products,
+      logeadoUser: req.session.logged
     });
   },
   detailEdit: (req, res, next) => {
     var product = products.find(function(element) {
       return element.id == req.params.id;
         });
-        console.log(product)
 
     res.render('processEditProduct',{
-      producto:product
+      producto:product,
+      logeadoUser: req.session.logged
     })
   },
   processEdit: (req, res, next) => {
+    console.log(req.body.name)
+    products.forEach(element=>{
+			if(element.id==req.params.id){
+				element.name=req.body.name
+				element.release_date=req.body.release_date
+				element.age=req.body.age
+				element.price=req.body.price
+				element.category=req.body.category
+				element.developer=req.body.developer
+				element.distributor=req.body.distributor
+				element.platform=req.body.platform
+        element.section=req.body.section
+        element.image=req.body.image					
+			}
+		})
+		
+		let productosModificadosJSON = JSON.stringify(products)
+		fs.writeFileSync(productsFilePath, productosModificadosJSON)
+		
+		res.redirect("/products");
+  },
+  deleteProduct:(req,res,next)=>{
+    
+    res.render('deleteProduct',{
+      products:products
+    })
+  },
+  deleteProcess:(req,res)=>{
+    let productsQueQuedan = products.filter(function(element) {
+			return element.id != req.params.id;
+		});
 
+		let productosModificadosJSON = JSON.stringify(productsQueQuedan)
+		fs.writeFileSync(productsFilePath, productosModificadosJSON)
+		res.send(productsQueQuedan)
   }
 }
 
