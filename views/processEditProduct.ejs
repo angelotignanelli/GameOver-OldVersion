@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+<body>
+  <div class="container-fluid">
+    <!--HEADER-->
+    <%- include('./partials/header')  %>
+    <%- include('./partials/navbar')  %>
+
+    <!--INICIO DE EDITAR-->
+    <div class="card">
+      <div class="card-body" style="margin-left: 40%;">
+        <h2 class="col-12">EDICION DE PRODUCTO</h2>
+        <form action="/admin/editProduct/detail/<%=producto.id%>" method="POST" class="col-4">
+          <!--NOMBRE DEL PRODUCTO-->
+         
+            <strong><label for="name">Nombre de producto:</label></strong>
+            <input name="name" type="name" class="form-control" id="name" value="<%=producto.name%> ">
+        
+          <!--FECHA DE LANZAMIENTO-->
+          <div class="form-group">
+            <strong><label for="date">Fecha de lanzamiento</label></strong>
+            <input name="release_date" class="form-control" id="release_date" value="<%=producto.release_date%>">
+          </div>
+          <!--CLASIFICACION DE EDAD-->
+          <div class="form-group">
+            <strong><label for="number">Clasificacion de edad</label></strong>
+            <input name="age" type="number" class="form-control" id="age" value="<%=producto.age_clasification%>">
+          </div>
+          <!--PRECIO DEL PRODUCTO-->
+          <div class="form-group">
+            <strong><label for="number">Precio</label></strong>
+            <input name="price" type="number" class="form-control" id="price" value="<%=producto.price%>">
+          </div>
+          <!--CATEGORIA/GENERO-->
+          <div class="form-group">
+            <strong><label for="name">Categoria/Genero</label></strong>
+            <input name="category" type="name" class="form-control" id="category" value="<%=producto.category%>">
+          </div>
+          <!--DESARROLLADOR-->
+          <div class="form-group">
+            <strong><label for="name">Desarrollador</label></strong>
+            <input name="developer" type="name" class="form-control" id="developer" value="<%=producto.developer%>">
+          </div>
+          <!--DISTRIBUIDOR-->
+          <div class="form-group">
+            <strong><label for="name">Distribuidor</label></strong>
+            <input name="distributor" type="name" class="form-control" id="distributor"
+              value="<%=producto.distributor%>">
+          </div>
+          <!--CONSOLE / PLATAFORMA-->
+          <div class="form-check form-check-inline">
+            <strong><label for="platform">Consola/Plataforma de juego</label></strong>
+
+          </div>
+          <!--INPUT CHECK-->
+          <div class="form-check form-check-inline ">
+            <!--XBOX-->
+            <input class="platform mr-2" type="checkbox" name="platform" id="inlineCheckbox2" value="XBOX">
+            <label class="form-check-label mr-2" for="inlineCheckbox2">XBOX</label>
+            <!--PS4-->
+            <input class="platform mr-2" type="checkbox" name="platform" id="inlineCheckbox1" value="PS4">
+            <label class="form-check-label mr-2" for="inlineCheckbox1">PS4</label>
+            <!--PC-->
+            <input class="platform mr-2 " type="checkbox" name="platform" id="inlineCheckbox3" value="PC">
+            <label class="form-check-label mr-2" for="inlineCheckbox3">PC</label>
+            <!--NINTENDO-->
+            <input class="platform mr-2 " type="checkbox" name="platform" id="inlineCheckbox2" value="Nintendo Switch">
+            <label class="form-check-label" for="inlineCheckbox4">Nintendo Switch</label>
+          </div>
+          <!--SECCION-->
+          <div class="form-row align-items-center">
+            <div class="col-auto mt-1">
+              <strong> <label class="mr-sm-2" for="inlineFormCustomSelect">Seccion</label></strong>
+              <select class="custom-select mr-sm-2">
+                <option selected>Elige</option>
+                <option name="Recomendados">Recomendada</option>
+                <option name="vendidos">Mas vendidos</option>
+              </select>
+            </div>
+          </div>
+          <!--IMAGEN DEL PRODUCTO-->
+          <img src="/images/product-games/<%=producto.image%>" alt="img-producto" class="img-fluid rounded-top rounded-bottom">
+          <label for="image">
+            <input type="file" name="image" id="image">
+          </label>
+          <!--EDITAR PRODUCTO BOTON-->
+          <button type="submit" class="btn btn-success mt-4">EDITAR</button>
+        </form>
+      </div>
+    </div>
+    <!--FIN DE EDITAR-->
+    <%- include('./partials/footer') %>
+  </div>
+
+  <!--Optional JavaScript-->
+  <!--jQuery first, then Popper.js, then Bootstrap JS-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

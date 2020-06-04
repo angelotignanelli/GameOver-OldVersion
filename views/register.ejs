@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <%- include('./partials/head') %>
 
 <body>
@@ -8,7 +8,7 @@
         <%- include('./partials/navbar') %>
 
         <div id="login-container" class="row " >
-            <form class=" col-5" id="formulario" action="/user/register" method="POST">
+            <form class=" col-5" id="formulario" action="/user/register" method="POST" enctype="multipart/form-data">
               <div class="row"><div class="col-12">
                 <% if (typeof errors !="undefined")  { %>
                   <div class="alert alert-danger" role="alert">
