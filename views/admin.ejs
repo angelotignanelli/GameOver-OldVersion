@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <%- include('./partials/head') %> 
     <body>
         <div class="container-fluid">
@@ -50,33 +50,25 @@
                       </nav>
                 </nav>
             </nav>
-            <div class="main-boxes row m-auto">
+            <div class="main-boxes row m-4">
                 <h2 class="col-12">PANEL ADMINISTRADOR</h2>
-                    <div class="main_agregar col-5">
-                        <img src="/images/admin/agregar.png" alt="">
-                        <a href="/products/create"><button type="button" class="btn btn-outline-success">Agregar</button></a>
-                    </div>
-                    <!--<div class="main-borrar">
-                    <div class="main_borrar  col-5">
-                      <img src="/images/admin/borrar.png" alt=""> <button type="button"
-                      class="btn btn-outline-danger">Eliminar</button>
-                  </div>
-                  <div class="main_editar  col-5">
-                      <img src="/images/admin/modificar.png" alt="">
-                      <button type="button" class="btn btn-outline-danger">Eliminar</button>
-                  </div>
-                  </div>-->
-                    <div class="main_editar  col-5">
-                        <img src="/images/admin/estadisticas.png" alt="">
-                        <button type="button" class="btn btn-outline-danger">Estadisticas</button>
+                    
+                    <div class="main_productos  col-5">
+                      <p class="h4 scol-12"> PRODUCTOS</p>
+                        <img src="/images/admin/products.png" alt="">
+                        <a href="/admin/adminProducts">
+                          <button type="button" class="btn btn-outline-danger">Productos</button>
+                        </a>
                     </div>
                     <div class="main_usuario  col-5">
-                        <img src="/images/admin/usuario.png" alt="">
+                      <p class="h4 scol-12"> USUARIOS</p>
+                        <img src="/images/admin/Usuarios.png" alt="">
                         <button type="button" class="btn btn-outline-danger">Usuarios</button>
                     </div>
-                    <div class="main_envio col-5">
-                        <img src="/images/admin/envio.png" alt="">
-                        <button type="button" class="btn btn-outline-danger">Envios</button>
+                    <div class="main_carrito col-5">
+                      <p class="h4 scol-12"> CARRITO</p>
+                        <img src="/images/admin/carrito.png" alt="">
+                        <button type="button" class="btn btn-outline-dark">carrito</button>
                         
                     </div>
             </div>

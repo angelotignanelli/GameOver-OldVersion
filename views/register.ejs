@@ -7,21 +7,28 @@
         <%- include('./partials/header') %>
         <%- include('./partials/navbar') %>
 
-<<<<<<< HEAD
         <div id="login-container" class="row " >
-            <form class=" col-5 container-fluid" id="formulario" action="/user/login" method="POST">
+            <form class=" col-5" id="formulario" action="/user/register" method="POST">
+              <div class="row"><div class="col-12">
+                <% if (typeof errors !="undefined")  { %>
+                  <div class="alert alert-danger" role="alert">
+                    Chequeá tu formulario
+                  </div>
+                  <ul>
+                      <% for(let i = 0; i < errors.length; i++) { %>
+                          <li>
+                              <%=errors[i].msg%> 
+                          </li>
+                      <% } %>
+                  </ul>
+              <% } %>
+              </div>
+            </div>
+              <div class="row">
                 <h1 class="col-12 text-center">Registro</h1>
                 <div class="name col-12">
                   <label for="first_name ">Nombre:</label>
                   <input class="form-control col-8" type="text" name="first_name">
-=======
-        <div id="login-container" class="container-fluid">
-            <form class="row" id="formulario" action="/user/register" method="POST">
-                <h1 class="col-12">Registro</h1>
-                <div class="name col-9">
-                  <label for="first_name">Nombre:</label>
-                  <input class="form-control col-4" type="text" name="first_name">
->>>>>>> b4d3ddecb25ee5015543e36c799412f57f5757d8
                 </div>
                 <div class="last_name col-12">
                   <label for="last_name">Apellido:</label>
@@ -41,15 +48,10 @@
                   <label for="avatar">Avatar:</label>
                   <input class="form-control col-8" type="file" name="avatar">
                 </div>
-<<<<<<< HEAD
-                <div class="enviar col-12 d-flex justify-content-center">
-                  <button class="btn btn-success mt-4" type="button">REGISTARME</button>
-=======
                 <div class="enviar col-9">
                   <button class="btn btn-success mt-4" type="submit">REGISTRARME</button>
->>>>>>> b4d3ddecb25ee5015543e36c799412f57f5757d8
                 </div>
-
+              </div>
             </form>
 
         </div>

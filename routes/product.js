@@ -5,12 +5,14 @@ const router = express.Router();
 // ************ Controller Require ************
 const productsController = require('../controller/productsController');
 
-router.get('/', productsController.root); /* GET - All products */
+//*TODOS LOS PRODUCTOS */
+router.get('/', productsController.allProducts); /* GET - All products */
+
 router.get('/detail/:productId/', productsController.detail); /* GET - Product detail */
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/create/', productsController.create); /* GET - Form to create */
-router.post('/create/', productsController.store); /* POST - Store in DB */
+//router.get('/create/', productsController.create); /* GET - Form to create */
+//router.post('/create/', productsController.store); /* POST - Store in DB */
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:productId', productsController.edit); /* GET - Form to create */

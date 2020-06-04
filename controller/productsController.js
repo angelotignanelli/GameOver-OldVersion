@@ -31,6 +31,15 @@ const controller = {
 		});
 		console.log(products);
 	},
+	//TODOS LOS PRODUCTOS
+	allProducts:(req,res,next)=>{
+		res.render('products.ejs',{
+			products : products
+		})
+	},
+	products:(req,res,next)=>{
+		res.render('addProduct')
+	},
 	
 	// Detail - Detail from one product
 	detail: function(req, res, next) {
@@ -52,7 +61,7 @@ const controller = {
 
 
 	// Create -  Method to store
-	store: (req, res) => {
+	/*store: (req, res) => {
 		// Do the magic
 		let nuevoProducto={}
 		if(products==""){
@@ -79,7 +88,7 @@ const controller = {
 
 		res.render("addProduct");
 	},
-		
+	*/	
 
 	// Update - Form to edit
 	edit: (req, res) => {
