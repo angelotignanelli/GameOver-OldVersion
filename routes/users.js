@@ -38,6 +38,9 @@ router.post('/login', [
   check('password').isLength({ min: 8 }).withMessage("El password debe tener como mínimo 8 caracteres")],
   usersController.processLogin);
 
+//lOGOUT
+router.get('/logout', usersController.logout);
+
 //PERFIL DE USUARIO
 router.get('/perfilUser', usersController.perfilUser);
 router.post('/perfilUser', usersController.processPerfil);

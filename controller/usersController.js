@@ -87,9 +87,11 @@ controller = {
                 ]
             });
         }
-
-
     },
+    logout: function(req,res,next){
+            req.session.destroy() 
+            res.redirect('/')
+        },
     fanZone: function (req, res) {
         res.render('fanZone', {
             logeadoUser: req.session.logged
