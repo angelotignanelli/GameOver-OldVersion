@@ -20,6 +20,7 @@ controller ={
         let admin = usersJSON.filter(function(element) {
           return element.admin == "admin";
           });
+        console.log("logueadoAutomatico: "+ req.cookies.logueadoAutomatico) // Cookie creada en usersController/login
         res.render('index', {
         recomendados: recomendados,
         vendidos: vendidos,

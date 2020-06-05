@@ -77,6 +77,7 @@ controller = {
                 req.session.logged = usersJSON[i].email;
                 var logeadoUser = req.session.logged;
                 //console.log(logeadoUser);
+                res.cookie('logueadoAutomatico',usersJSON[i].email) // Cookie cuando se loguea el usuario
             }
         }
         res.redirect('/')
