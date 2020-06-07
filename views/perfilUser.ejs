@@ -4,6 +4,7 @@
 
 <body>
     <div class="container-fluid">
+        <!--HEADER-->
         <%- include('./partials/header') %>
         <%- include('./partials/navbar') %>
 
@@ -12,40 +13,33 @@
         <% }) %>
 
         <% if (logeadoPerfil) { %>
-        <% console.log(logeadoPerfil) %>
-        <div class="container bootstrap snippet">
+
+        <div class="container  ">
+            <!--Logo-->
             <div class="row">
                 <div class="col-sm-10">
-                    <h1><%= logeadoPerfil.first_name %> </h1><a class="btn btn-primary" href="/user/logout" role="button">Logout</a>
+                    <h1><%= logeadoPerfil.first_name %> </h1><a class="btn btn-primary" href="/user/logout"
+                        role="button">Logout</a>
                 </div>
-                <h6 class="col-sm-10">Editar Perfil</h6>
-                <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image"
+                <div class="col-sm-2"><a href="#" class="pull-right"><img title="profile image"
                             class="img-circle img-responsive img-fluid" src="/images/logo.png"></a></div>
             </div>
+            <!--AVATAR-->
             <div class="row">
                 <div class="col-sm-3">
-                    <!--left col-->
-
-
-                    <div class="text-center">
+                    <div class="logo">
                         <img src="/images/img-perfil/<%=logeadoPerfil.avatar %>" class="avatar img-circle img-thumbnail"
                             alt="avatar">
-
-
                     </div>
                     </hr><br>
-
-
+                    <!--WEBSITE-->
                     <div class="panel panel-default">
                         <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i></div>
                         <div class="panel-body"><a href="#">www.GameOver.com.ar</a></div>
                     </div>
-
-
+                    <!--ACTIVIDAD-->
                     <ul class="list-group">
                         <li class="list-group-item text-muted">Actividad</i></li>
-                        <li class="list-group-item text-right"><span class="pull-left"><strong>Shares</strong></span>
-                            125</li>
                         <li class="list-group-item text-right"><span class="pull-left"><strong>Likes</strong></span> 13
                         </li>
                         <li class="list-group-item text-right"><span class="pull-left"><strong>Posts</strong></span> 37
@@ -53,130 +47,72 @@
                         <li class="list-group-item text-right"><span class="pull-left"><strong>Followers</strong></span>
                             78</li>
                     </ul>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Redes Sociales</div>
+                    <!--REDES SOCIALES-->
+                    <div class="panel mb-5">
+                        <div class="panel-heading mb-3">Redes Sociales:</div>
                         <div class="panel-body">
                             Instagram - Facebook - Twitter
                         </div>
                     </div>
-
                 </div>
-                <!--/col-3-->
+                <!--TITULO DATOS EDITAR-->
                 <div class="col-sm-9">
                     <h5>Datos a editar:</h5>
-
-
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="home">
-                            <hr>
-                            <form class="form" action="##" method="post" id="registrationForm">
-                                <div class="form-group">
-
-                                    <div class="col-xs-6">
-                                        <label for="first_name">
-                                            <h4>Nombre</h4>
-                                        </label>
-                                        <input type="text" class="form-control" name="first_name" id="first_name"
-                                            value="<%=logeadoPerfil.first_name %>"
-                                            title="enter your first name if any.">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-
-                                    <div class="col-xs-6">
-                                        <label for="last_name">
-                                            <h4>Apellido</h4>
-                                        </label>
-                                        <input type="text" class="form-control" name="last_name" id="last_name"
-                                            value="<%=logeadoPerfil.last_name %>" title="enter your last name if any.">
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-
-                                    <div class="col-xs-6">
-                                        <label for="phone">
-                                            <h4>Celular</h4>
-                                        </label>
-                                        <input type="text" class="form-control" name="phone" id="phone"
-                                            placeholder="enter phone" title="enter your phone number if any.">
-                                    </div>
-                                </div>
+                    <hr>
+                    <!--FORMULARIO-->
+                    <form  action="/user/perfilUser" method="post" enctype="multipart/form-data">
+                        <!--NOMBRE-->
+                        <div class="col-xs-6">
+                            <label for="first_name">
+                                <h4>Nombre</h4>
+                            </label>
+                            <input type="text" class="form-control" name="first_name" id="first_name"
+                                value="<%=logeadoPerfil.first_name %>">
                         </div>
-                        <div class="form-group">
-
-                            <div class="col-xs-6">
-                                <label for="email">
-                                    <h4>Email</h4>
-                                </label>
-                                <input type="email" class="form-control" name="email" id="email"
-                                    value="<%=logeadoPerfil.email %>" title="enter your email.">
-                            </div>
+                        <!--APELLIDO-->
+                        <div class="col-xs-6">
+                            <label for="last_name">
+                                <h4>Apellido</h4>
+                            </label>
+                            <input type="text" class="form-control" name="last_name" id="last_name"
+                                value="<%=logeadoPerfil.last_name %>">
                         </div>
-                        <div class="form-group">
-
-                            <div class="col-xs-6">
-                                <label for="email">
-                                    <h4>Localidad</h4>
-                                </label>
-                                <input type="email" class="form-control" id="location" placeholder="somewhere"
-                                    title="enter a location">
-                            </div>
+                        <!--EMAIL-->
+                        <div class="col-xs-6">
+                            <label for="email">
+                                <h4>Email</h4>
+                            </label>
+                            <input type="email" class="form-control" name="email" id="email"
+                                value="<%=logeadoPerfil.email %>">
                         </div>
-                        <div class="form-group">
-
-                            <div class="col-xs-6">
-                                <label for="password">
-                                    <h4>Password</h4>
-                                </label>
-                                <input type="password" class="form-control" name="password" id="password"
-                                    placeholder="password" title="enter your password.">
-                            </div>
+                        <!--AVATAR-->
+                        <div class="col-xs-6">
+                            <label for="avatar">
+                                <h4>Avatar</h4>
+                            </label>
+                            <input type="file" class="form-control" name="file" id="file">
                         </div>
-                        <div class="form-group">
-
-
+                        <!--CONTRASEÑA-->
+                        <div class="col-xs-6">
+                            <label for="password">
+                                <h4>Contraseña</h4>
+                            </label>
+                            <input type="password" class="form-control" name="password" id="password"
+                                placeholder="Nueva contraseña">
                         </div>
-                        <div class="form-group">
-                            <div class="col-xs-12">
-                                <br>
-                                <button class="btn btn-lg btn-success" type="submit"><i
-                                        class="glyphicon glyphicon-ok-sign"></i> Save</button>
-                                <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i>
-                                    Reset</button>
-                            </div>
+                        <!--GUARDAR-->
+                        <div class="col-xs-12">
+                            <br>
+                            <button class="btn btn-lg btn-success" type="submit"><i
+                                    class="glyphicon glyphicon-ok-sign"></i> Guardar</button>
                         </div>
-                        </form>
-
-
-
-                    </div>
-                    <!--/tab-pane-->
-                    <div class="tab-pane" id="settings">
-
-
-
-                    </div>
-
+                    </form>
                 </div>
-                <!--/tab-pane-->
             </div>
-            <!--/tab-content-->
-
         </div>
-        <!--/col-9-->
+        <%- include('./partials/footer') %>
     </div>
     <% } %>
-
-
-
-
-
-
-    <%- include('./partials/footer') %>
-    </div>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>

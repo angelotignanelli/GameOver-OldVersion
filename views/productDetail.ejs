@@ -53,16 +53,21 @@
 
       <div class="main-boxes row m-auto">
         <div class="main_borrar  col-6">
-          <form id="eliminar" action="/products/delete/<%=producto.id%>?_method=DELETE" method="POST">
-            <img src="/images/admin/borrar.png" alt=""> 
-        <button type="submit" class="btn-eliminar">Eliminar</button>
+          
+          <% if (logeadoUser) { %>
+            <form id="eliminar" action="/products/delete/<%=producto.id%>?_method=DELETE" method="POST">
+              <img src="/images/admin/borrar.png" alt=""> 
+          <button type="submit" class="btn-eliminar">Eliminar</button>
+        </div>
+        <div class="main_editar  col-5">
+          <img src="/images/admin/modificar.png" alt="">
+          <a href="/admin/editProduct/detail/<%=producto.id%>">
+            <button type="button" class="editar-boton">Editar</button></a>
+          </div>
         </form>
-    </div>
-    <div class="main_editar  col-5">
-        <img src="/images/admin/modificar.png" alt="">
-        <a href="/products/edit/<%=producto.id%>">
-          <button type="button" class="editar-boton">Editar</button></a>
-    </div>
+           
+          <% } %>
+
   </div>
       
       <section class="section__comentarios col-11">
@@ -122,6 +127,7 @@
       <%- include('./partials/box-card-interesante.ejs') %> 
   </div>
   -->
+  </div>
     <%- include('./partials/footer') %>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

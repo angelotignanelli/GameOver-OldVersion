@@ -9,48 +9,52 @@
 
         <div id="login-container" class="container-fluid">
 
-            <div class="row"><div class="col-12">
-            <form action="/user/login" id="formulario" method="POST">
-                <div class="row"><div class="col-12">
-                    <% if (typeof errors !="undefined")  { %>
-                      <div class="alert alert-danger" role="alert">
-                        Chequeá tu formulario
-                        <% for(let i = 0; i < errors.length; i++) { %>
-                            <li>
-                                <%=errors[i].msg%> 
-                            </li>
-                        <% } %>
-                      </div>
-                      <ul>
-                      </ul>
-                  <% } %>
-                  </div>
-                </div>               
-                <div class="row">
-                <div class="title col-12">
-                    <h2>LOGIN DE USUARIO</h3>                        
+            <div class="row">
+                <div class="col-12">
+                    <form action="/user/login" id="formulario" method="POST">
+                        <div class="row">
+                            <div class="col-12">
+                                <% if (typeof errors !="undefined")  { %>
+                                <div class="alert alert-danger" role="alert">
+                                    Chequeá tu formulario
+                                    <% for(let i = 0; i < errors.length; i++) { %>
+                                    <li>
+                                        <%=errors[i].msg%>
+                                    </li>
+                                    <% } %>
+                                </div>
+                                <ul>
+                                </ul>
+                                <% } %>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="title col-12">
+                                <h2>LOGIN DE USUARIO</h3>
+                            </div>
+                        </div>
+                        <div class="information row" id="informacion">
+                            <div class="form-group col-12">
+                                <label id="user-label" for="email">Usuario</label>
+                                <input type="email" name="email" id="usuario" class="form-control"
+                                    placeholder="Ingresa tu usuario" required="">
+                            </div>
+                            <div class="form-group col-12">
+                                <label id="password-label" for="password">Contraseña</label>
+                                <input type="password" name="password" id="password" class="form-control"
+                                    placeholder="Ingresa tu contraseña" required="">
+                            </div>
+                            <div class="btn col-12 mb-4">
+                                <button type="submit" class="col-4 btn btn-primary btn-lg mb-4">INICIAR SESION</button>
+                                <a class="col-12" href="">
+                                    <h4>¿Olvidaste tu contraseña?</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                </div>
-                <div class="information row" id="informacion">
-                    <div class="form-group col-12">
-                        <label id="user-label" for="email">Usuario</label>
-                        <input type="email" name="email" id="usuario" class="form-control" placeholder="Ingresa tu usuario"
-                            required="">
-                    </div>
-                    <div class="form-group col-12">
-                        <label id="password-label" for="password">Contraseña</label>
-                        <input type="password" name="password" id="password" class="form-control"
-                            placeholder="Ingresa tu contraseña" required="">
-                    </div>
-                    <div class="btn col-12 mb-4">
-                        <button type="submit" class="col-4 btn btn-primary btn-lg mb-4">INICIAR SESION</button>
-                        <a class="col-12" href=""><h4>¿Olvidaste tu contraseña?</h4></a>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
-    </div>
-</div>
 
 
 

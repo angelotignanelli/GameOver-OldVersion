@@ -3,7 +3,8 @@ const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+const usersFilePath = path.join(__dirname, '../data/users.json');
+const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
@@ -28,7 +29,8 @@ const controller = {
 			ofertas: ofertas,
 			aMiles: toThousand,
 			porcentaje: porcentaje,
-			logeadoUser:req.session.logged
+			logeadoUser:req.session.logged,
+			users:usersJSON,
 		});
 		console.log(products);
 	},
@@ -36,12 +38,14 @@ const controller = {
 	allProducts:(req,res,next)=>{
 		res.render('products.ejs',{
 			products : products,
+			users:usersJSON,
 			logeadoUser:req.session.logged
 		})
 	},
 	products:(req,res,next)=>{
 		res.render('addProduct',{
-			logeadoUser:req.session.logged
+			logeadoUser:req.session.logged,
+			users:usersJSON,
 		})
 	},
 	
@@ -54,7 +58,8 @@ const controller = {
         res.render("productDetail", {
             aMiles: toThousand,
 			producto: product,
-			logeadoUser:req.session.logged
+			logeadoUser:req.session.logged,
+			users:usersJSON,
         });
     },
 	
@@ -62,7 +67,8 @@ const controller = {
 	create: (req, res) => {
 		// Do the magic	
 		res.render("addProduct",{
-			logeadoUser:req.session.logged
+			logeadoUser:req.session.logged,
+			users:usersJSON,
 		})		
 	},
 
@@ -106,7 +112,8 @@ const controller = {
 
 		res.render("editProduct", {
 			productToEdit: product,
-			logeadoUser:req.session.logged
+			logeadoUser:req.session.logged,
+			users:usersJSON,
 		});	
 	},
 
@@ -148,15 +155,32 @@ const controller = {
 
 	checkout: (req,res) => {
 		res.render('checkout',{
-			logeadoUser:req.session.logged
+			logeadoUser:req.session.logged,
+			users:usersJSON,
 		})
 	},
 
 	cart: (req,res) => {
+		let logeadoPerfil = usersJSON.find(element=>{
+			return element.email == req.session.logged
+		})
+		console.log(logeadoPerfil)
 		res.render('productCart',{
-			logeadoUser:req.session.logged
+			usersJSON:usersJSON,
+			users:usersJSON,
+			logeadoUser:req.session.logged,
 		})
 	},
+	cartProcess: (req,res)=>{
+		productosCarrito = [];
+		for(var i = 0; i < products.length; i++){
+			if(logeadoUser){
+				products[i].id.push(productosCarrito);
+			}
+		}
+		console.log(productosCarrito)
+		res.redirect('/')
+	}
 };
 
 module.exports = controller;

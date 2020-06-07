@@ -29,5 +29,5 @@ router.post('/editProduct/detail/:id', adminController.processEdit);
 //LISTADO DE PRODUCTOS A ELIMINAR
 router.get('/deleteProduct',adminController.deleteProduct);
 //ELIMINAR PRODUCTO
-router.post('/deleteProduct/:id',adminController.deleteProduct);
+router.post('/deleteProduct/:id',adminController.deleteProcess);
 module.exports = router;
