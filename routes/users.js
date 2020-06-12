@@ -28,7 +28,7 @@ router.post('/register', upload.any(), [
   check('last_name').isAlpha().withMessage("El apellido es obligatorio"),
   check('email').isEmail().withMessage("Debe ser un email"),
   check('password').isAlphanumeric().isLength({ min: 8, max: 15 }).withMessage("El password debe ser alfanumérico, mínimo 8 caracteres y máximo 15"),
-  //check('avatar').isEmpty(). withMessage("Debes elegir un Avatar")
+  check('avatar').notEmpty().withMessage("Debes elegir un Avatar")
 ], usersController.createUser)
 
 //LOGIN

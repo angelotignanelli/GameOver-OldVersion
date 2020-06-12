@@ -58,7 +58,7 @@ controller = {
                 });
             }
         } else {
-            return res.render('register', { logeadoUser: req.session.logged, errors: errors.errors })
+            return res.render('register', { users: usersJSON, logeadoUser: req.session.logged, errors: errors.errors })
         }
 
     },
