@@ -6,7 +6,52 @@
     flex-direction: column;
     flex-wrap: wrap;
     background-image: url('../images/fanzone1.jpg');
-    background-size: cover;    
+    background-size: cover;  
+    .name{
+        position: relative;
+        width: 100%;
+
+        .user{
+            color: red;
+            position: absolute;
+            bottom: 10px;
+            left: 5px;
+            z-index: 1;
+
+        }
+    }
+    .apellido{
+        position: relative;
+        width: 100%;
+
+        .user2{
+            position: absolute;
+            bottom: 10px;
+            left: 5px;
+            z-index: 1;
+
+        }
+    }
+    .emaill{
+        position: relative;
+        width: 100%;
+        .email-ico{
+            position: absolute;
+            bottom: 10px;
+            left: 2px;
+            z-index: 1;
+        }
+    }
+    .pass{
+        position: relative;
+        width: 100%;
+        .pass-ico{
+            position: absolute;
+            bottom: 10px;
+            left: 2px;
+            z-index: 1;
+        }
+    }
 }
 
 #formulario{
@@ -35,6 +80,7 @@
     }
     .input-r{
        padding: 10px;
+       padding-left: 30px;
        background:none;
        border: none;
        border-bottom: 2px solid red;

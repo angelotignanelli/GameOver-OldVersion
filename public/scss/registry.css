@@ -18,6 +18,55 @@
   background-size: cover;
 }
 
+.container .name {
+  position: relative;
+  width: 100%;
+}
+
+.container .name .user {
+  color: red;
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  z-index: 1;
+}
+
+.container .apellido {
+  position: relative;
+  width: 100%;
+}
+
+.container .apellido .user2 {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  z-index: 1;
+}
+
+.container .emaill {
+  position: relative;
+  width: 100%;
+}
+
+.container .emaill .email-ico {
+  position: absolute;
+  bottom: 10px;
+  left: 2px;
+  z-index: 1;
+}
+
+.container .pass {
+  position: relative;
+  width: 100%;
+}
+
+.container .pass .pass-ico {
+  position: absolute;
+  bottom: 10px;
+  left: 2px;
+  z-index: 1;
+}
+
 #formulario {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,6 +107,7 @@
 
 #formulario .input-r {
   padding: 10px;
+  padding-left: 30px;
   background: none;
   border: none;
   border-bottom: 2px solid red;
