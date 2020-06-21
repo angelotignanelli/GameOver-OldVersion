@@ -3,14 +3,19 @@ const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+const usersFilePath = path.join(__dirname, '../data/users.json');
+const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 controller = {
   admin: function (req, res, next) {
-    res.render('admin');
+    res.render('admin',{
+      users:usersJSON,
+    });
   },
   product: (req, res, next) => {
-    res.render('addproduct')
+    res.render('addproduct',{
+      users:usersJSON,
+    })
   },
   addProduct: function (req, res, next) {
     let nuevoProducto = {}
@@ -43,7 +48,8 @@ controller = {
   editProduct: function (req, res, next) {
     res.render('editProduct', {
       products: products,
-      logeadoUser: req.session.logged
+      logeadoUser: req.session.logged,
+      users:usersJSON,
     });
   },
   detailEdit: (req, res, next) => {
@@ -53,7 +59,8 @@ controller = {
 
     res.render('processEditProduct',{
       producto:product,
-      logeadoUser: req.session.logged
+      logeadoUser: req.session.logged,
+      users:usersJSON,
     })
   },
   processEdit: (req, res, next) => {
@@ -79,19 +86,21 @@ controller = {
 		res.redirect("/products");
   },
   deleteProduct:(req,res,next)=>{
-    
+
     res.render('deleteProduct',{
-      products:products
+      eliminando:products,
+      users:usersJSON,
     })
+    console.log(products)
   },
   deleteProcess:(req,res)=>{
-    let productsQueQuedan = products.filter(function(element) {
-			return element.id != req.params.id;
-		});
-
-		let productosModificadosJSON = JSON.stringify(productsQueQuedan)
+    
+        let productsQueQuedan = products.filter(function(element) {
+          return element.id != req.params.id;
+        });
+        let productosModificadosJSON = JSON.stringify(productsQueQuedan)
 		fs.writeFileSync(productsFilePath, productosModificadosJSON)
-		res.send(productsQueQuedan)
+        res.redirect('/products')
   }
 }
 

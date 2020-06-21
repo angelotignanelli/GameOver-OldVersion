@@ -4,6 +4,7 @@
 <%- include('./partials/head') %> 
 
 <body>
+  
     <div class="container-fluid">
       <!-- HEADER -->
       <%- include('./partials/header') %>
@@ -47,8 +48,8 @@
 
           <!--CAJA 1-->
           <%recomendados.forEach(recomendado => { %>
-          <section class="card col-dm-3">
-            <div class="card" style="width: 18rem;">
+          
+            <div class="card col-dm-3 mb-3" style="width: 18rem;">
               <img class="card-img-top" src="/images/product-games/<%= recomendado.image %> " alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title"><%= recomendado.name %></h5>
@@ -66,7 +67,7 @@
                 <a href="/products/detail/<%= recomendado.id %>" class="btn btn-primary offset-4">Comprar</a>
               </div>
             </div>
-          </section>
+        
           <%})%>
           <!-- TOP VENTAS -->
           <div class="row justify-content-around" id="top-venta">
@@ -81,8 +82,8 @@
 
 
             <% for( let i = 0; i < vendidos.length; i++ ) { %>
-              <section class="card col-dm-3">
-                <div class="card" style="width: 18rem;">
+              
+                <div class="card col-6 col-lg-2 col-sm-5 m-4 col-lg-3 col-xl-2" style="width: 18rem;">
                   <img class="card-img-top" src="/images/product-games/<%= vendidos[i].image %>" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title"><%= vendidos[i].name %></h5>
@@ -103,7 +104,6 @@
                     <a href="/products/detail/<%= vendidos[i].id %>" class="btn btn-primary offset-4">Comprar</a>
                   </div>
                 </div>
-              </section>
               <% } %>
               
 
@@ -119,8 +119,8 @@
           <!--CAJA 1-->
           <% for( let i = 0; i < ofertas.length; i++ ) { %>
           
-            <section class="card col-dm-3">
-                <div class="card" style="width: 18rem;">
+           
+                <div class="card col-dm-3 mb-3" style="width: 18rem;">
                   <img class="card-img-top" src="/images/product-games/<%= ofertas[i].image %>" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title"><%= ofertas[i].name %></h5>
@@ -158,7 +158,6 @@
                     <a href="/products/detail/<%= ofertas[i].id %>" class="btn btn-primary offset-4">Comprar</a>
                   </div>
                 </div>
-              </section>
           <% } %>
 
 
@@ -168,7 +167,7 @@
         <%- include('./partials/footer') %> 
 
     </div>
-
+    <script src="/javascript/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>

@@ -28,7 +28,7 @@ router.post('/register', upload.any(), [
   check('last_name').isAlpha().withMessage("El apellido es obligatorio"),
   check('email').isEmail().withMessage("Debe ser un email"),
   check('password').isAlphanumeric().isLength({ min: 8, max: 15 }).withMessage("El password debe ser alfanumérico, mínimo 8 caracteres y máximo 15"),
-  //check('avatar').isEmpty(). withMessage("Debes elegir un Avatar")
+  //check('avatar').notEmpty().withMessage("Debes elegir un Avatar")
 ], usersController.createUser)
 
 //LOGIN
@@ -38,12 +38,18 @@ router.post('/login', [
   check('password').isLength({ min: 8 }).withMessage("El password debe tener como mínimo 8 caracteres")],
   usersController.processLogin);
 
+//lOGOUT
+router.get('/logout', usersController.logout);
+
 //PERFIL DE USUARIO
 router.get('/perfilUser', usersController.perfilUser);
 router.post('/perfilUser', usersController.processPerfil);
+router.post('/perfilUser',upload.any(), usersController.processEditPerfil);
 
 //FAN ZONE
 router.get('/fanzone', usersController.fanZone)
+
+
 
 
 module.exports = router;

@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index');
 var adminRouter = require('./routes/admin');
 var productRouter = require('./routes/product');
 var usersRouter = require('./routes/users');
+var productsdbRouter = require('./routes/productsdb');
 
 var app = express();
 
@@ -31,6 +32,7 @@ app.use('/admin', adminRouter);
 app.use('/addProduct', adminRouter);
 app.use('/editProduct', adminRouter);
 app.use('/user', usersRouter);
+app.use('/productsdb', productsdbRouter);
 //app.use('/register', usersRouter);
 
 

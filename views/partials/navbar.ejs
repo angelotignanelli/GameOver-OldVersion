@@ -1,6 +1,11 @@
 <!-- MENU ESCRITORIO -->
 <nav class="row">
   <nav class="menu col-12 d-none d-md-block">
+
+    <% let logeadoPerfil= users.find(element => { %>
+      <% return element.email == logeadoUser %>
+      <% }) %>
+
     <ul>
       <li><a href="/">Home</a></li><span class="border-right"></span>
       <li><a href="/products">Catalogo</a>
@@ -9,12 +14,16 @@
           <li><a href="">Accesorios</a></li>
           <li><a href="">Video Juegos</a></li>
         </ul>
+
       </li><span class="border-right"></span>
       <li><a href="/user/fanzone">FanZone</a></li><span class="border-right"></span>
       <li><a href="/products/productcart">Carrito</a></li><span class="border-right"></span>
       <% if (logeadoUser) { %>
       <li><a href="/admin">ADMIN</a></li><span class="border-right"></span>
-      <li><a href="/user/perfilUser">Bienvenido : <%= logeadoUser %></a></li></span>
+      <li><a href="/user/perfilUser">Bienvenido :  <%= logeadoPerfil.first_name + " " + logeadoPerfil.last_name%> </a></li></span>
+    
+      <div id="avatar" style="background-image: url(/images/img-perfil/<%= logeadoPerfil.avatar %>)"></div>
+      <a class="btn btn-dark" href="/user/logout" role="button"><i class="fas fa-sign-out-alt"></i></a>
       <% } else {%>
       <li><a href="/user/register">Registrarme</a></li><span class="border-right"></span>
       <li><a href="/user/login">Login</a></li></span>
@@ -33,14 +42,27 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                   <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="/products">Catalogo <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Merchandising</a>
+                      <a class="nav-link" href="/user/fanzone">FanZone</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Video Juegos</a>
-                    </li>
+                    <% if (logeadoUser) { %>
+      <li><a href="/admin">ADMIN</a></li><span class="border-right">
+      </span>
+      <li>
+        <a href="/user/perfilUser">
+          Bienvenido : <%= logeadoUser %>
+        </a>
+      </li>
+      <div id="avatar" style="background-image: url(/images/img-perfil/<%= logeadoPerfil.avatar %>)"></div>
+      </span>
+      <a class="btn btn-primary" href="/user/logout" role="button">Logout</a>
+      <% } else {%>
+      <li><a href="/user/register">Registrarme</a></li><span class="border-right"></span>
+      <li><a href="/user/login">Login</a></li></span>
+      <%}%>
+                    
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Buscar productos">

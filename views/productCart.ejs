@@ -28,12 +28,14 @@
                 <h3>Cantidad</h3>
                 <hr>
                 <div class="input-group">
+                  <form action="/products/productcart" method="post">
                   <input type="text" class="form-control col-12 col-sm-12 col-md-12 align-self-center" placeholder="Cant" aria-label="Recipient's username" aria-describedby="basic-addon2">
                   <div class="input-group-append row m-4">
-                    <button class="btn btn-outline-success col-12 col-md-auto m-1 col-lg-auto" type="button">Agregar</button>
-                    <button class="btn btn-outline-danger col-12 col-md-auto m-1 col-lg-auto" type="button">Quitar</button>
+                    <button class="btn btn-outline-success col-12 col-md-auto m-1 col-lg-auto" type="submit">Agregar</button>
+                    <button class="btn btn-outline-danger col-12 col-md-auto m-1 col-lg-auto" type="submit">Quitar</button>
                     <button type="button" class="btn btn-danger col-12 col-md-auto m-1 col-lg-auto"><i class="fas fa-trash-alt"></i></button>
                   </div>
+                </form>
                 </div>
               </div>
             </div>
