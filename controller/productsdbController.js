@@ -6,23 +6,30 @@ let productsdbController = {
     crear: function(req,res) {
         db.Game.findAll()
         .then(function(juegos){
-            return res.render("1creacionPeliculas", {juegos:juegos})
+            console.log(juegos)
+            return res.render("DBaddProduct", {juegos:juegos})
         })
     },
-/*
+
     //Guardado
     guardado: function(req, res) {
-        db.Pelicula.create({
-            title: req.body.titulo,
-            awards: req.body.premios,
-            release_date: req.body.fecha_estreno,
-            genre_id: req.body.genero,
-            length: req.body.duracion,
-            rating: req.body.rating
+        db.Game.create({
+            name: req.body.name,
+            logo: req.body.logo,
+            description: req.body.description,
+            image: req.body.image,
+            video: req.body.video,
+            discount: req.body.discount,
+            release_date: req.body.release_date,
+            age_clasification: req.body.age_clasification,
+            price: req.body.price,
+            category_id: req.body.category_id,
+            distributor_id: req.body.distributor_id,
+            section_id: req.body.section_id,
         });
-        res.redirect("/peliculas");
+        res.redirect("/products");
     },
-
+/*
     //Listado
     listado: function(req,res) {
         db.Pelicula.findAll()

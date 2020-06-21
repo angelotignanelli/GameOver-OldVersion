@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %> 
+    <body>
+        <div class="container-fluid">
+            <!--HEADER-->
+            <%- include('./partials/header')  %> 
+            <nav class="row">
+                <nav class="menu col-12 d-none d-sm-block">
+                    <ul>
+                                                <li><a href="/">Home</a></li><span class="border-right"></span>
+                        <li><a href="">Estadisticas</a>
+                        </li><span class="border-right"></span>
+                        <li><a href="">FanZone</a></li><span class="border-right"></span>
+                        <li><a href="">Email</a></li><span class="border-right"></span>
+                        <li><a href="">Deslogear</a></li>
+                    </ul>
+                </nav>
+                <a href="/admin">
+                  <button type="button" class="btn btn-dark mt-4"><i class="fas fa-backward"></i> Volver</button>
+                </a>
+                <div class="card col-12">
+                    <div class="card-body">
+                      <h2 class="col-12">AGREGAR PRODUCTO</h2>
+                        <form action="/admin/addproduct" method="POST" enctype="multipart/form-data">
+                            <div class="form-group">
+                              <label for="name">Nombre de producto</label>
+                              <input name="name" type="name" class="form-control" id="name" placeholder="Producto">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">Descripción</label>
+                                <input name="description" type="name" class="form-control" id="description" placeholder="Descripción">
+                              </div>
+
+                              <div class="form-group">
+                                <label for="name">Link a video</label>
+                                <input name="video" type="name" class="form-control" id="video" placeholder="Link a video">
+                              </div>
+
+                              <div class="form-group">
+                                <label for="name">Descuento</label>
+                                <input name="discount" type="name" class="form-control" id="discount" placeholder="Descuento">
+                              </div>
+
+                            <div class="form-group">
+                                <label for="release_date">Fecha de lanzamiento</label>
+                                <input name="release_date" type="date" class="form-control" id="release_date" placeholder="Fecha de lanzamiento">
+                              </div>
+
+                            <div class="form-group">
+                                <label for="number">Clasificacion de edad</label>
+                                <input name="age_clasification" type="number" class="form-control" id="age_clasification" placeholder="Edad">
+                              </div>
+
+                            <div class="form-group">
+                                <label for="number">Precio</label>
+                                <input name="price" type="number" class="form-control" id="price" placeholder="Precio">
+                              </div>
+
+                            <div class="form-group">
+                                <label for="name">Categoria</label>
+                                <input name="category_id" type="name" class="form-control" id="category_id" placeholder="Categoria">
+                              </div>
+
+                            <div class="form-group">
+                                <label for="name">Distribuidor</label>
+                                <input name="distributor_id" type="name" class="form-control" id="distributor_id" placeholder="Distribuidor">
+                              </div>
+
+                            <div class="form-check form-check-inline">
+                                <label for="platform">Consola/Plataforma de juego</label>
+                                <input class="platform" type="checkbox" name="platform" id="inlineCheckbox1" value="PS4">
+                                <label class="form-check-label" for="inlineCheckbox1">PS4</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="platform" type="checkbox" name="platform" id="inlineCheckbox2" value="XBOX">
+                                <label class="form-check-label" for="inlineCheckbox2">XBOX</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="platform" type="checkbox" name="platform" id="inlineCheckbox3" value="PC">
+                                <label class="form-check-label" for="inlineCheckbox3">PC</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="platform" type="checkbox" name="platform" id="inlineCheckbox2" value="Nintendo Switch">
+                                <label class="form-check-label" for="inlineCheckbox4">Nintendo Switch</label>
+                              </div>
+
+                            <!--<div class="form-group">
+                                <label for="number">ID</label>
+                                <input type="number" class="form-control" id="id" placeholder="">
+                              </div>-->
+
+                            <div class="form-group">
+                                <label for="name">Seccion</label>
+                                <input name="section_id" type="name" class="form-control" id="section_id" placeholder="Seccion">
+                              </div>
+
+                              <label for="image">Imagen de portada:</label>
+                              <input class="form-control" type="file" name="image">
+                              
+                            <button type="submit" class="mt-4">Enviar</button>
+
+                          </form>
+                    </div>
+                  </div>
+
+            
+            <%- include('./partials/footer') %>
+        </div>
+
+        <!--Optional JavaScript-->
+        <!--jQuery first, then Popper.js, then Bootstrap JS-->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
