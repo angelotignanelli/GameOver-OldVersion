@@ -4,10 +4,19 @@ let productsdbController = {
 
     //Creado
     crear: function(req,res) {
-        db.Game.findAll()
-        .then(function(juegos){
-            console.log(juegos)
-            return res.render("DBaddProduct", {juegos:juegos})
+        db.Section.findAll()
+        .then(secciones=>{
+            db.Category.findAll()
+            .then(categorias=>{
+                db.Distributor.findAll()
+                .then(distribuidores=>{
+                    res.render("DBaddProduct",{
+                        secciones,
+                        categorias,
+                        distribuidores,
+                    })
+                })
+            })
         })
     },
 
@@ -28,56 +37,70 @@ let productsdbController = {
             section_id: req.body.section_id,
         });
         console.log(req.body);
-        res.redirect("/products");
+        res.redirect("/DBProducts");
     },
-/*
+
     //Listado
     listado: function(req,res) {
-        db.Pelicula.findAll()
-        .then(function(peliculas) {
-            res.render("2listadoPeliculas", {peliculas:peliculas})
+        db.Game.findAll()
+        .then(function(juegos) {
+            res.render("DBProducts", {juegos:juegos})
         })
     },
 
     //Detalle
     detalle: function(req,res) {
-        db.Pelicula.findByPk(req.params.id, {
-            include: [{association: "genero"}, {association: "actores"}]
+        db.Game.findByPk(req.params.id, {
+            include: [
+                {association: "categories"}, 
+                {association: "distributors"}, 
+                {association: "sections"}, 
+                {association: "platforms"}
+            ]
         })
-        .then(function(pelicula){
-            res.render("3detallePelicula", {pelicula:pelicula})
+        .then(function(juego){
+            res.render("DBDetalle", {juego:juego})
         })
     },
 
     //Editado
     editar: function(req,res) {
-        let pedidoPelicula = db.Pelicula.findByPk(req.params.id);
+        let pedidoJuego = db.Game.findByPk(req.params.id);
         
-        let pedidoGeneros = db.Genero.findAll();
+        let pedidoSeccion = db.Section.findAll();
+        let pedidoDistribuidor = db.Distributor.findAll();
+        let pedidoCategoria = db.Category.findAll();
 
-        Promise.all([pedidoPelicula, pedidoGeneros])
-            .then(function([pelicula, generos]) {
-                res.render("4editarPelicula", {pelicula:pelicula, generos:generos});
+        Promise.all([pedidoJuego, pedidoSeccion, pedidoDistribuidor, pedidoCategoria])
+            .then(function([juego, categoria, distribuidor, seccion]) {
+                res.render("DBEdit", {juego, categoria, distribuidor, seccion});
             })
     },
 
     //Modificado
     actualizar: function(req,res) {
-        db.Pelicula.update({
-            title: req.body.titulo,
-            awards: req.body.premios,
-            release_date: req.body.fecha_estreno,
-            genre_id: req.body.genero,
-            length: req.body.duracion,
-            rating: req.body.rating
+        db.Game.update({
+            name: req.body.name,
+            logo: req.body.logo,
+            description: req.body.description,
+            image: req.body.image,
+            video: req.body.video,
+            discount: req.body.discount,
+            release_date: req.body.release_date,
+            age_clasification: req.body.age_clasification,
+            price: req.body.price,
+            category_id: req.body.category_id,
+            distributor_id: req.body.distributor_id,
+            section_id: req.body.section_id,
         }, {
             where: {
                 id: req.params.id
             }
         });
-        res.redirect("/peliculas/" + req.params.id);
+        console.log(req.body);
+        res.redirect("/productsdb/" + req.params.id);
     },
-
+/*
     //Borrado
     borrar: function(req,res){
         db.Pelicula.destroy({

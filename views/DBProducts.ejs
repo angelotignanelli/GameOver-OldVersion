@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD HTML-->
+<%- include('./partials/head') %> 
+
+<body>
+    <div class="container-fluid">
+        <!-- HEADER -->
+        <%- include('./partials/header') %>
+        <!-- MENU DE ESCRITORIO -->
+        <%- //include('./partials/navbar')%>
+        <section class="row justify-content-around">
+            <div class="titulo-product col-12">
+                <h5 class="estilo-fuente-1">TODOS <mark class="estilo-fuente-2">LOS PRODUCTOS</mark></h5>
+                <hr>
+              </div>
+              <% for( let i = 0; i < juegos.length; i++ ) { %>
+               
+                    <div class="card col-dm-3 d-flex justify-content-around m-4" style="width: 18rem;">
+                      <img class="card-img-top" src="/images/product-games/<%= juegos[i].image %>" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title"><%= juegos[i].name %></h5>
+                        <hr>
+                        <p class="card-text">
+                          <strong>Fecha de estreno inicial: </strong> <%= juegos[i].release_date %>
+                          <hr>
+                          <strong>Desarrollador: </strong><%= juegos[i].distributor_id %>
+                          <hr>
+                          <strong>Categoría: </strong><%= juegos[i].category_id %>
+                          <hr>
+                          </p>
+                            <strong class="precio">
+                              $<%= juegos[i].price %>
+                              
+                            </strong>
+                            <hr>
+                        <a href="/productsdb/<%= juegos[i].id %>" class="btn btn-primary offset-4">Comprar</a>
+                      </div>
+                    </div>
+              <% } %>
+            </section>
+
+
+
+        <%- include('./partials/footer') %> 
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

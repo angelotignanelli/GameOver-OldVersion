@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD HTML-->
+<%- include('./partials/head') %>
+
+<body>
+  <div class="container-fluid">
+    <!-- HEADER -->
+    <%- include('./partials/header') %>
+    <!-- MENU -->
+    <%- //include('./partials/navbar') %>
+    <!-- Video -->
+    <div class="row">
+     <iframe class="col-12" id="video-demo" height="215vh" src="<%= juego.video %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <!-- SECCION SOBRE LA INFO DEL JUEGO-->
+    <section class="section row justify-content-around">
+      <!-- LOGO IMG-->
+      <div class="section__logo col-12 col-md-5 col-lg-3">
+        <img src="/images/product-games/logo/<%=juego.logo %>" alt="logo producto" class="section__logoimg img-fluid">
+      </div>
+      <!-- INFORMACION-->
+      <div class="section__info col-11 col-lg-3 d-flex justify-content-center m-4">
+        <%= juego.description %> 
+      </div>
+      <!-- ESPECIFICACION -->
+      <div class="section__especificaciones col-11 col-md-4 col-lg-4">
+        <ul>
+          <li><strong class="section__strong">LANZAMIENTO:</strong> <%=juego.release_date%></li>
+          <hr>
+          <li><strong class="section__strong">DESARROLLADOR:</strong> <%=juego.distributor_id%></li>
+          <hr>
+          <li><strong class="section__strong">CATEGORÍA:</strong> <%=juego.category_id%></li>
+          <hr>
+          <li><strong class="section__strong">PLATAFORMAS:</strong> <%=juego.platform%></li>
+          <hr>
+          <li><strong class="section__strong">RATING ESRB:</strong> <%=juego.age_clasification%></li>
+          <hr>
+          <li><strong class="section__strong">PRECIO:</strong> $<%=juego.price%></li>
+          <a href="#" class="section__boton btn btn-primary offset-4">Añadir al carrito</a>
+        </div>
+        </ul>
+    </section>
+    <!-- SECCION ACERCA DEL JUEGO Y COMENTARIOS-->
+    <section class="section row justify-content-center">
+      <div class="section__acerca col-11">
+        <h5 class="section__h5">ACERCA DE ESTE JUEGO</h5>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint nisi officiis totam ipsam illum? Dolores,
+          minus? Nesciunt, itaque nam neque quidem vitae magnam nemo cupiditate omnis praesentium rem magni soluta modi
+          aliquam inventore laboriosam vel quibusdam. Qui illum nulla dolores, non suscipit eveniet praesentium ipsam
+          ipsum assumenda aliquam aut recusandae.</p>
+      </div>
+
+      <div class="main-boxes row m-auto">
+        <div class="main_borrar  col-6">
+          
+          <% //if (logeadoUser) { %>
+            <form id="eliminar" action="/products/delete/<%=juego.id%>?_method=DELETE" method="POST">
+              <img src="/images/admin/borrar.png" alt=""> 
+          <button type="submit" class="btn-eliminar">Eliminar</button>
+        </div>
+        <div class="main_editar  col-5">
+          <img src="/images/admin/modificar.png" alt="">
+          <a href="/admin/editProduct/detail/<%=juego.id%>">
+            <button type="button" class="editar-boton">Editar</button></a>
+          </div>
+        </form>
+           
+          <% //} %>
+
+  </div>
+      
+      <section class="section__comentarios col-11">
+        <h3 class="section__h3">Comentarios</h3>
+        <hr>
+        <ul class="list-unstyled">
+          <li class="media">
+            <img class="section__img-perfil mr-3 mt-4" src="/images/comentarios/tevez.jpg"
+              alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">Carlitos Tevez</h5>
+              La verdad very dificult debe ser esto de hacer paginas, y esta esta espetacula , quiero mas juegos de
+              estos son buenardos, le pondria 5 estrellas
+            </div>
+          </li>
+          <hr>
+          <li class="media">
+            <img class="section__img-perfil mr-3" src="/images/comentarios/tevez.jpg" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">Carlitos Tevez</h5>
+              Aguante boca papa
+              <div class="media mt-3">
+                <a class="pr-3" href="#">
+                  <img class="section__img-perfil" src="/images/comentarios/gallardo.webp" alt="Generic placeholder image">
+                </a>
+                <div class="media-body">
+                  <h5 class="mt-0">Gallardo</h5>
+                   tevez! mira donde te encuentro!, buscate el fifa 20 que esta de oferta!, y jugamos la revancha.
+                </div>
+              </div>
+            </div>
+          </li>
+          <hr>
+          <li class="media">
+            <img class="section__img-perfil mr-3 " src="/images/comentarios/tevez.jpg" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">Carlitos Tevez</h5>
+              Lo compro baratito aca asi como te salio la copa a vos?
+            </div>
+          </li>
+        </ul>
+      
+        
+        
+      
+      </section>
+    </section>
+    <!--SECCION CARDS-->
+    <!--
+    <section class="cards row d-flex justify-content-center m-2">
+      <h3 class="cards__h3 col-12" id="h3-cards">PUEDEN INTERESARTE</h3>
+    </section>
+    <div class="container__cards col-12 d-flex align-self-center">
+      <%- include('./partials/box-card-interesante.ejs') %>
+      <%- include('./partials/box-card-interesante.ejs') %> 
+      <%- include('./partials/box-card-interesante.ejs') %> 
+      <%- include('./partials/box-card-interesante.ejs') %> 
+  </div>
+  -->
+  </div>
+    <%- include('./partials/footer') %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

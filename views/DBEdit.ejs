@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+<body>
+  <div class="container-fluid">
+    <!--HEADER-->
+    <%- include('./partials/header')  %>
+
+      <nav class="menu col-12 d-none d-sm-block">
+        <ul>
+          <li><a href="/">Home</a></li><span class="border-right"></span>
+          <li><a href="">Estadisticas</a>
+          </li><span class="border-right"></span>
+          <li><a href="">FanZone</a></li><span class="border-right"></span>
+          <li><a href="">Email</a></li><span class="border-right"></span>
+          <li><a href="">Deslogear</a></li>
+        </ul>
+      </nav>
+
+
+      <a href="/admin">
+        <button type="button" class="btn btn-dark mt-4"><i class="fas fa-backward"></i> Volver</button>
+      </a>
+      
+
+
+
+
+    <h1>Editar película</h1>
+    <form action="/productsdb/editar/<%=juego.id%>" method="POST">
+        <div>
+            <label for="">Nombre</label>
+            <input type="text" name="name" value="<%=juego.name%>">
+        </div>
+        <div>
+            <label for="">Descripción</label>
+            <input type="text" name="description" value="<%=juego.description%>">
+        </div>
+        <div>
+            <label for="">Link a video</label>
+            <input type="text" name="video" value="<%=juego.video%>">
+        </div>
+        <div>
+            <label for="">Descuento</label>
+            <input type="text" name="discount" value="<%=juego.discount%>">
+        </div>
+        <div>
+            <label for="">Image</label>
+            <input type="text" name="image" value="<%=juego.image%>">
+        </div>
+        <div>
+            <label for="">Logo</label>
+            <input type="text" name="logo" value="<%=juego.logo%>">
+        </div>
+        <div>
+            <label for="">Precio</label>
+            <input type="text" name="price" value="<%=juego.price%>">
+        </div>
+        <div>
+            <label for="">Fecha de estreno</label>
+            <input type="date" name="release_date">
+        </div>
+        <div>
+            <label for="">Clasificacion de edad</label>
+            <input type="text" name="age_clasification" value="<%=juego.age_clasification%>">
+        </div>
+        <div>
+            <label for="">Categoria</label>
+            <select name="category_id">
+                <% for (let i = 0; i < categoria.length; i++){ %>
+                    <% if (categoria[i].id == juego.category_id) { %>
+                    <option value="<%=categoria[i].id%>" selected>
+                        <%=categoria[i].name%>
+                    </option>
+                <% } else { %>
+                    <option value="<%=categoria[i].id%>">
+                        <%=categoria[i].name%> 
+                    </option>
+                    <% } %>
+                <% } %>    
+            </select>
+        </div>
+        <div>
+            <label for="">Distribuidor</label>
+            <select name="distributor_id">
+                <% for (let i = 0; i < distribuidor.length; i++){ %>
+                    <% if (distribuidor[i].id == juego.distributor_id) { %>
+                    <option value="<%=distribuidor[i].id%>" selected>
+                        <%=distribuidor[i].name%>
+                    </option>
+                <% } else { %>
+                    <option value="<%=distribuidor[i].id%>">
+                        <%=distribuidor[i].name%> 
+                    </option>
+                    <% } %>
+                <% } %>    
+            </select>
+        </div>
+        <div>
+            <label for="">Seccion</label>
+            <select name="section_id">
+                <% for (let i = 0; i < seccion.length; i++){ %>
+                    <% if (seccion[i].id == juego.section_id) { %>
+                    <option value="<%=seccion[i].id%>" selected>
+                        <%=seccion[i].name%>
+                    </option>
+                <% } else { %>
+                    <option value="<%=seccion[i].id%>">
+                        <%=seccion[i].name%> 
+                    </option>
+                    <% } %>
+                <% } %>    
+            </select>
+        </div>
+        
+       
+        <button type="submit">Editar</button>
+    </form>
+</body>
+</html>
+      <%- include('./partials/footer') %>
+    </div>
+
+  <!--Optional JavaScript-->
+  <!--jQuery first, then Popper.js, then Bootstrap JS-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

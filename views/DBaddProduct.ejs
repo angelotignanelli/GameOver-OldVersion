@@ -22,7 +22,7 @@
                 <div class="card col-12">
                     <div class="card-body">
                       <h2 class="col-12">AGREGAR PRODUCTO</h2>
-                        <form action="/productsdb/crear" method="POST" enctype="multipart/form-data">
+                        <form action="/productsdb/crear" method="POST">
                             <div class="form-group">
                               <label for="name">Nombre de producto</label>
                               <input name="name" type="name" class="form-control" id="name" placeholder="Producto">
@@ -60,12 +60,26 @@
 
                             <div class="form-group">
                                 <label for="name">Categoria</label>
-                                <input name="category_id" type="name" class="form-control" id="category_id" placeholder="Categoria">
+                                <select name="category_id" id="">
+                                    <% for (let i = 0; i < categorias.length; i++){ %>
+                                        <option value="<%=categorias[i].id%>">
+                                            <%=categorias[i].name%>
+                                        </option>
+                                    <% } %>
+                                </select>
+                                <!--<input name="category_id" type="name" class="form-control" id="category_id" placeholder="Categoria">-->
                               </div>
 
                             <div class="form-group">
                                 <label for="name">Distribuidor</label>
-                                <input name="distributor_id" type="name" class="form-control" id="distributor_id" placeholder="Distribuidor">
+                                <select name="distributor_id" id="">
+                                    <% for (let i = 0; i < distribuidores.length; i++){ %>
+                                        <option value="<%=distribuidores[i].id%>">
+                                            <%=distribuidores[i].name%>
+                                        </option>
+                                    <% } %>
+                                </select>
+                                <!--<input name="distributor_id" type="name" class="form-control" id="distributor_id" placeholder="Distribuidor">-->
                               </div>
 
                             <div class="form-check form-check-inline">
@@ -93,7 +107,14 @@
 
                             <div class="form-group">
                                 <label for="name">Seccion</label>
-                                <input name="section_id" type="name" class="form-control" id="section_id" placeholder="Seccion">
+                                <select name="section_id" id="">
+                                    <% for (let i = 0; i < secciones.length; i++){ %>
+                                        <option value="<%=secciones[i].id%>">
+                                            <%=secciones[i].name%>
+                                        </option>
+                                    <% } %>
+                                </select>
+                                <!--<input name="section_id" type="name" class="form-control" id="section_id" placeholder="Seccion">-->
                               </div>
 
                               <label for="image">Imagen de portada:</label>
